@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/departemen.css">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Font Google -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+rel="stylesheet" />
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Logo Title -->
+
+<link rel="icon" href="image/hmj/logo_hmj.png" type="image/x-icon" />
+
+    <title>Departemen Keilmuan</title>
+</head>
+<body>
+    <button id="backToTop" class="hide" border= "none">
+        <i class="bi bi-arrow-up-square-fill"></i>
+     <script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  // Menampilkan atau menyembunyikan tombol berdasarkan posisi scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) { // Jika pengguna menggulir lebih dari 200px
+      backToTopButton.classList.add("show");
+      backToTopButton.classList.remove("hide");
+    } else {
+      backToTopButton.classList.add("hide");
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  // Fungsi untuk kembali ke atas
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0, // Gulir ke posisi paling atas
+      behavior: "smooth" // Gulir dengan animasi halus
+    });
+  });
+</script>
+
+    
+    </button>
+    
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent position-fixed w-100">
+        <div class="container">
+          <a class="navbar-brand me-3" href="#hero"> <img src="image/hmj/logo_hmj.png" alt="" width="40"
+              />HMJ TI 2025</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" aria-current="page" href="#hero">Beranda</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" href="#about-section">Tentang</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" href="#BKepengurusan">Kepengurusan</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" href="#">Kegiatan</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" href="#post">Postingan</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light text-dark" href="#contact">Kontak</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    
+
+    <!-- Hero Section -->
+    <header id="Hero">
+        <div class="container">
+            <!-- Menghilangkan h1 dan p -->
+        </div>
+    </header>
+
+    <!-- Departemen Keilmuan Description -->
+    <section id="departemen" class="container">
+        <p> <strong>Departemen Keilmuan adalah</strong> bagian yang bertugas untuk mengembangkan ilmu pengetahuan dalam berbagai bidang. Kami berfokus pada inovasi dan riset yang berkaitan dengan perkembangan ilmu pengetahuan terkini.</p>
+    </section>
+
+    <!-- Anggota Departemen -->
+    <div class="slider-container">
+      <div class="slider">
+          <!-- Slide 1 -->
+          <div class="slide">
+              <img src="image/foto_bersama.jpg" alt="Anggota 1">
+              <div class="info">
+                  <h3>Nama Anggota 1</h3>
+                  <p>Posisi: Ketua</p>
+                  <a href="https://instagram.com/anggota1" target="_blank">
+                      <img src="image/ig icon warna.png" alt="Instagram">
+                  </a>
+              </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+              <img src="image/foto_bersama.jpg" alt="Anggota 2">
+              <div class="info">
+                  <h3>Nama Anggota 2</h3>
+                  <p>Posisi: Anggota</p>
+                  <a href="https://instagram.com/anggota2" target="_blank">
+                      <img src="image/ig icon warna.png" alt="Instagram">
+                  </a>
+              </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+              <img src="image/foto_bersama.jpg" alt="Anggota 3">
+              <div class="info">
+                  <h3>Nama Anggota 3</h3>
+                  <p>Posisi: Sekretaris</p>
+                  <a href="https://instagram.com/anggota3" target="_blank">
+                      <img src="image/ig icon warna.png" alt="Instagram">
+                  </a>
+              </div>
+          </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+    <section id="slider">
+        <h2 class="section-title">Anggota Departemen</h2>
+    </section>
+
+   <!-- Program Kerja -->
+<section id="program-kerja" class="container">
+    <h2>Program Kerja</h2>
+    <div class="program-cards">
+        <div class="card">
+            <div class="card-info">
+                <h3>Sosial Media Menfess HMJ TI Officer</h3>
+                <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+                    <p>Hai</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-info">
+                <h3>Sosial Media Tiktok HMJ TI Officer</h3>
+                 <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+                 
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-info">
+                <h3>Sosial Media Youtube HMJ TI Officer</h3>
+                  <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-info">
+              <h3>Sosial Media Instagram H MJ TI Officer</h3>
+                <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+                 
+              </div>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+            <h3>Information Center</h3>
+              <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+               
+            </div>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-info">
+          <h3>Pengoptimalan Website</h3>
+            <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+             
+          </div>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card-info">
+        <h3>Sosial Media Youtube HMJ TI Officer</h3>
+          <div class="hover-info" style="background-image: url(); background-size: cover; background-position: center; background-color: rgb(255, 255, 255);">
+           
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+  <!-- bottom -->
+  <section id="bot">
+    <div class="container h-100">
+      <div class="row h-100"> 
+        <div class="main d-flex flex-row flex-wrap">
+          <div class="quicklinks">
+            <h4>Quick Links</h4>
+            <a href="#">High Achiever</a>
+            <a href="#">Competition</a>
+            <a href="#">Scholarship</a>
+          </div>
+          <div class="sosmed">
+            <h4>HMJ TI</h4>
+            <!-- <img src="image/hmj/logo_hmj.png" alt="logo_hmj" class="img-logo" width="75px" height="75px" /> -->
+            <div class="icon">
+              <div class="canvas">
+                <a href="https://x.com/HMJTI_POLIJE"><img src="image/Twiter Icon.png" alt="" /></a>
+              </div>
+              <div class="canvas">
+                <a href="https://www.youtube.com/@HMJTIPolije"><img src="image/Facebook Icon.png" alt="" /></a>
+              </div>
+              <div class="canvas">
+                <a href="mailto:<hmjti@polije.ac.id>"><img src="image/Email Icon.png" alt="" /></a>
+              </div>
+              <div class="canvas">
+                <a href="https://wa.me/6287779834215"><img src="image/Whatsapp icon.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="contactinfo">
+            <h4>Contact Info</h4>
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.314 28.323" style="enable-background:new 0 0 28.314 28.323" width="18px" xml:space="preserve" class="telepon" fill="#444444"><path d="m27.728 20.384-4.242-4.242a1.982 1.982 0 0 0-1.413-.586h-.002c-.534 0-1.036.209-1.413.586L17.83 18.97l-8.485-8.485 2.828-2.828c.78-.78.78-2.05-.001-2.83L7.929.585A1.986 1.986 0 0 0 6.516 0h-.001C5.98 0 5.478.209 5.101.587L.858 4.83C.729 4.958-.389 6.168.142 8.827c.626 3.129 3.246 7.019 7.787 11.56 6.499 6.499 10.598 7.937 12.953 7.937 1.63 0 2.426-.689 2.604-.867l4.242-4.242c.378-.378.587-.881.586-1.416 0-.534-.208-1.037-.586-1.415zm-5.656 5.658c-.028.028-3.409 2.249-12.729-7.07C-.178 9.452 2.276 6.243 2.272 6.244L6.515 2l4.243 4.244-3.535 3.535a.999.999 0 0 0 0 1.414l9.899 9.899a.999.999 0 0 0 1.414 0l3.535-3.536 4.243 4.244-4.242 4.242z"/></svg>087779834215</p>
+            <p>
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="18px" fill="#444444">
+                <path d="M123.25 24.192c0-.018 0-.034-.005-.052s-.007-.063-.009-.094a1.734 1.734 0 0 0-.083-.408c-.006-.018 0-.037-.011-.055s-.01-.015-.013-.023a1.734 1.734 0 0 0-.227-.407c-.021-.028-.043-.053-.066-.08a1.755 1.755 0 0 0-.31-.294c-.012-.009-.022-.02-.034-.028a1.744 1.744 0 0 0-.414-.2c-.034-.012-.068-.022-.1-.032a1.733 1.733 0 0 0-.474-.073H6.5a1.733 1.733 0 0 0-.474.073c-.035.01-.068.02-.1.032a1.744 1.744 0 0 0-.414.2c-.012.008-.022.019-.034.028a1.755 1.755 0 0 0-.31.294c-.022.027-.045.052-.066.08a1.734 1.734 0 0 0-.227.407c0 .008-.01.015-.013.023s-.005.037-.011.055a1.734 1.734 0 0 0-.083.408c0 .032-.009.063-.009.094s-.005.034-.005.052v79.615c0 .023.006.045.007.068a1.737 1.737 0 0 0 .019.188c.008.051.015.1.027.152a1.74 1.74 0 0 0 .056.179c.017.047.033.094.054.139a1.729 1.729 0 0 0 .093.172c.024.04.048.081.075.119a1.743 1.743 0 0 0 .125.152c.033.036.066.072.1.106.021.019.037.042.059.061s.036.017.052.03a1.736 1.736 0 0 0 .452.263c.035.014.071.022.107.033a1.732 1.732 0 0 0 .488.085c.012 0 .023.006.035.006H121.501c.012 0 .023-.006.034-.006a1.732 1.732 0 0 0 .489-.085c.035-.011.07-.019.1-.033a1.736 1.736 0 0 0 .453-.263c.016-.013.036-.017.052-.03s.038-.042.059-.061c.036-.034.069-.069.1-.106a1.743 1.743 0 0 0 .125-.152c.027-.038.051-.078.075-.119a1.729 1.729 0 0 0 .093-.172c.021-.045.037-.092.054-.139a1.74 1.74 0 0 0 .056-.179c.012-.05.019-.1.027-.152a1.737 1.737 0 0 0 .019-.188c0-.023.007-.045.007-.068zM45.8 60.316l17.058 14.677a1.751 1.751 0 0 0 2.283 0L82.2 60.316l35.512 41.741H10.289zM8.25 99.052V28.007l34.9 30.026zm76.6-41.019 34.9-30.026v71.045zm31.931-32.091L81.276 56.493c-.006.005-.014.008-.02.014l-.019.02L64 71.358 46.763 56.527l-.019-.02-.02-.014-35.507-30.551z"></path>
+              </svg>
+              <a href="mailto:hmjti@polije.ac.id" style="color: rgb(88, 88, 255); text-decoration: none; margin-left: -2px;">hmjti@polije.ac.id</a>
+            </p>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="copyright">
+    <div class="container copyr">
+      <p>Copyright © 2025 HMJTI - All rights reserved.</p>
+    </div>  
+  </div>
+
+  <!-- Script Postingan -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
+  <script src="js/script.js"></script>
+  <script>
+    const animatedElements = document.querySelectorAll(".animate");
+
+    const handleScroll = () => {
+      animatedElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Trigger scroll event on load to check visibility
+    handleScroll();
+
+    // Fungsi untuk mendeteksi elemen di viewport
+    function handleScrollAnimations() {
+      const animatedElements = document.querySelectorAll(".scroll-animation");
+      animatedElements.forEach((element) => {
+        const elementPosition = element.getBoundingClientRect();
+        const isVisible = elementPosition.top < window.innerHeight && elementPosition.bottom >= 0;
+
+        if (isVisible) {
+          element.classList.add("visible");
+        }
+      });
+    }
+
+    // Event listener untuk scroll
+    window.addEventListener("scroll", handleScrollAnimations);
+
+    // Jalankan fungsi saat pertama kali laman dimuat
+    document.addEventListener("DOMContentLoaded", handleScrollAnimations);
+  </script>
+  <script>
+    // JavaScript untuk mendeteksi scroll
+    const img = document.getElementById("scrollImage");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        // Jika sudah di-scroll lebih dari 50px
+        img.classList.add("scrolled"); // Tambahkan kelas
+      } else {
+        img.classList.remove("scrolled"); // Hapus kelas
+      }
+    });
+  </script>
+  <script src="js/animation_slide.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
