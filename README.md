@@ -4,6 +4,7 @@ npm init -y
 ## Panduan database menggunakan dump sql
 
 mysql -u root
+
 CREATE DATABASE hmj; // jika belum ada
 
 ## Dump via Command Line (lebih cepat & fleksibel)
