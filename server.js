@@ -6,9 +6,7 @@ const app = express()
 app.set("view engine", "ejs")
 app.set("views", "views")
 
-app.use(express.static('css'));
-app.use(express.static('image'));
-app.use('/images', express.static('images'))
+app.use(express.static('public'));
 
 const db = mysql.createConnection({
     host: "127.0.0.1",
@@ -23,8 +21,14 @@ db.connect((err) => {
         console.log("Dataabase connection error:", err)
         return
     } 
-    console.log("Database connected")
+    console.log("Database connected")   
 
+    // Home Route
+    app.get("/", (req, res) => {
+        res.render("index", { title: "HOME" })
+    })
+
+    app.get("/berita", (req, res) => {
     const sql = `
         SELECT 
             artikel.*, 
@@ -34,7 +38,6 @@ db.connect((err) => {
         JOIN kategori ON artikel.id_kategori = kategori.id_kategori
     `
 
-    app.get("/", (req, res) => {
         db.query(sql, (err, result) => {
             if (err) throw err
             
@@ -61,6 +64,9 @@ db.connect((err) => {
     })
 })
 
+app.get("/departemen", (req, res) => {
+    res.render("departemen", { title: "DEPARTEMEN" })
+})
 
 app.listen(8000, () => {
     console.log("server ready");
