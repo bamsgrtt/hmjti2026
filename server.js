@@ -1,5 +1,5 @@
 const express = require('express')
-const mysql = require("mysql")
+const mysql = require("mysql2")
 const app = express()
 // const path = require('path')
 
@@ -11,15 +11,19 @@ app.use(express.static('image'));
 app.use('/images', express.static('images'))
 
 const db = mysql.createConnection({
-    host: "localhost",
+    host: "127.0.0.1",
     database: "hmj",
     user: "root",
-    password: ""
+    password: "",
+    port: 3306
 })
 
 db.connect((err) => {
-    if (err) throw err
-    console.log('Database connected')
+    if (err) {
+        console.log("Dataabase connection error:", err)
+        return
+    } 
+    console.log("Database connected")
 
     const sql = `
         SELECT 
@@ -30,14 +34,17 @@ db.connect((err) => {
         JOIN kategori ON artikel.id_kategori = kategori.id_kategori
     `
 
-    db.query(sql, (err, result) => {
-        if (err) throw err
-        const datas = result.map(item => ({
+    app.get("/", (req, res) => {
+        db.query(sql, (err, result) => {
+            if (err) throw err
+            
+            const datas = result.map(item => ({
             ...item,
-            base64Image: item.base64Image ? `data:image/jpeg;base64,${item.base64Image}` : null
+            base64Image: item.base64Image 
+            ? `data:image/jpeg;base64,${item.base64Image}` 
+            : null
         }))
 
-        app.get("/", (req, res) => {
             res.render("berita", { 
                 datas: datas, 
                 title: "ARTIKEL", 

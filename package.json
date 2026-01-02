@@ -17,12 +17,13 @@
     "url": "https://github.com/doniwah/Web_hmjti2025/issues"
   },
   "homepage": "https://github.com/doniwah/Web_hmjti2025#readme",
-  "description": "",
+  "description": "npm init -y",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.16.0",
     "nodemon": "^3.1.9",
     "path": "^0.12.7"
-  }
+  },
+  "type": "commonjs"
 }
