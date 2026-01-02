@@ -33,7 +33,10 @@ body {
     margin-top: 70px;
 }
 
-#navbar #pilihan span {
+.filter-nav {
+    align-items: center;
+}
+#filter-kategori #pilihan span {
     margin: 0px 20px;
     cursor: pointer;
 }
@@ -330,7 +333,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-    #navbar #pilihan span {
+    #filter-kategori #pilihan span {
         margin: 0px 8px;
         cursor: pointer;
         font-size: 15px;
@@ -412,7 +415,7 @@ body {
 }
 
 @media screen and (min-width: 400px) and (max-width: 768px) {
-    #navbar #pilihan span {
+    #filter-kategori #pilihan span {
         margin: 0px 10px;
         cursor: pointer;
         font-size: 18px;
@@ -476,7 +479,7 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 880px) {
-    #navbar #pilihan span {
+    #filter-kategori #pilihan span {
         margin: 0px 15px;
         cursor: pointer;
         font-size: 26px;

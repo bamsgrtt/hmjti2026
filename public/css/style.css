@@ -9,7 +9,10 @@ body {
 
 /* Navbar */
 .navbar {
-  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   padding: 20px 0;
   /*Ukuranpaddingawal*/
@@ -272,48 +275,38 @@ Mission List Styling .mission-list {
   font-size: 14px;
 }
 
-/* .about-image {
-  max-width: 500px;
+.about-image {
+  max-width: 700px;
+  margin-top: 80px;
   margin-inline: auto;
   border-radius: 5rem 2rem 5rem 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-} */
+  align-items: center;
+  justify-content: center;
+} 
 
-/* .about-image .title {
+.about-image .title {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   background-color: #007bff;
-} */
-/* .about_image .banner__container {
+} 
+ .about_image .banner__container {
   display: grid;
   gap: 2rem;
   overflow: hidden;
-} */
+}
 
 .about-image img {
   max-width: 700px;
   margin-inline: auto;
-  margin-top: 80px;
-  margin-right: 60px;
+  margin-top: 40px;
   border-radius: 5rem 2rem 5rem 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+
 }
 
-/* .about-image::before {
-  content: "";
-  position: absolute;
-  margin: 50px;
-  top: -20px;
-  left: -20px;
-  width: 60%;
-  height: 50%;
-  background-color: #4caf50;
-  border-radius: 50%;
-  z-index: -1;
-  transform: rotate(-35deg);
-} */
 
 /* Animasi muncul dari bawah */
 .animate {

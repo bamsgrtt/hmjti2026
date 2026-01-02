@@ -68,6 +68,14 @@ app.get("/departemen", (req, res) => {
     res.render("departemen", { title: "DEPARTEMEN" })
 })
 
+app.get("/proker", (req, res) => {
+    res.render("proker", { title: "PROGRAM KERJA" })
+})
+
+app.get("/about", (req, res) => {
+    res.render("about", { title: "TENTANG KAMI" })
+})  
+
 app.listen(8000, () => {
     console.log("server ready");
 })
