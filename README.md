@@ -12,4 +12,4 @@ Buka Laragon → Menu → Terminal → MySQL Command Line (atau bisa pakai CMD/P
 
 Jalankan perintah berikut:
 
-mysqldump -u root -p hmj > hmj_dump.sql
+mysqldump -u root -p hmj > hmj.sql
