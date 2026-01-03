@@ -26,12 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML += `
         <div class="col-md-4 py-2 mb-4 d-flex justify-content-center">
           <div class="card text-center">
-            <img src="${a.foto}" class="card-img-top">
+            <img src="${a.foto}" class="card-img-top" alt="${a.nama}">
             <div class="card-body">
               <h6 class="fw-bold">${a.nama}</h6>
-              <p class="mb-1">${a.jabatan}</p>
-              <span class="badge bg-primary">${a.divisi}</span>
+              <p class="mb-1" style="font-size: 14px;">${a.jabatan}</p>
             </div>
+            <div class="card-icon">
+              <i class="bi bi-linkedin"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-github"></i>
+            </div>
+            
+              <span class="btn text-dark fw-bold p-2 mb-4 m-2 border" style="border-radius: 15px; background: #ffffff;">${a.divisi}</span>
           </div>
         </div>
       `;
