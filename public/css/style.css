@@ -9,10 +9,7 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+   z-index: 999;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   padding: 20px 0;
   /*Ukuranpaddingawal*/
@@ -77,11 +74,11 @@ body {
   overflow: hidden; */
 /* } */
 #hero {
-  /* background: linear-gradient(to bottom, transparent 0%, transparent 10%, #ffffff 100%), url("../image/foto_bersama.jpg") bottom right/contain no-repeat; */
-  background: linear-gradient(to bottom, #557dff 5%, #ffffff 90%);
+background: #bfcdff;
+background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
   /* background-image: url("../image/hmj/unnamed\ qq.png");
   background-color: antiquewhite; */
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
 }
@@ -104,10 +101,11 @@ body {
 }
 
 .hero-tagline h1 {
-  color: #ffffff;
+  color: #597DFF;
   font-weight: 700;
   font-size: 50px;
   line-height: 72px;
+  text-shadow: #001665 1px  2px;
 }
 
 .hero-tagline p {
@@ -120,28 +118,28 @@ body {
 }
 
 .button-lg-primary {
-  width: 237px;
-  height: 70px;
-  background: linear-gradient(160deg, var(--pr-color), #1d1d1d);
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(160deg, #597DFF, #ffffff);
   color: #fff;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .button-lg-primary:hover {
-  width: 237px;
-  height: 70px;
+  width: 100px;
+  height: 50px;
   background: white;
-  color: rgb(10, 0, 157);
-  border: 2px solid rgb(10, 0, 157);
-  font-size: 20px;
+  color: rgb(120, 110, 255);
+  border: 2px solid rgb(125, 115, 255);
+  font-size: 16px;
   font-weight: 700;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
   -o-border-radius: 5px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
