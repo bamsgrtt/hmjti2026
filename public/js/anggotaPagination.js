@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <p class="mb-1" style="font-size: 14px;">${a.jabatan}</p>
             </div>
             <div class="card-icon">
-              <i class="bi bi-linkedin"></i>
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-github"></i>
+              <a href="${a.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="${a.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="${a.github}" target="_blank"><i class="bi bi-github"></i></a>
             </div>
             
               <span class="btn text-dark fw-bold p-2 mb-4 m-2 border" style="border-radius: 15px; background: #ffffff;">${a.divisi}</span>
