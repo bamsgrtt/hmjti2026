@@ -16,382 +16,300 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/global.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
   <!-- Logo Title -->
 
   <link rel="icon" href="/image/hmj/logo_hmj.png" type="/image/x-icon" />
 
-  <title>HMJTI 2026</title>
+  <title>HMJTI</title>
 </head>
 
 <body>
   <button id="backToTop" class="hide" border="none">
     <i class="bi bi-arrow-up-square-fill"></i>
-    <script>
-      const backToTopButton = document.getElementById("backToTop");
-
-      // Menampilkan atau menyembunyikan tombol berdasarkan posisi scroll
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) { // Jika pengguna menggulir lebih dari 200px
-          backToTopButton.classList.add("show");
-          backToTopButton.classList.remove("hide");
-        } else {
-          backToTopButton.classList.add("hide");
-          backToTopButton.classList.remove("show");
-        }
-      });
-
-      // Fungsi untuk kembali ke atas
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,           // Gulir ke posisi paling atas
-          behavior: "smooth" // Gulir dengan animasi halus
-        });
-      });
-    </script>
-
   </button>
 
   <%- include('partials/navbar') %>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-md-6 hero-tagline my-auto">
-          <h1>HMJ TI </h1>
-          <h2 class="fw-bold text-dark">BERSINERGI DARI HATI BERDEDIKASI UNTUK TI <br><span>TI PC!!</span></h2>
-
-          
-          <a href="/about"><button class="btn button-lg-primary">Tentang</button></a>
-          <a href="#"><button class="btn button-lg-primary">CARD</button></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  
-
-  <!-- Section Departemen -->
-  <section class="department-section" id="department">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="department-container" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
-            <img src="/image/hmj/percobaan.png" alt="Departemen Keilmuan" class="department-image" />
-            <div class="department-overlay"></div>
-            <div class="department-content">
-              <h3 class="department-title">Departemen Administrasi</h3>
-              <a href="#" class="read-more-btn">READ MORE</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="department-container" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300">
-            <img src="/image/hmj/percobaan.png" alt="Departemen ELD" class="department-image" />
-            <div class="department-overlay"></div>
-            <div class="department-content">
-              <h3 class="department-title">Departemen Keilmuan</h3>
-              <a href="#" class="read-more-btn">READ MORE</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="department-container" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300">
-            <img src="/image/hmj/percobaan.png" alt="Departemen ELD" class="department-image" />
-            <div class="department-overlay"></div>
-            <div class="department-content">
-              <h3 class="department-title">Departemen Perhubungan</h3>
-              <a href="#" class="read-more-btn">READ MORE</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="department-container" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300">
-            <img src="/image/hmj/percobaan.png" alt="Departemen Keilmuan" class="department-image" />
-            <div class="department-overlay"></div>
-            <div class="department-content">
-              <h3 class="department-title">Departemen Kominfo</h3>
-              <a href="#" class="read-more-btn">READ MORE</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="dep">
-            <div class="department-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="300">
-              <img src="/image/hmj/percobaan.png" alt="Departemen Keilmuan" class="department-image" />
-              <div class="department-overlay"></div>
-              <div class="department-content">
-                <h3 class="department-title">Departemen kewirausahaan</h3>
-                <a href="#" class="read-more-btn">READ MORE</a>
-              </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-md-6 hero-tagline my-auto">
+            <h1 class="fw-bold text-dark">BERSINERGI DARI HATI BERDEDIKASI UNTUK TI <br><span>TI PC!!</span></h1>
+              <h1>HMJ TI </h1>
+              <a href="/about"><button class="btn button-lg-primary">Tentang</button></a>
+              <a href="#"><button class="btn button-lg-primary">CARD</button></a>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-    </div>
-  </section>
 
-  <!-- Postingan  -->
-  <section id="post">
-    <div class="animasiig">
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; max-width: 800px; margin: 0 auto; padding: 12px;">
-        <!-- Post 1 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DFDEBxZTRoZ/?utm_source=ig_web_copy_link"
-          data-instgrm-version="12"
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <div style="padding:12px;">
-            <a href="https://www.instagram.com/p/DFDEBxZTRoZ/?utm_source=ig_web_copy_link"
-              style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
-              target="_blank">
-              <div style="display: flex; flex-direction: row; align-items: center;">
-                <div
-                  style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 32px; margin-right: 12px; width: 32px;">
-                </div>
-                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+
+
+    <!-- Section Departemen -->
+    <div class="container py-5">
+      <h2 class="text-left fw-bold mb-4 section-title">DIVISI HMJ TI</h2>
+      <div class="row justify-content-center g-3">
+        
+        <!-- BOX 1 -->
+        <div class="col-6 col-md-2">
+          <div class="dept-box text-center">
+            <i class="bi bi-people dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">BPH</p>
+          </div>
+        </div>
+        
+        <!-- BOX 2 -->
+        <div class="col-6 col-md-2">  
+          <div class="dept-box text-center">
+            <i class="bi bi-journal-bookmark dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">ADMINISTRASI</p>
+          </div>
+        </div>
+
+        <!-- BOX 3 -->
+        <div class="col-6 col-md-2">
+          <div class="dept-box text-center">
+            <i class="bi bi-lightbulb dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">KEILMUAN</p>
+          </div>
+        </div>
+
+        <!-- BOX 4 -->
+        <div class="col-6 col-md-2">
+          <div class="dept-box text-center">
+            <i class="bi bi-briefcase dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">PERHUBUNGAN</p>
+          </div>
+        </div>
+
+        <!-- BOX 5 -->
+        <div class="col-6 col-md-2">
+          <div class="dept-box text-center">
+            <i class="bi bi-calendar-event dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">KOMINFO</p>
+          </div>
+        </div>
+
+        <!-- BOX 6 -->
+        <div class="col-6 col-md-2">
+          <div class="dept-box text-center">
+            <i class="bi bi-gear dept-icon"></i>
+            <p class="dept-title fw-bold fs-5">KWU</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <!-- Postingan  -->
+    <section id="post">
+      <div class="animasiig">
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; max-width: 800px; margin: 0 auto; padding: 12px;">
+          <!-- Post 1 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DFDEBxZTRoZ/?utm_source=ig_web_copy_link"
+            data-instgrm-version="12"
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <div style="padding:12px;">
+              <a href="https://www.instagram.com/p/DFDEBxZTRoZ/?utm_source=ig_web_copy_link"
+                style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                target="_blank">
+                <div style="display: flex; flex-direction: row; align-items: center;">
                   <div
-                    style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 12px; margin-bottom: 6px; width: 80px;">
+                    style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 32px; margin-right: 12px; width: 32px;">
                   </div>
-                  <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 12px; width: 50px;">
+                  <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                    <div
+                      style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 12px; margin-bottom: 6px; width: 80px;">
+                    </div>
+                    <div
+                      style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 12px; width: 50px;">
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <p
-              style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:12px; line-height:15px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-              Post 1</p>
-          </div>
-        </blockquote>
+              </a>
+              <p
+                style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:12px; line-height:15px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                Post 1</p>
+            </div>
+          </blockquote>
 
-        <!-- Post 2 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DE2JQ-WTMGi/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <p style="text-align:center;">Post 2</p>
-        </blockquote>
+          <!-- Post 2 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DE2JQ-WTMGi/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <p style="text-align:center;">Post 2</p>
+          </blockquote>
 
-        <!-- Post 3 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DEzlC_hzz08/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <p style="text-align:center;">Post 3</p>
-        </blockquote>
+          <!-- Post 3 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DEzlC_hzz08/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <p style="text-align:center;">Post 3</p>
+          </blockquote>
 
-        <!-- Post 4 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DEw-LSdzJgO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <p style="text-align:center;">Post 4</p>
-        </blockquote>
+          <!-- Post 4 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DEw-LSdzJgO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <p style="text-align:center;">Post 4</p>
+          </blockquote>
 
-        <!-- Post 5 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DErz6PbzcG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <p style="text-align:center;">Post 5</p>
-        </blockquote>
+          <!-- Post 5 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DErz6PbzcG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <p style="text-align:center;">Post 5</p>
+          </blockquote>
 
-        <!-- Post 6 -->
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DEpQATUzoc3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
-          <p style="text-align:center;">Post 6</p>
-        </blockquote>
+          <!-- Post 6 -->
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DEpQATUzoc3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            style="margin: 0 !important; width: 100% !important; max-width: 250px !important; min-width: auto !important;">
+            <p style="text-align:center;">Post 6</p>
+          </blockquote>
+        </div>
       </div>
-    </div>
-  </section>
-  <script src="https://www.instagram.com/embed.js"></script>
-  <!-- End Postingan -->
+    </section>
+    <script src="https://www.instagram.com/embed.js"></script>
+    <!-- End Postingan -->
 
 
 
-  <!-- Section Program -->
-  <section id="Program">
-    <div id="card-area">
-      <div class="wrapper">
-        <div class="box-area" id="kumpulan">
-          <div class="box">
+    <!-- Section Program -->
+    <section id="Program">
+      <div id="card-area">
+        <div class="wrapper">
+          <div class="box-area" id="kumpulan">
+            <div class="box">
+              <img src="/image/hmj/coba.png" alt="" />
+              <div class="overlay">
+                <h3>Ketua Himpunan</h3>
+                <p>Saya Tiara Agustina Putri Wulandari selaku Ketua Himpunan</p>
+                <a href="#">show more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="box2">
             <img src="/image/hmj/coba.png" alt="" />
             <div class="overlay">
-              <h3>Ketua Himpunan</h3>
-              <p>Saya Tiara Agustina Putri Wulandari selaku Ketua Himpunan</p>
+              <h3>Doni Wahyudi</h3>
+              <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
               <a href="#">show more</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="box2">
-          <img src="/image/hmj/coba.png" alt="" />
-          <div class="overlay">
-            <h3>Doni Wahyudi</h3>
-            <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
-            <a href="#">show more</a>
+        <div class="wrapper">
+          <div class="box3">
+            <img src="/image/hmj/coba.png" alt="" />
+            <div class="overlay">
+              <h3>Doni Wahyudi</h3>
+              <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
+              <a href="#">cuy</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="box4">
+            <img src="/image/hmj/coba.png" alt="" />
+            <div class="overlay">
+              <h3>Doni Wahyudi</h3>
+              <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
+              <a href="#">cuy</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="box5">
+            <img src="/image/hmj/coba.png" alt="" />
+            <div class="overlay">
+              <h3>Doni Wahyudi</h3>
+              <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
+              <a href="#">cuy</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="box6">
+            <img src="/image/hmj/coba.png" alt="" />
+            <div class="overlay">
+              <h3>Doni Wahyudi</h3>
+              <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
+              <a href="#">cuy</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="wrapper">
-        <div class="box3">
-          <img src="/image/hmj/coba.png" alt="" />
-          <div class="overlay">
-            <h3>Doni Wahyudi</h3>
-            <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
-            <a href="#">cuy</a>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="box4">
-          <img src="/image/hmj/coba.png" alt="" />
-          <div class="overlay">
-            <h3>Doni Wahyudi</h3>
-            <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
-            <a href="#">cuy</a>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="box5">
-          <img src="/image/hmj/coba.png" alt="" />
-          <div class="overlay">
-            <h3>Doni Wahyudi</h3>
-            <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
-            <a href="#">cuy</a>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="box6">
-          <img src="/image/hmj/coba.png" alt="" />
-          <div class="overlay">
-            <h3>Doni Wahyudi</h3>
-            <p>nama saya adalah doni wahyudi yang tinggal di jember uahu hahaha ini coba</p>
-            <a href="#">cuy</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-   
-    <!-- contact us -->
-    <section id="contact" style="background-image: url(/image/gedungjti.jpg);">
-      <div class="container h-100">
-        <div class="row h-100" id="wadah">
-          <span class="icontelp">
-            <svg fill="#ffffff" height="70px" width="70px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.806 473.806" xml:space="preserve"
-              stroke="#ffffff">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <g>
+
+      <!-- contact us -->
+      <section id="contact" style="background-image: url(/image/gedungjti.jpg);">
+        <div class="container h-100">
+          <div class="row h-100" id="wadah">
+            <span class="icontelp">
+              <svg fill="#ffffff" height="70px" width="70px" version="1.1" id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 473.806 473.806" xml:space="preserve" stroke="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
                   <g>
-                    <path
-                      d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4 c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8 c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6 c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5 c-2.4,29.2,6.2,56.4,12.8,74.2c16.2,43.7,40.4,84.2,76.5,127.6c43.8,52.3,96.5,93.6,156.7,122.7c23,10.9,53.7,23.8,88,26 c2.1,0.1,4.3,0.2,6.3,0.2c23.1,0,42.5-8.3,57.7-24.8c0.1-0.2,0.3-0.3,0.4-0.5c5.2-6.3,11.2-12,17.5-18.1c4.3-4.1,8.7-8.4,13-12.9 c9.9-10.3,15.1-22.3,15.1-34.6c0-12.4-5.3-24.3-15.4-34.3L374.456,293.506z M410.256,398.806 C410.156,398.806,410.156,398.906,410.256,398.806c-3.9,4.2-7.9,8-12.2,12.2c-6.5,6.2-13.1,12.7-19.3,20 c-10.1,10.8-22,15.9-37.6,15.9c-1.5,0-3.1,0-4.6-0.1c-29.7-1.9-57.3-13.5-78-23.4c-56.6-27.4-106.3-66.3-147.6-115.6 c-34.1-41.1-56.9-79.1-72-119.9c-9.3-24.9-12.7-44.3-11.2-62.6c1-11.7,5.5-21.4,13.8-29.7l34.1-34.1c4.9-4.6,10.1-7.1,15.2-7.1 c6.3,0,11.4,3.8,14.6,7c0.1,0.1,0.2,0.2,0.3,0.3c6.1,5.7,11.9,11.6,18,17.9c3.1,3.2,6.3,6.4,9.5,9.7l27.3,27.3 c10.6,10.6,10.6,20.4,0,31c-2.9,2.9-5.7,5.8-8.6,8.6c-8.4,8.6-16.4,16.6-25.1,24.4c-0.2,0.2-0.4,0.3-0.5,0.5 c-8.6,8.6-7,17-5.2,22.7c0.1,0.3,0.2,0.6,0.3,0.9c7.1,17.2,17.1,33.4,32.3,52.7l0.1,0.1c27.6,34,56.7,60.5,88.8,80.8 c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9 l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1 C420.456,377.706,420.456,388.206,410.256,398.806z">
-                    </path>
-                    <path
-                      d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2 c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11 S248.656,111.506,256.056,112.706z">
-                    </path>
-                    <path
-                      d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11 c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2 c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z">
-                    </path>
+                    <g>
+                      <path
+                        d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4 c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8 c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6 c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5 c-2.4,29.2,6.2,56.4,12.8,74.2c16.2,43.7,40.4,84.2,76.5,127.6c43.8,52.3,96.5,93.6,156.7,122.7c23,10.9,53.7,23.8,88,26 c2.1,0.1,4.3,0.2,6.3,0.2c23.1,0,42.5-8.3,57.7-24.8c0.1-0.2,0.3-0.3,0.4-0.5c5.2-6.3,11.2-12,17.5-18.1c4.3-4.1,8.7-8.4,13-12.9 c9.9-10.3,15.1-22.3,15.1-34.6c0-12.4-5.3-24.3-15.4-34.3L374.456,293.506z M410.256,398.806 C410.156,398.806,410.156,398.906,410.256,398.806c-3.9,4.2-7.9,8-12.2,12.2c-6.5,6.2-13.1,12.7-19.3,20 c-10.1,10.8-22,15.9-37.6,15.9c-1.5,0-3.1,0-4.6-0.1c-29.7-1.9-57.3-13.5-78-23.4c-56.6-27.4-106.3-66.3-147.6-115.6 c-34.1-41.1-56.9-79.1-72-119.9c-9.3-24.9-12.7-44.3-11.2-62.6c1-11.7,5.5-21.4,13.8-29.7l34.1-34.1c4.9-4.6,10.1-7.1,15.2-7.1 c6.3,0,11.4,3.8,14.6,7c0.1,0.1,0.2,0.2,0.3,0.3c6.1,5.7,11.9,11.6,18,17.9c3.1,3.2,6.3,6.4,9.5,9.7l27.3,27.3 c10.6,10.6,10.6,20.4,0,31c-2.9,2.9-5.7,5.8-8.6,8.6c-8.4,8.6-16.4,16.6-25.1,24.4c-0.2,0.2-0.4,0.3-0.5,0.5 c-8.6,8.6-7,17-5.2,22.7c0.1,0.3,0.2,0.6,0.3,0.9c7.1,17.2,17.1,33.4,32.3,52.7l0.1,0.1c27.6,34,56.7,60.5,88.8,80.8 c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9 l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1 C420.456,377.706,420.456,388.206,410.256,398.806z">
+                      </path>
+                      <path
+                        d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2 c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11 S248.656,111.506,256.056,112.706z">
+                      </path>
+                      <path
+                        d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11 c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2 c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z">
+                      </path>
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg>
-          </span>
-          <h1 class="contactinform">Need Further Information? Don't hesitate to contact us!</h1>
-          <a href="#" class="buttoncontact"><button>contact us</button></a>
+              </svg>
+            </span>
+            <h1 class="contactinform">Need Further Information? Don't hesitate to contact us!</h1>
+            <a href="#" class="buttoncontact"><button>contact us</button></a>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
-  </section>
 
-  <!-- footer-->
-  <%- include('partials/footer') %>
-  <!-- Script Postingan -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <!-- footer-->
+    <%- include('partials/footer') %>
+      <!-- Script Postingan -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-    });
-  </script>
-  <script src="/js/script.js"></script>
-  <script>
-    const animatedElements = document.querySelectorAll(".animate");
-
-    const handleScroll = () => {
-      animatedElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add("visible");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Trigger scroll event on load to check visibility
-    handleScroll();
-
-    // Fungsi untuk mendeteksi elemen di viewport
-    function handleScrollAnimations() {
-      const animatedElements = document.querySelectorAll(".scroll-animation");
-      animatedElements.forEach((element) => {
-        const elementPosition = element.getBoundingClientRect();
-        const isVisible = elementPosition.top < window.innerHeight && elementPosition.bottom >= 0;
-
-        if (isVisible) {
-          element.classList.add("visible");
-        }
-      });
-    }
-
-    // Event listener untuk scroll
-    window.addEventListener("scroll", handleScrollAnimations);
-
-    // Jalankan fungsi saat pertama kali laman dimuat
-    document.addEventListener("DOMContentLoaded", handleScrollAnimations);
-  </script>
-  <script>
-    // JavaScript untuk mendeteksi scroll
-    const img = document.getElementById("scroll/image");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        // Jika sudah di-scroll lebih dari 50px
-        img.classList.add("scrolled"); // Tambahkan kelas
-      } else {
-        img.classList.remove("scrolled"); // Hapus kelas
-      }
-    });
-  </script>
-
-  <script src="/js/animation_slide.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          once: true,
+        });
+      </script>
+      <script src="/js/script.js"></script>
+      <script src="/js/backToTop.js"></script>
+      <script src="/js/scrollImage.js"></script>
+      <script src="/js/animation_slide.js"></script>
 </body>
+
 </html>

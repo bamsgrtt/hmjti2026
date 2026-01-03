@@ -1,0 +1,350 @@
+[
+  {
+    "nama": "Juliana Intan Purwaningtyas",
+    "divisi": "BPH",
+    "jabatan": "Ketua Himpunan",
+    "foto": "image/hmj/logo_hmj.png"
+  },
+  {
+    "nama": "ACH. Humaidi Aidil Kamal",
+    "divisi": "BPH",
+    "jabatan": "Wakil Ketua Himpunan",
+    "foto": "image/ach_humaidi_aidil_kamal.jpg"
+  },
+  {
+    "nama": "Alya Rachma Kamila",
+    "divisi": "BPH",
+    "jabatan": "Sekretaris 1",
+    "foto": "image/alya_rachma_kamila.jpg"
+  },
+  {
+    "nama": "Nur Fitri Romadhani",
+    "divisi": "BPH",
+    "jabatan": "Sekretaris 2",
+    "foto": "image/nur_fitri_romadhani.jpg"
+  },
+  {
+    "nama": "Agnees Serlita Anggun",
+    "divisi": "BPH",
+    "jabatan": "Bendahara 1",
+    "foto": "image/agnees_serlita_anggun.jpg"
+  },
+  {
+    "nama": "Putri Amelia Balqis",
+    "divisi": "BPH",
+    "jabatan": "Bendahara 2",
+    "foto": "image/putri_amelia_balqis.jpg"
+  },
+  {
+    "nama": "Ahmad Maulana Febri Hananto",
+    "divisi": "Administrasi",
+    "jabatan": "Kepala Departemen",
+    "foto": "image/ahmad_maulana_febri_hananto.jpg"
+  },
+  {
+    "nama": "Febriana Rahmasari",
+    "divisi": "Administrasi",
+    "jabatan": "Sekretaris Departemen",
+    "foto": "image/febriana_rahmasari.jpg"
+  },
+  {
+    "nama": "Maulany Ayuning Rahma",
+    "divisi": "Administrasi",
+    "jabatan": "CO Biro Kesekretariatan",
+    "foto": "image/maulany_ayuning_rahma.jpg"
+  },
+  {
+    "nama": "Aldi Miftahul",
+    "divisi": "Administrasi",
+    "jabatan": "Anggota",
+    "foto": "image/aldi_miftahul.jpg"
+  },
+  {
+    "nama": "Rico Febrian",
+    "divisi": "Administrasi",
+    "jabatan": "Anggota",
+    "foto": "image/rico_febrian.jpg"
+  },
+  {
+    "nama": "Hanuum Rachmaniyar Salsabila",
+    "divisi": "Administrasi",
+    "jabatan": "Anggota",
+    "foto": "image/hanuum_rachmaniyar_salsabila.jpg"
+  },
+  {
+    "nama": "Siti Aisyah",
+    "divisi": "Administrasi",
+    "jabatan": "Anggota",
+    "foto": "image/siti_aisyah.jpg"
+  },
+  {
+    "nama": "Nur Arianti T",
+    "divisi": "Keilmuan",
+    "jabatan": "Kepala Departemen",
+    "foto": "image/nur_arianti_t.jpg"
+  },
+  {
+    "nama": "Nency Elvaretta Ardelia",
+    "divisi": "Keilmuan",
+    "jabatan": "Sekretaris Departemen",
+    "foto": "image/nency_elvaretta_ardelia.jpg"
+  },
+  {
+    "nama": "Rafli Aulia Al Giffari",
+    "divisi": "Keilmuan",
+    "jabatan": "CO Biro Akademik",
+    "foto": "image/rafli_aulia_al_giffari.jpg"
+  },
+  {
+    "nama": "Rianty Arda Wijaya",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/rianty_arda_wijaya.jpg"
+  },
+  {
+    "nama": "Nila Putri",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/nila_putri.jpg"
+  },
+  {
+    "nama": "Nur Hidayatul Fitriyah",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/nur_hidayatul_fitriyah.jpg"
+  },
+  {
+    "nama": "Yanuarta Tri Widurani",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/yanuarta_tri_widurani.jpg"
+  },
+  {
+    "nama": "Putri Denta Tama",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/putri_denta_tama.jpg"
+  },
+  {
+    "nama": "Linda Ratnadela Angraini",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Akademik",
+    "foto": "image/linda_ratnadela_angraini.jpg"
+  },
+  {
+    "nama": "M. Rizky Niamuddin",
+    "divisi": "Keilmuan",
+    "jabatan": "CO Biro Non Akademik",
+    "foto": "image/m_rizky_niamuddin.jpg"
+  },
+  {
+    "nama": "Rasya Aurik",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Non Akademik",
+    "foto": "image/rasya_aurik.jpg"
+  },
+  {
+    "nama": "Fauzi Rafi Abimanyu Nugraha",
+    "divisi": "Keilmuan",
+    "jabatan": "Anggota Biro Non Akademik",
+    "foto": "image/fauzi_rafi_abimanyu_nugraha.jpg"
+  },
+  {
+    "nama": "Yuke Maia Chelci Dofir Nanda",
+    "divisi": "Perhubungan",
+    "jabatan": "Kepala Departemen",
+    "foto": "image/yuke_maia_chelci_dofir_nanda.jpg"
+  },
+  {
+    "nama": "Syavana Aurel Septiarsa",
+    "divisi": "Perhubungan",
+    "jabatan": "Sekretaris Departemen",
+    "foto": "image/syavana_aurel_septiarsa.jpg"
+  },
+  {
+    "nama": "Muzayyinatul Aulia",
+    "divisi": "Perhubungan",
+    "jabatan": "CO Biro Eksternal",
+    "foto": "image/muzayyinatul_aulia.jpg"
+  },
+  {
+    "nama": "Lili Kurnia Putri",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Eksternal",
+    "foto": "image/lili_kurnia_putri.jpg"
+  },
+  {
+    "nama": "Dwi Fitria Wardaniah",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Eksternal",
+    "foto": "image/dwi_fitria_wardaniah.jpg"
+  },
+  {
+    "nama": "Eka Fitri Salsabilah",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Eksternal",
+    "foto": "image/eka_fitri_salsabilah.jpg"
+  },
+  {
+    "nama": "Tristan Juliano Maldini",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/tristan_juliano_maldini.jpg"
+  },
+  {
+    "nama": "Reindra Pratama",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/reindra_pratama.jpg"
+  },
+  {
+    "nama": "Nadila",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/nadila.jpg"
+  },
+  {
+    "nama": "Refita",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/refita.jpg"
+  },
+  {
+    "nama": "Rezza Wahyu Setya Adhy",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/rezza_wahyu_setya_adhy.jpg"
+  },
+  {
+    "nama": "Farin Sevany Kasih",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/farin_sevany_kasih.jpg"
+  },
+  {
+    "nama": "Kiswah Najwa Febiyana",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/kiswah_najwa_febiyana.jpg"
+  },
+  {
+    "nama": "Dhina Rinata",
+    "divisi": "Perhubungan",
+    "jabatan": "Anggota Biro Internal",
+    "foto": "image/dhina_rinata.jpg"
+  },
+  {
+    "nama": "Muhammad Lukmanul Hakim",
+    "divisi": "Kominfo",
+    "jabatan": "Kepala Departemen",
+    "foto": "image/muhammad_lukmanul_hakim.jpg"
+  },
+  {
+    "nama": "Rifda Aprilia",
+    "divisi": "Kominfo",
+    "jabatan": "Sekretaris Departemen",
+    "foto": "image/rifda_aprilia.jpg"
+  },
+  {
+    "nama": "Safina Rahmatus Sa’diyah",
+    "divisi": "Kominfo",
+    "jabatan": "CO Biro Sistem Informasi",
+    "foto": "image/safina_rahmatus_sadiyah.jpg"
+  },
+  {
+    "nama": "Bambang Sugiarto",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Sistem Informasi",
+    "foto": "image/bambang_sugiarto.jpg"
+  },
+  {
+    "nama": "Diva Fidhelya Ariyani",
+    "divisi": "Kominfo",
+    "jabatan": "CO Biro Publikasi",
+    "foto": "image/diva_fidhelya_ariyani.jpg"
+  },
+  {
+    "nama": "Fairuz Zaky Nugraha",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/fairuz_zaky_nugraha.jpg"
+  },
+  {
+    "nama": "Wildan Ramadhani Akbar",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/wildan_ramadhani_akbar.jpg"
+  },
+  {
+    "nama": "Sujono",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/sujono.jpg"
+  },
+  {
+    "nama": "Muhammad Miska Nayafie",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/muhammad_miska_nayafie.jpg"
+  },
+  {
+    "nama": "Muhammad Syahrul Mubarok",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/muhammad_syahrul_mubarok.jpg"
+  },
+  {
+    "nama": "Muhamad Nauval Zdakwan Utomo",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota Biro Publikasi",
+    "foto": "image/muhamad_nauval_zdakwan_utomo.jpg"
+  },
+  {
+    "nama": "Uaryl Engno Laurenca",
+    "divisi": "Kominfo",
+    "jabatan": "Anggota",
+    "foto": "image/uaryl_engno_laurenca.jpg"
+  },
+  {
+    "nama": "Ovi Octa",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Kepala Departemen",
+    "foto": "image/ovi_octa.jpg"
+  },
+  {
+    "nama": "Indra Nur Hafyyan",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Sekretaris Departemen",
+    "foto": "image/indra_nur_hafyyan.jpg"
+  },
+  {
+    "nama": "Fatimah Retnaning Larasati",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Anggota",
+    "foto": "image/fatimah_retnaning_larasati.jpg"
+  },
+  {
+    "nama": "Lyra Aurelia",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Anggota",
+    "foto": "image/lyra_aurelia.jpg"
+  },
+  {
+    "nama": "Gadis Eka Pertiwi",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Anggota",
+    "foto": "image/gadis_eka_pertiwi.jpg"
+  },
+  {
+    "nama": "Radis Naila",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Anggota",
+    "foto": "image/radis_naila.jpg"
+  },
+  {
+    "nama": "Lidya Aisyah Aprilia",
+    "divisi": "Kewirausahaan",
+    "jabatan": "Anggota",
+    "foto": "image/lidya_aisyah_aprilia.jpg"
+  }
+]

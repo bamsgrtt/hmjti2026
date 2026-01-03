@@ -1,0 +1,205 @@
+/* Hero Section */
+
+/* #hero { */
+/* background: linear-gradient(160deg, var(--pr-color), #000000); */
+/* background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(0, 95, 177) 60%), url("image/kontak_img.png") bottom/contain no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden; */
+/* } */
+#hero {
+background: #bfcdff;
+background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  /* background-image: url("../image/hmj/unnamed\ qq.png");
+  background-color: antiquewhite; */
+ padding: 100px 0 80px;
+ max-height: 320px;  
+  overflow: hidden;
+}
+
+#hero p {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 17px;
+}
+
+.acsent-img {
+  margin-top: 505px;
+  width: 32%;
+  height: 32%;
+  margin-left: 380px;
+  opacity: 0.5;
+}
+
+.acsent-img.scrolled {
+  opacity: 1;
+}
+
+.span {
+  color: #597DFF;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 72px;
+  text-shadow: #001665 1px  2px;
+}
+
+.hero-tagline p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 85%;
+}
+
+.button-lg-primary {
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(160deg, #597DFF, #ffffff);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+.button-lg-primary:hover {
+  width: 100px;
+  height: 50px;
+  background: white;
+  color: rgb(120, 110, 255);
+  border: 2px solid rgb(125, 115, 255);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+
+
+
+/* About Section Styling */
+#about-section {
+ position: relative;
+  display: flex;
+  justify-content: center; /* Ubah ke center untuk posisi tengah */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Batasi lebar maksimum */
+  margin: 0 auto; /* Auto margin untuk centering horizontal */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about-content {
+  max-width: 600px;
+  text-align: left;
+  /* Tetap rata kiri */
+  margin-right: 50px;
+  /* Tambahkan jarak lebih ke kanan */
+}
+
+/* Subtitle */
+.about-subtitle {
+  color: #16a085;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 80px;
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+/* Text Styling */
+.about-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-content .btn_selengkapnya {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.about-content .btn_selengkapnya:hover {
+  background: rgb(0, 0, 185);
+  border: none;
+}
+
+Mission List Styling .mission-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+  color: #484848;
+}
+
+/* Custom Icon for List Items */
+.mission-list li:before {
+  content: "✔";
+  /* Gunakan tanda centang */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16a085;
+  /* Warna hijau */
+  font-size: 14px;
+}
+
+.about-image {
+  max-width: 700px;
+  margin-top: 80px;
+  margin-inline: auto;
+  border-radius: 5rem 2rem 5rem 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+} 
+
+.about-image .title {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #007bff;
+} 
+ .about_image .banner__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.about-image img {
+  max-width: 700px;
+  margin-inline: auto;
+  margin-top: 40px;
+  border-radius: 5rem 2rem 5rem 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+
+}

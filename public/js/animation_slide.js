@@ -39,3 +39,39 @@ dots.forEach((li, key) => {
 window.onresize = function (event) {
   reloadSlider();
 };
+
+
+        const animatedElements = document.querySelectorAll(".animate");
+
+        const handleScroll = () => {
+          animatedElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+              el.classList.add("visible");
+            }
+          });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Trigger scroll event on load to check visibility
+        handleScroll();
+
+        // Fungsi untuk mendeteksi elemen di viewport
+        function handleScrollAnimations() {
+          const animatedElements = document.querySelectorAll(".scroll-animation");
+          animatedElements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect();
+            const isVisible = elementPosition.top < window.innerHeight && elementPosition.bottom >= 0;
+
+            if (isVisible) {
+              element.classList.add("visible");
+            }
+          });
+        }
+
+        // Event listener untuk scroll
+        window.addEventListener("scroll", handleScrollAnimations);
+
+        // Jalankan fungsi saat pertama kali laman dimuat
+        document.addEventListener("DOMContentLoaded", handleScrollAnimations);

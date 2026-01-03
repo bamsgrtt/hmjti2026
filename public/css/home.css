@@ -1,68 +1,3 @@
-:root {
-  --pr-color: #0c52e7;
-}
-
-body {
-  font-family: "Poppins", serif;
-  background: #ffffff;
-}
-
-/* Navbar */
-.navbar {
-   z-index: 999;
-  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  padding: 20px 0;
-  /*Ukuranpaddingawal*/
-  -webkit-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  -ms-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-}
-
-.navbar-scrolled {
-  background-color: #ffffff !important;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  /* Opsional */
-  padding: 10px 0;
-  /* Ukuran padding setelah scroll */
-}
-
-.navbar-brand {
-  font-weight: 700;
-  font-size: 20px;
-  /* Ukuran font awal */
-  transition: font-size 0.3s ease-in-out;
-}
-
-.navbar-scrolled .navbar-brand {
-  font-size: 16px;
-  /* Ukuran font setelah scroll */
-  color: #000000;
-}
-
-.navbar-scrolled .navbar-brand:hover {
-  font-size: 16px;
-  /* Ukuran font setelah scroll */
-  color: #000000;
-}
-
-.nav-link {
-  font-size: 16px;
-}
-
-.nav-item.active .nav-link {
-  border-bottom: 2px solid #000000;
-  /* Warna dan ketebalan garis untuk link aktif */
-  font-weight: bold;
-  /* Penekanan pada link aktif */
-  transition: border-bottom 0.1s ease, font-weight 0.1s ease;
-  /* Transisi untuk efek hover */
-}
-
-.nav-link:hover {
-  font-weight: bold;
-  transition: border-bottom 0.1s ease, font-weight 0.1s ease;
-}
 
 /* Hero Section */
 
@@ -147,13 +82,6 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   -o-transition: all 0.5s;
 }
 
-.hero {
-  text-align: center;
-  background-image: url("image.jpg");
-  background-size: cover;
-  color: #fff;
-  padding: 100px;
-}
 
 
 
@@ -185,274 +113,72 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 }
 
 
-/* About Section Styling */
-#about-section {
- position: relative;
-  display: flex;
-  justify-content: center; /* Ubah ke center untuk posisi tengah */
-  align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Batasi lebar maksimum */
-  margin: 0 auto; /* Auto margin untuk centering horizontal */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.about-content {
-  max-width: 600px;
-  text-align: left;
-  /* Tetap rata kiri */
-  margin-right: 50px;
-  /* Tambahkan jarak lebih ke kanan */
-}
-
-/* Subtitle */
-.about-subtitle {
-  color: #16a085;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 10px;
-  margin-top: 80px;
-}
-
-/* Title Styling */
-.about-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-}
-
-/* Text Styling */
-.about-text {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.about-content .btn_selengkapnya {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background: blue;
-  color: white;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.about-content .btn_selengkapnya:hover {
-  background: rgb(0, 0, 185);
-  border: none;
-}
-
-Mission List Styling .mission-list {
-  list-style: none;
-  padding: 0;
-}
-
-.mission-list li {
-  font-size: 16px;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 25px;
-  color: #484848;
-}
-
-/* Custom Icon for List Items */
-.mission-list li:before {
-  content: "✔";
-  /* Gunakan tanda centang */
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #16a085;
-  /* Warna hijau */
-  font-size: 14px;
-}
-
-.about-image {
-  max-width: 700px;
-  margin-top: 80px;
-  margin-inline: auto;
-  border-radius: 5rem 2rem 5rem 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-  align-items: center;
-  justify-content: center;
-} 
-
-.about-image .title {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  background-color: #007bff;
-} 
- .about_image .banner__container {
-  display: grid;
-  gap: 2rem;
-  overflow: hidden;
-}
-
-.about-image img {
-  max-width: 700px;
-  margin-inline: auto;
-  margin-top: 40px;
-  border-radius: 5rem 2rem 5rem 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-
-}
 
 
-/* Animasi muncul dari bawah */
-.animate {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1.5s ease-in-out;
-}
 
-.animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-animation {
-  opacity: 0;
-  transform: translateX(-600px);
-  transition: all 1.5s ease-out;
-}
-
-/* Ketika elemen terlihat di viewport */
-.scroll-animation.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* slide-departemen */
-.slider {
-  width: 800px;
-  max-width: 100vw;
-  height: 450px;
-  margin: auto;
-  margin-top: 150px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.slider .list {
-  position: absolute;
-  width: max-content;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  transition: 1s;
-}
-
-.slider .list img {
-  width: 800px;
-  max-width: 100vw;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.slider .buttons {
-  /* position: absolute;
-  top: 45%;
-  left: 5%;
-  width: 90%;
-  display: flex;
-  justify-content: space-between; */
-}
-
-.slider .buttons button {
-  /* width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fff5;
-  color: #fff;
-  border: none;
-  font-family: monospace;
-  font-weight: bold; */
-}
-
-.slider .dots {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: #fff;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.slider .dots li {
-  list-style: none;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  margin: 10px;
-  border-radius: 20px;
-  transition: 0.5s;
-}
-
-.slider .dots li.active {
-  width: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  .slider {
-    height: 400px;
-  }
-}
 
 /* section departemen */
-.department-section {
-  padding: 80px 0;
-  background-color: transparent;
-}
-
-.department-container {
+.dept-box {
   position: relative;
-  margin-bottom: 30px;
+  border: 2px solid #5a31ff;
+  border-radius: 14px;
+  padding: 24px 12px;
+  height: 200px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.department-image {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  display: block;
-}
-
-.department-overlay {
+/* GRADIENT LAYER */
+.dept-box::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent, rgba(255, 255, 255, 1) 100%);
-  border-radius: 15px;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(191, 205, 255, 1) 0%,
+    rgba(220, 225, 252, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
 }
 
-.department-content {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  text-align: center;
+/* HOVER EFFECT */
+.dept-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(90, 49, 255, 0.2);
 }
 
-.department-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
+.dept-box:hover::after {
+  opacity: 1;
+}
+
+.dept-icon {
+  font-size: 60px;
+  color: #5a31ff;
+  margin-bottom: 10px;
+}
+
+.dept-box i,
+.dept-box p,
+.dept-box a {
+  position: relative;
+  z-index: 2;
+}
+
+.dept-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.dept-link {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #5a31ff;
 }
 
 .read-more-btn {
@@ -978,79 +704,6 @@ Mission List Styling .mission-list {
     left: 0%;
     /* Full width on very small screens */
   }
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 65px;
-  height: 65px;
-  background-color: transparent;
-  cursor: pointer;
-  justify-content: center;
-  z-index: 3;
-  align-items: center;
-  border: none;
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-#backToTop.show {
-  display: flex;
-  /* Tampilkan tombol */
-  animation: fadeInUp 0.6s ease-out forwards;
-  /* Animasi muncul dari bawah ke atas */
-  border: none;
-}
-
-#backToTop.hide {
-  animation: fadeOutDown 0.6s ease-out forwards;
-  /* Animasi hilang dari atas ke bawah */
-  border: none;
-}
-
-/* Animasi untuk kemunculan tombol (dari bawah ke atas) */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-    /* Mulai dari di bawah layar */
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    /* Berhenti di posisi awal */
-  }
-}
-
-/* Animasi untuk menghilangkan tombol (dari atas ke bawah) */
-@keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-    /* Mulai dari posisi awal */
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(100%);
-    /* Bergerak ke bawah layar */
-  }
-}
-
-#backToTop i {
-  color: rgb(0, 4, 255);
-  font-size: 50px;
-  transition: color 0.3s ease;
-}
-
-/* Efek hover pada tombol */
-#backToTop:hover i {
-  color: #00734f;
-  font-size: 50px;
-  transition: color 0.3s ease;
 }
 
 
