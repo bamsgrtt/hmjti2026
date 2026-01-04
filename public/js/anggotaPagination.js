@@ -46,15 +46,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderPagination(total) {
     pagination.innerHTML = "";
+
+    if (total <= perPage) return;
     const pages = Math.ceil(total / perPage);
+
+    // Prev Button
+    pagination.innerHTML += `
+      <button class="page-btn page-link prev${currentPage === 1 ? "disabled" : ""}">
+      &laquo; Prev
+      </button>
+    `;
+
+  
 
     for (let i = 1; i <= pages; i++) {
       pagination.innerHTML += `
-        <button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">
+        <button class="page-btn page-link ${i === currentPage ? "active" : ""}" data-page="${i}">
           ${i}
         </button>
       `;
     }
+
+     // Next Button
+    pagination.innerHTML += `
+      <button class="page-btn page-link next${currentPage === pages ? "disabled" : ""}">
+      Next &raquo;
+      </button>
+    `;
+
 
     document.querySelectorAll(".page-btn").forEach(btn => {
       btn.onclick = () => {
@@ -62,7 +81,32 @@ document.addEventListener("DOMContentLoaded", () => {
         render();
       };
     });
+
+     // Prev Event 
+  const prevBtn = pagination.querySelector(".prev");
+  if (prevBtn) {
+    prevBtn.onclick = () => {
+      if (currentPage > 1) {
+        currentPage--;
+        render();
+      }
+    };
   }
+
+  // Next Envent 
+  const nextBtn = pagination.querySelector(".next");
+  if (nextBtn) {
+    nextBtn.onclick = () => {
+      if (currentPage < pages) {
+        currentPage++;
+        render();
+      }
+    };
+  }
+  }
+
+ 
+
 
   function render() {
     const data = filteredData();

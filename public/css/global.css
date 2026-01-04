@@ -64,35 +64,6 @@ body {
   transition: border-bottom 0.1s ease, font-weight 0.1s ease;
 }
 
-.button-lg-primary {
-  width: 100px;
-  height: 50px;
-  background: linear-gradient(160deg, #597DFF, #ffffff);
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
-}
-
-.button-lg-primary:hover {
-  width: 100px;
-  height: 50px;
-  background: white;
-  color: rgb(120, 110, 255);
-  border: 2px solid rgb(125, 115, 255);
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 5px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
 
 
 
