@@ -120,7 +120,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 /* section departemen */
 .dept-box {
   position: relative;
-  border: 2px solid #5a31ff;
+  border: 1px solid #6640ff;
   border-radius: 14px;
   padding: 24px 12px;
   height: 200px;
@@ -197,6 +197,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   color: white;
   text-decoration: none;
 }
+
 
 /* Program */
 
