@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
- router.get("/berita", (req, res) => {
+ router.get("/", (req, res) => {
     const sql = `
         SELECT 
             artikel.*, 

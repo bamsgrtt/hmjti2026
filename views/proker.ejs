@@ -43,14 +43,106 @@ rel="stylesheet" />
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 hero-tagline">
-            <h1 class="fw-bold text-dark">Program Kerja <span class="span">HMJTI</span></h1>  
-            <p class="text-dark"> Jelajahi rangkaian program kerja strategis dan inovatif yang kami rancang untuk mengembangkan talenta mahasiswa, membangun kolaborasi lintas divisi, dan menciptakan dampak positif bagi komunitas Teknologi Informasi Politeknik Negeri Jember.</p>
+            <h1 class="fw-bold text-dark">Program Kerja <span class="span-hero">HMJTI</span></h1>  
+            <p class="text-light"> Jelajahi rangkaian program kerja strategis dan inovatif yang kami rancang untuk mengembangkan talenta mahasiswa, membangun kolaborasi lintas divisi, dan menciptakan dampak positif bagi komunitas Teknologi Informasi Politeknik Negeri Jember.</p>
           </div>
         </div>
       </div>
     </section>
 
    <!-- Program Kerja -->
+    <section class="container my-5">
+      <div class="row g-4">
+        <% if (kegiatan.length < 0) { %>
+          <div class="col-12" text-center>
+            <div class="text-muted">Belum ada program kerja</div>
+          </div>
+        <% } %>
+
+        <% kegiatan.forEach(item => { %>
+          <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center">
+            <div class="card  g-2 align-items-center bg-white h-100 shadow-sm position-relative">
+
+                <!-- Gambar -->
+                 <img src="/proker/gambar/<%= item.id %>" 
+                 class="card-img-top"
+                 alt="<%= item.judul %>"
+                 style="height: 200px; object-fit: cover;">
+
+              <div class="card-body d-flex flex-column">
+
+                   <!-- Judul -->
+                   <h5 class="card-title ">
+                     <%= item.judul %>
+                    </h5>
+                    
+                  <!-- Deskripsi -->
+                   <p class="card-text text-muted" style="font-size: 14px;">
+                    <%= item.deskripsi.length > 100 
+                    ? item.deskripsi.substring(0, 100) + '...' 
+                    : item.deskripsi %>
+                   </p>
+                   
+                    <% const today = new Date();
+                      today.setHours( 0, 0, 0, 0);
+
+                      const tanggalDB = new Date(item.tanggal);
+                      tanggalDB.setHours(0, 0, 0, 0);
+
+                      let status = '';
+                      let badgeClass = '';
+
+                      if (tanggalDB > today) {
+                        status = 'Belum Berjalan';
+                        badgeClass = 'bg-warning text-dark';
+                      } else if (tanggalDB.getTime() === today.getTime()) {
+                        status = 'Sedang Berjalan';
+                        badgeClass = 'bg-success';
+                      } else {
+                        status = 'Selesai';
+                        badgeClass = 'bg-secondary';
+                      }
+                      %>
+                   <!-- Status -->
+                    <span class="badge position-absolute top-0 end-0 m-2
+                     <%= badgeClass %>">
+                      <%= status %>
+                    </span>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+
+  <nav aria-label="Page navigation"> <!-- Navigasi pagination -->
+  <ul class="pagination justify-content-center mb-5"> <!-- Center + margin bawah -->
+
+    <!-- TOMBOL PREVIOUS -->
+    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>"> <!-- Disable jika halaman 1 -->
+      <a class="page-link" href="/proker?page=<%= currentPage - 1 %>">
+         &laquo; Prev
+      </a>
+    </li>
+
+    <!-- NOMOR HALAMAN -->
+    <% for (let i = 1; i <= totalPages; i++) { %> <!-- Loop total halaman -->
+      <li class="page-item <%= i === currentPage ? 'active' : '' %>"> <!-- Aktif jika halaman sekarang -->
+        <a class="page-link" href="/proker?page=<%= i %>">
+          <%= i %> <!-- Nomor halaman -->
+        </a>
+      </li>
+    <% } %>
+
+    <!-- TOMBOL NEXT -->
+    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>"> <!-- Disable jika halaman terakhir -->
+      <a class="page-link" href="/proker?page=<%= currentPage + 1 %>">
+        Next &raquo;
+      </a>
+    </li>
+
+  </ul>
+  </nav>
 
 
   <!-- footer -->

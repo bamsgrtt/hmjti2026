@@ -12,25 +12,11 @@
   overflow: hidden; */
 /* } */
 #hero {
-background: #bfcdff;
-background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
-  /* background-image: url("../image/hmj/unnamed\ qq.png");
-  background-color: antiquewhite; */
  padding: 100px 0 80px;
  max-height: 320px;  
   overflow: hidden;
 }
 
-
-
-
-.span {
-  color: #597DFF;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 72px;
-  text-shadow: #001665 1px  2px;
-}
 
 .hero-tagline p {
   font-size: 16px;
@@ -55,11 +41,9 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   width: max-content;
   min-height: 50px;
   padding: 10px 20px;
-  box-sizing: border-box;   /* 🔥 PALING PENTING */
-      /* 🔥 KUNCI VISUAL */
-
+  box-sizing: border-box;
   line-height: 1;  
-  background: linear-gradient(160deg, #597DFF, #ffffff);
+  background: linear-gradient(160deg, var(--pr-color), #ffffff);
   color: #fff;
   border: 2px solid transparent;
   font-size: 16px;
@@ -72,8 +56,8 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 /* hover */
 .button-lg-primary:hover {
   background: #fff;
-  color: rgb(120, 110, 255);
-  border-color: rgb(125, 115, 255);
+  color: var(--pr-color);
+  border-color: var(--pr-color);
 }
 
 /* ACTIVE FILTER (penting untuk pagination & UX) */

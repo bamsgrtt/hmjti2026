@@ -64,7 +64,18 @@ body {
   transition: border-bottom 0.1s ease, font-weight 0.1s ease;
 }
 
+#hero {
+background: #ffffff;
+background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
+}
 
+.span-hero {
+  color: #fff;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 72px;
+  text-shadow: #001665 1px  2px;
+}
 
 
 /* Back to Top Button */
@@ -144,6 +155,7 @@ body {
 
 
 /* Footer */
+
 #bot {
   height: 30vh;
   width: 100%;
@@ -201,6 +213,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  color: #000000;
 }
 
 #bot .sosmed .icon .canvas {
@@ -208,7 +221,8 @@ body {
   height: 30px;
   align-content: center;
   text-align: center;
-  background-color: #000000;
+  background: #000000;
+  color: #000000;
   margin: 0 5px 42px 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -222,7 +236,7 @@ body {
   -webkit-animation: zoom-in-zoom-out 0.5s ease;
   width: 30px;
   height: 30px;
-  background-color: #0c52e7;
+  background-color: var(--pr-color);
 }
 
 @keyframes zoom-in-zoom-out {
@@ -312,4 +326,85 @@ body {
   font-size: 16px;
   margin-top: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .copyr p {
+    left: 0%;
+    /* Adjust left margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .copyr p {
+    left: 0%;
+    /* Full width on very small screens */
+  }
+}
+
+.dep {
+  position: relative;
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+  .dep {
+    left: 0%;
+    /* Adjust left margin for smaller screens */
+  }
+
+  .acsent-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dep {
+    left: 0%;
+    /* Full width on very small screens */
+  }
+}
+
+
+
+#contact {
+  position: relative;
+  /* Menambahkan posisi relatif untuk menempatkan elemen pseudo */
+  background-image: url("path_to_your_image.jpg");
+  /* Ganti dengan path gambar Anda */
+  background-repeat: no-repeat;
+  /* Memastikan gambar tidak terduplikat */
+  background-position: center;
+  /* Menempatkan gambar di tengah */
+  background-size: cover;
+  /* Mengisi seluruh section */
+  height: 100vh;
+  /* Memastikan section mengisi seluruh layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Warna teks agar tetap terlihat */
+}
+
+#contact::before {
+  content: "";
+  /* Menambahkan konten kosong */
+  position: absolute;
+  /* Memposisikan elemen pseudo di atas gambar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Efek gelap (ubah nilai 0.4 untuk intensitas) */
+  z-index: 1;
+  /* Menempatkan elemen pseudo di atas gambar */
+}
+
+#contact h1,
+#contact .buttoncontact,
+#contact .icontelp {
+  z-index: 2;
+  /* Menempatkan konten seperti teks, tombol, dan gambar telepon di atas lapisan gelap */
 }

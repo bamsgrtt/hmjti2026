@@ -8,10 +8,6 @@
   overflow: hidden; */
 /* } */
 #hero {
-background: #bfcdff;
-background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
-  /* background-image: url("../image/hmj/unnamed\ qq.png");
-  background-color: antiquewhite; */
  padding: 100px 0 80px;
  max-height: 320px;  
   overflow: hidden;
@@ -32,14 +28,6 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 
 .acsent-img.scrolled {
   opacity: 1;
-}
-
-.span {
-  color: #597DFF;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 72px;
-  text-shadow: #001665 1px  2px;
 }
 
 .hero-tagline p {

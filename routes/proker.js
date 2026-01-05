@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../db');
 
 // Proker Route
-router.get("/proker", (req, res) => {
+router.get("/", (req, res) => {
    const limit = 8;
    const page = parseInt(req.query.page) || 1;
    const offset = (page - 1) * limit;
@@ -35,7 +35,7 @@ router.get("/proker", (req, res) => {
 
             res.render('proker', {
                 title: 'PROGRAM KERJA',
-                kegiatan,
+                kegiatan: dataResult,
                 currentPage: page,
                 totalPages
             });
