@@ -9,8 +9,8 @@
   overflow: hidden; */
 /* } */
 #hero {
-background: #bfcdff;
-background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
+background: #ffffff;
+background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
   /* background-image: url("../image/hmj/unnamed\ qq.png");
   background-color: antiquewhite; */
   height: 80vh;
@@ -36,7 +36,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 }
 
 .hero-tagline h1 {
-  color: #597DFF;
+  color: #fff;
   font-weight: 700;
   font-size: 50px;
   line-height: 72px;
@@ -55,8 +55,9 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 .button-lg-primary {
   width: 100px;
   height: 50px;
-  background: linear-gradient(160deg, #597DFF, #ffffff);
-  color: #fff;
+  background: #fff;
+  color: #000000;
+  border: 2px solid rgb(17, 0, 255);
   border: none;
   font-size: 16px;
   font-weight: 700;
@@ -67,8 +68,8 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   width: 100px;
   height: 50px;
   background: white;
-  color: rgb(120, 110, 255);
-  border: 2px solid rgb(125, 115, 255);
+  background: var(--pr-color);
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   border-radius: 25px;
@@ -120,13 +121,13 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 /* section departemen */
 .dept-box {
   position: relative;
-  border: 1px solid #6640ff;
+  border: 1px solid #003c8b;
   border-radius: 14px;
   padding: 24px 12px;
   height: 200px;
   background: #fff;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;;
 }
 
 /* GRADIENT LAYER */
@@ -134,12 +135,8 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(191, 205, 255, 1) 0%,
-    rgba(220, 225, 252, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: #ffffff;
+background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -149,6 +146,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 .dept-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(90, 49, 255, 0.2);
+  color: #fff;
 }
 
 .dept-box:hover::after {
@@ -157,8 +155,12 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 
 .dept-icon {
   font-size: 60px;
-  color: #5a31ff;
+  color: var(--pr-color);
   margin-bottom: 10px;
+}
+
+.dept-box:hover .dept-icon {
+  color: #fff;
 }
 
 .dept-box i,
