@@ -19,6 +19,7 @@
   "homepage": "https://github.com/doniwah/Web_hmjti2025#readme",
   "description": "npm init -y",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "mysql2": "^3.16.0",
