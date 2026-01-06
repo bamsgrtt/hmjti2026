@@ -13,14 +13,30 @@ background: #ffffff;
 background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
   /* background-image: url("../image/hmj/unnamed\ qq.png");
   background-color: antiquewhite; */
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 #hero p {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 17px;
+}
+
+.container-hero {
+  background: rgb(17, 157, 223);
+background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border: 1px solid rgba(215, 233, 255, 0.22);
+  width: 1200px;
+  padding: 20px 40px;
+  height: 80vh;
+  max-width: 95%;
+  box-sizing: border-box;
 }
 
 .acsent-img {
@@ -36,42 +52,35 @@ background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
 }
 
 
-
+.span-hero {
+  color: #fff;
+  text-shadow: #4f4f4f -3px 2px 2px ;
+}
 
 
 .button-lg-primary {
-  width: 100px;
+  display: inline-block;
+  width: 120px;               /* Lebih fleksibel */
   height: 50px;
-  background: #fff;
-  color: #000000;
-  border: 2px solid rgb(17, 0, 255);
-  border: none;
+  background-color: #fff;     /* Default putih */
+  color: #000;                /* Teks hitam */
+  border: 2px solid #1100ff;  /* Border default */
+  border-radius: 25px;        /* Rounded */
   font-size: 16px;
   font-weight: 700;
-  border-radius: 25px;
+  text-align: center;         /* Vertikal center teks */
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: -35px;
 }
 
 .button-lg-primary:hover {
-  width: 100px;
-  height: 50px;
-  background: white;
-  background: var(--pr-color);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 5px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
+  background-color: var(--pr-color, #597DFF); /* Warna hover */
+  color: #fff;                               /* Teks putih saat hover */
+  border-color: var(--pr-color, #597DFF);    /* Border mengikuti warna */
+  transform: translateY(-2px);               /* Sedikit efek naik */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);/* Shadow halus */
 }
-
-
-
 
 /* FOTO BAWAH VISI DAN MISI */
 .item {

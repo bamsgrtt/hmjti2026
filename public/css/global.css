@@ -7,12 +7,11 @@ body {
   background: #ffffff;
 }
 
-/* Navbar */
-.navbar {
+
+.navbar {  
    z-index: 999;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  padding: 20px 0;
-  /*Ukuranpaddingawal*/
+  
   -webkit-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   -moz-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   -ms-transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -20,11 +19,20 @@ body {
 }
 
 .navbar-scrolled {
-  background-color: #ffffff !important;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   /* Opsional */
-  padding: 10px 0;
-  /* Ukuran padding setelah scroll */
+  z-index: 999;
+  padding: 10px;
+  width: auto; /* biar mengikuti konten */
+  max-width: 1420px ; /* optional, biar nggak terlalu lebar */
+  margin: 10px auto; 
+  left: 0; 
+  right: 0;
+  background: rgba(215, 233, 255, 0.70);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border: 1px solid rgba(215, 233, 255, 0.22);
 }
 
 .navbar-brand {
@@ -50,6 +58,10 @@ body {
   font-size: 16px;
 }
 
+.navbar-nav {
+  align-items: center;
+}
+
 .nav-item.active .nav-link {
   border-bottom: 2px solid #000000;
   /* Warna dan ketebalan garis untuk link aktif */
@@ -64,9 +76,15 @@ body {
   transition: border-bottom 0.1s ease, font-weight 0.1s ease;
 }
 
+
+
+
 #hero {
-background: #ffffff;
-background: linear-gradient(135deg, #cbe2ff, #b6caff);
+background: rgb(8,146,208);
+background: linear-gradient(159deg, rgb(182, 232, 255) 0%, oklch(55.535% 0.20725 268.106) 100%);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border: 1px solid rgba(232, 242, 255, 0.22);
 }
 
 .hero-tagline h1 {
@@ -79,12 +97,15 @@ background: linear-gradient(135deg, #cbe2ff, #b6caff);
 
 .hero-tagline p {
   font-size: 16px;
-  color: #333;
+  color: #333333;
   margin-bottom: 60px;
   margin-top: 20px;
   line-height: 30px;
   width: 85%;
 }
+
+
+
 
 
 /* Back to Top Button */

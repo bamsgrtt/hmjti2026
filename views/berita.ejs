@@ -43,276 +43,74 @@
     <i class="bi bi-arrow-up-square-fill"></i>
   </button>
 
-    <%- include('partials/navbar') %>
+   <%- include('partials/navbar') %>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 hero-tagline">
+        <h1>Berita & Artikel HMJTI</h1>  
+        <p>Artikel, tips, dan cerita menarik dari komunitas HMIF UNEJ. Temukan berbagai insight, pengalaman, dan informasi terkini seputar dunia informatika dan kegiatan himpunan</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<!-- Filter Kategori -->
+<section class="filter-kategori my-4" id="filter-kategori">
+  <div class="container text-center">
+    <nav class="d-inline-block">
+      <div id="pilihan" class="d-flex justify-content-center flex-wrap gap-2">
+        <span class="filter-item btn btn-sm button-lg-primary " id="klik1">Semua</span>
+        <span class="filter-item btn btn-sm button-lg-primary " id="klik2">Seminar</span>
+        <span class="filter-item btn btn-sm button-lg-primary " id="klik3">Lomba</span>
+        <span class="filter-item btn btn-sm button-lg-primary " id="klik4">Beasiswa</span>
+      </div>
+    </nav>
+  </div>
+</section>
 
-     <!-- Hero Section -->
-    <section id="hero">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 hero-tagline">
-            <h1>Berita & Artikel HMJTI</h1>  
-            <p> Artikel, tips, dan cerita menarik dari komunitas HMIF UNEJ. Temukan berbagai insight, pengalaman, dan informasi terkini seputar dunia informatika dan kegiatan himpunan</p>
+<!-- Berita / Cards -->
+<section class="berita">
+  <div class="container">
+    <div class="row" id="con">
+      <% datas.forEach(data => { %>
+        <div class="col-md-6 col-lg-4 mb-4 cardarea">
+          <div class="card h-100 shadow-sm border-1">
+            <div class="widget p-2 d-flex justify-content-between small text-muted">
+              <span><i class="bi bi-person-fill"></i> <%= data.author %></span>
+              <span><i class="bi bi-calendar-fill"></i> <%= formatDate(data.date) %></span>
+              <span><i class="bi bi-tags-fill"></i> <%= data.nama_kategori %></span>
+            </div>
+            <img src="<%= data.base64Image %>" class="card-img-top" alt="fotoartikel">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><%= data.title %></h5>
+              <p class="card-text text-truncate"><%= data.content %></p>
+              <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      <% }) %>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="pagination d-flex justify-content-center align-items-center mt-4">
+      <button id="prevPage" class="btn btn-primary me-3">Previous</button>
+      <span id="pageInfo" class="fw-bold">Page 1 of 1</span>
+      <button id="nextPage" class="btn btn-primary ms-3">Next</button>
+    </div>
+  </div>
+</section>
 
-    <section class="maintitle">
-        <div class="container d-flex flex-column mt-4">
-            <div class="judul">
-                <h1>ARTIKEL</h1>
-            </div>
-            <div class="barisabu"></div>
-            <div class="barisbiru"></div>
-        </div>
-    </section>
-    <section class="filter-kategori" id="filter-kategori">
-        <div class="container h-100 d-flex justify-content-center mb-2 mt-0">
-            <nav class="filter-nav">
-                <div class="container-fluid" id="pilihan">
-                    <span class="filter-item mb-0" id="klik1">Semua</span>
-                    <span class="filter-item mb-0" id="klik2">Seminar</span>
-                    <span class="filter-item mb-0" id="klik3">Lomba</span>
-                    <span class="filter-item mb-0" id="klik4">Beasiswa</span>
-                </div>
-            </nav>
-        </div>
-    </section>
-    <section class="berita">
-        <div class="container-fluid" id="con">
-            <% for (const data of datas) {%>
-                <div class="cardarea">
-                    <div class="card align-items-center">
-                        <div class="widget">
-                            <ul>
-                                <li>
-                                    <span>
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-far-user-circle"
-                                            viewBox="0 0 496 512">
-                                            <path
-                                                d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"
-                                                fill="#0000FF"></path>
-                                        </svg>
-                                    </span>
-                                    <span>
-                                        <%= data.author %>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-calendar tanggal"
-                                            viewBox="0 0 448 512">
-                                            <path
-                                                d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"
-                                                fill="#0000FF"></path>
-                                        </svg>
-                                    </span>
-                                    <span>
-                                        <time>
-                                            <%= formatDate(data.date) %>
-                                        </time>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-tags"
-                                            viewBox="0 0 640 512">
-                                            <path
-                                                d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"
-                                                fill="#0000FF"></path>
-                                        </svg>
-                                    </span>
-                                    <span>
-                                        <%= data.nama_kategori %>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="foto">
-                            <img src="<%= data.base64Image %>" alt="fotoartikel">
-                        </div>
-                        <div class="description">
-                            <h4>
-                                <%= data.title %>
-                            </h4>
-                            <p>
-                                <%= data.content %>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <%}%>
-        </div>
-        <div class="pagination" id="pagination">
-            <button id="prevPage" class="pagination-btn">Previous</button>
-            <span id="pageInfo" class="pagination-info">Page 1 of 1</span>
-            <button id="nextPage" class="pagination-btn">Next</button>
-        </div>
-    </section>
+<%- include('partials/footer') %>
 
-    <!-- footer -->
-    <%- include('partials/footer') %>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script>
-    //klik navbar
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all elements
-        const nav = document.querySelectorAll('[id^="klik"]');
-        const cardAreas = document.querySelectorAll('.cardarea');
-        const color = '#0000FF';
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/backToTop.js"></script>
+<script src="/js/script.js"></script>
 
-        let activespan = null;
-
-        nav.forEach(span => {
-            span.addEventListener("click", function () {
-                // Reset previous active state
-                if (activespan && activespan !== this) {
-                    activespan.style.color = "#000000";
-                }
-
-                // Set current span as active
-                activespan = this;
-                this.style.color = color;
-
-                // Get selected category text
-                const selectedCategory = this.textContent.trim();
-
-                // Filter card areas
-                cardAreas.forEach(card => {
-                    const cardCategory = card.querySelector('.widget ul li:last-child span:last-child').textContent.trim();
-
-                    if (selectedCategory === 'Semua' || cardCategory === selectedCategory) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-
-    // pagination
-    document.addEventListener('DOMContentLoaded', () => {
-        // Pagination settings
-        const itemsPerPage = 6;
-        const cardAreas = document.querySelectorAll('.cardarea');
-        const prevPageBtn = document.getElementById('prevPage');
-        const nextPageBtn = document.getElementById('nextPage');
-        const pageInfo = document.getElementById('pageInfo');
-
-        // Category navigation elements
-        const nav = document.querySelectorAll('[id^="klik"]');
-        const color = '#0000FF';
-        let activespan = null;
-
-        // Pagination and filtering function
-        function filterAndPaginateCards(category = 'Semua') {
-            // Filter cards by category
-            const visibleCards = Array.from(cardAreas).filter(card => {
-                const cardCategory = card.querySelector('.widget ul li:last-child span:last-child').textContent.trim();
-                return category === 'Semua' || cardCategory === category;
-            });
-
-            // Pagination calculations
-            const totalCards = visibleCards.length;
-            const totalPages = Math.ceil(totalCards / itemsPerPage);
-            let currentPage = 1;
-
-            // Function to show cards for current page
-            function showCurrentPageCards() {
-                // Hide all cards first
-                cardAreas.forEach(card => card.style.display = 'none');
-
-                // Calculate start and end indices
-                const startIndex = (currentPage - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-
-                // Show cards for current page
-                visibleCards.slice(startIndex, endIndex).forEach(card => card.style.display = 'block');
-
-                // Update page info
-                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-
-                // Enable/disable pagination buttons
-                prevPageBtn.disabled = currentPage === 1;
-                nextPageBtn.disabled = currentPage === totalPages;
-            }
-
-            // Previous page button
-            prevPageBtn.onclick = () => {
-                if (currentPage > 1) {
-                    currentPage--;
-                    showCurrentPageCards();
-                }
-            };
-
-            // Next page button
-            nextPageBtn.onclick = () => {
-                if (currentPage < totalPages) {
-                    currentPage++;
-                    showCurrentPageCards();
-                }
-            };
-
-            // Initial page display
-            showCurrentPageCards();
-
-            // Category navigation
-            nav.forEach(span => {
-                span.addEventListener("click", function () {
-                    // Reset previous active state
-                    if (activespan && activespan !== this) {
-                        activespan.style.color = "#000000";
-                    }
-
-                    // Set current span as active
-                    activespan = this;
-                    this.style.color = color;
-
-                    // Get selected category and filter
-                    const selectedCategory = this.textContent.trim();
-
-                    // Refilter and reset to first page
-                    filterAndPaginateCards(selectedCategory);
-                });
-            });
-        }
-
-        // Initial pagination
-        filterAndPaginateCards();
-    });
-
-    // active nav
-    const nav = document.querySelectorAll('[id^="klik"]');
-    const color = '#0000FF';
-
-    let activespan = null;
-    nav.forEach(span => {
-        span.addEventListener("click", function () {
-            if (activespan && activespan !== this) {
-                activespan.style.color = "#000000";
-            }
-
-            activespan = this;
-
-            this.style.color = color;
-        });
-    })
-</script>
-     <script src="/js/animation_slide.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="/js/scrollImage.js"></script>
-    <script src="/js/backToTop.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-        AOS.init({
-          once: true,
-        });
-      </script>
 </body>
 
 

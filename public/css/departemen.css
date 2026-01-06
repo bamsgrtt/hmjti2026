@@ -22,42 +22,12 @@
 .filter-divisi {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
+   overflow-x: auto;        
+   -webkit-overflow-scrolling: touch;
 }
 
-.button-lg-primary {
-  display: inline-flex;       /* INI KUNCI UTAMA */
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  min-height: 50px;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  line-height: 1;  
-  background: linear-gradient(160deg, var(--pr-color), #ffffff);
-  color: #fff;
-  border: 2px solid transparent;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 15px;
-  transition: all 0.3s ease;
- 
-}
-
-/* hover */
-.button-lg-primary:hover {
-  background: #fff;
-  color: var(--pr-color);
-  border-color: var(--pr-color);
-}
-
-/* ACTIVE FILTER (penting untuk pagination & UX) */
-.button-lg-primary.active {
-  background: rgb(125, 115, 255);
-  color: #fff;
-  border-color: rgb(125, 115, 255);
-}
 
 
 
@@ -110,7 +80,32 @@
     }
 
 
+.button-lg-primary {
+  display: inline-block;
+  min-width: 120px;
+  height: 40px;
+  background-color: #fff;       /* default putih */
+  color: #1100ff;               /* teks biru */
+  border: 2px solid #1100ff;    /* border jelas */
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0;                /* hilangkan margin negatif */
+  z-index: 10;                  /* pastikan di atas elemen lain */
+  position: relative;           /* supaya z-index berlaku */
+}
 
+.button-lg-primary:hover,
+.button-lg-primary.active {
+  background-color: #597DFF;
+  color: #fff;
+  border-color: #597DFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 .card {

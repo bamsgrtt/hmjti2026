@@ -1,249 +1,109 @@
-/* Hero Section */
-
-/* #hero { */
-/* background: linear-gradient(160deg, var(--pr-color), #000000); */
-/* background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(0, 95, 177) 60%), url("image/kontak_img.png") bottom/contain no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  overflow: hidden; */
-/* } */
+/* ==========================
+   Hero Section
+========================== */
 #hero {
- padding: 100px 0 80px;
- max-height: 360px;  
+  padding: 100px 0 80px;
   overflow: hidden;
+  max-height: 320px;
 }
 
-
-
-.acsent-img {
-  margin-top: 505px;
-  width: 32%;
-  height: 32%;
-  margin-left: 380px;
-  opacity: 0.5;
+#hero h1 {
+  font-weight: bold;
 }
 
-.acsent-img.scrolled {
-  opacity: 1;
+#hero p {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 17px;
+  margin-top: 15px;
 }
 
 .button-lg-primary {
-  width: 100px;
-  height: 50px;
-  background: linear-gradient(160deg, #597DFF, #ffffff);
+  display: inline-block;
+  min-width: 120px;
+  height: 40px;
+  background-color: #fff;       /* default putih */
+  color: #1100ff;               /* teks biru */
+  border: 2px solid #1100ff;    /* border jelas */
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0;                /* hilangkan margin negatif */
+  z-index: 10;                  /* pastikan di atas elemen lain */
+  position: relative;           /* supaya z-index berlaku */
+}
+
+.button-lg-primary:hover,
+.button-lg-primary.active {
+  background-color: #597DFF;
   color: #fff;
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
+  border-color: #597DFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.button-lg-primary:hover {
-  width: 100px;
-  height: 50px;
-  background: white;
-  color: rgb(120, 110, 255);
-  border: 2px solid rgb(125, 115, 255);
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 5px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
-
-
-.filter-nav span {
-    margin: 0px 10px;
-    cursor: pointer;
-    border: 2px solid #5277ff;
-    background: var(--pr-color);
-    color: #ffffff;
-    padding: 8px 15px;
-    border-radius: 16px;
-}
-
-.filter-nav span:hover, .filter-nav span.active {
-    background: #ffffff;
-    color: var(--pr-color);
-}
-
-.maintitle {
-    height: 15vh;
-    width: 100%;
-}
-
-.maintitle .container {
-    justify-content: center;
-    align-items: center;
-}
-
-.maintitle .container .judul {
-    color: rgb(0, 0, 0);
-    /* font-family: ; */
-}
-
-.maintitle .container .barisabu {
-    width: 150px;
-    height: 1px;
-    background-color: rgb(128, 128, 128);
-    position: absolute;
-    margin-top: 70px;
-}
-
-.maintitle .container .barisbiru {
-    width: 80px;
-    height: 3px;
-    background-color: rgb(0, 4, 247);
-    position: absolute;
-    margin-top: 70px;
-}
-
-.filter-nav {
-    align-items: center;
-}
-#filter-kategori #pilihan span {
-    margin: 0px 20px;
-    cursor: pointer;
-}
-
-.berita .container-fluid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.cardarea {
-    margin: 0 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
+/* Card Berita */
 .cardarea .card {
-    width: 25rem;
-    height: 30rem;
-    border: 1px solid rgb(134, 134, 134);
-    cursor: pointer;
-    transition: all 0.4s;
-    border-radius: 15px;
-    margin-top: 10px;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+  border: 2px solid var(--pr-color, #1100ff); /* pinggir jelas */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .cardarea .card:hover {
-    border: 1px solid blue;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .cardarea .card .widget {
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #333;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0,0,0,0.03);
 }
 
-.cardarea .card .widget ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0px 10px;
-    height: 100%;
+.cardarea .card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 
-.cardarea .card .widget ul li {
-    margin-right: 10px;
-    align-content: center;
+.cardarea .card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.cardarea .card .widget ul li svg {
-    width: 15px;
+.cardarea .card-body h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.cardarea .card .widget ul li .tanggal {
-    width: 13px;
+.cardarea .card-body p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  margin-bottom: auto;
 }
 
-.cardarea .card .foto {
-    height: 60%;
-    width: 95%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-.cardarea .card .foto img {
-    margin-top: 5px;
-    height: 100%;
-    border-radius: 20px;
-    width: 100%;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-.cardarea .card .description {
-    padding: 0px 10px;
-    height: 200px;
-    width: 100%;
-}
-
-.cardarea .card .description h4 {
-    margin-top: 15px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.cardarea .card .description p {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.pagination-info {
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.pagination-btn {
-    background-color: white;
-    color: blue;
-    border: none;
-    padding: 8px 16px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.pagination-btn:disabled {
-    color: #cccccc;
+.cardarea .card-body a.btn {
+  margin-top: 1rem;
+  align-self: start;
+  font-size: 0.85rem;
+  border-radius: 25px;
 }
