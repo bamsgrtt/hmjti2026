@@ -123,7 +123,7 @@ background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
   position: absolute;
   inset: 0;
   background: #ffffff;
-background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
+  background: linear-gradient(135deg, #eff6ff, #d0ddff);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -132,7 +132,7 @@ background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
 /* HOVER EFFECT */
 .dept-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(90, 49, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(175, 155, 255, 0.2);
   color: #fff;
 }
 
