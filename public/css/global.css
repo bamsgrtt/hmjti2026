@@ -69,6 +69,24 @@ background: #ffffff;
 background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
 }
 
+.hero-tagline h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 60px;
+  text-shadow: #001665 1px  2px;
+}
+
+.hero-tagline p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 85%;
+}
+
+
 .span-hero {
   color: #fff;
   font-weight: 700;

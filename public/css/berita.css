@@ -13,10 +13,7 @@
   overflow: hidden;
 }
 
-#hero p {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 17px;
-}
+
 
 .acsent-img {
   margin-top: 505px;
@@ -28,16 +25,6 @@
 
 .acsent-img.scrolled {
   opacity: 1;
-}
-
-
-.hero-tagline p {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 60px;
-  margin-top: 20px;
-  line-height: 30px;
-  width: 85%;
 }
 
 .button-lg-primary {

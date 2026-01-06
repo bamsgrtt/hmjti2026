@@ -34,15 +34,6 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
   opacity: 1;
 }
 
-.hero-tagline p {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 60px;
-  margin-top: 20px;
-  line-height: 30px;
-  width: 85%;
-}
-
 .button-lg-primary {
   width: 100px;
   height: 50px;
