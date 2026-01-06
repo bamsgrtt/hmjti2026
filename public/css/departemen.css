@@ -18,16 +18,16 @@
 }
 
 
-
-.filter-divisi {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 12px;
-   overflow-x: auto;        
-   -webkit-overflow-scrolling: touch;
+.d-flex.overflow-auto {
+  scroll-padding-left: 16px; /* jarak kiri saat scroll */
+  scroll-padding-right: 16px; /* jarak kanan */
 }
 
+@media (min-width: 992px) { /* desktop */
+  .d-flex.overflow-auto {
+    justify-content: center; /* center di desktop */
+  }
+}
 
 
 
@@ -111,9 +111,10 @@
 .card {
     background-color: rgb(255, 255, 255); /* Latar belakang putih */
     border-radius: 20px;
-    width: 400px;
     min-height: 420px;
+    max-width: 400px;
     height: auto;
+    width: 100%;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease; /* Menambahkan transisi */
@@ -121,7 +122,8 @@
 
 .card:hover {
     transform: translateY(-10px); /* Efek zoom-in */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgb(221, 222, 255) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 1px solid #bdcbff;
 }
 
 .card-img-wrapper {

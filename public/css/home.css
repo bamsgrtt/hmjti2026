@@ -13,16 +13,12 @@ background: #ffffff;
 background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
   /* background-image: url("../image/hmj/unnamed\ qq.png");
   background-color: antiquewhite; */
-  height: 70vh;
+  min-height: 70vh;
   width: 100%;
   overflow: hidden;
   padding: 80px 0;
 }
 
-#hero p {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 17px;
-}
 
 .container-hero {
   background: rgb(17, 157, 223);
@@ -34,21 +30,15 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   border: 1px solid rgba(215, 233, 255, 0.22);
   width: 1200px;
   padding: 20px 40px;
-  height: 80vh;
   max-width: 95%;
   box-sizing: border-box;
 }
 
-.acsent-img {
-  margin-top: 505px;
-  width: 32%;
-  height: 32%;
-  margin-left: 380px;
-  opacity: 0.5;
-}
-
-.acsent-img.scrolled {
-  opacity: 1;
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 
@@ -56,6 +46,30 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   color: #fff;
   text-shadow: #4f4f4f -3px 2px 2px ;
 }
+
+@media (min-width: 768px) {
+  .shadow-shape {
+    width: 120%;           /* memperbesar gambar */
+    max-width: 400px;      /* batas maksimal supaya tidak terlalu besar */
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 50%;    /* lingkaran, bisa dihapus kalau bentuk bebas PNG */
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+    perspective: 1000px;
+    margin: 0;
+  }
+  
+  /* Efek hover opsional */
+  .shadow-shape:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
+  }
+
+}
+/* Shadow mengikuti bentuk gambar */
+
 
 
 .button-lg-primary {
@@ -71,7 +85,6 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   text-align: center;         /* Vertikal center teks */
   cursor: pointer;
   transition: all 0.4s ease;
-  margin-top: -35px;
 }
 
 .button-lg-primary:hover {
@@ -116,33 +129,24 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
 
 /* section departemen */
 .dept-box {
-  position: relative;
-  border: 1px solid #003c8b;
-  border-radius: 14px;
-  padding: 24px 12px;
-  height: 200px;
-  background: #fff;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;;
+   background-color: rgb(255, 255, 255); /* Latar belakang putih */
+    border-radius: 20px;
+    min-height: 70vh;
+    max-width: 400px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-/* GRADIENT LAYER */
-.dept-box::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #ffffff;
-  background: linear-gradient(135deg, #eff6ff, #d0ddff);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
+
 
 /* HOVER EFFECT */
 .dept-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(175, 155, 255, 0.2);
-  color: #fff;
+  transform: translateY(-10px); /* Efek zoom-in */
+    box-shadow: rgb(221, 222, 255) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 1px solid #bdcbff;
 }
 
 .dept-box:hover::after {
@@ -150,7 +154,7 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
 }
 
 .dept-icon {
-  font-size: 60px;
+  font-size: 40px;
   color: var(--pr-color);
   margin-bottom: 10px;
 }
@@ -196,7 +200,13 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   text-decoration: none;
 }
 
-
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 /* Program */
 
 .wrapper {
