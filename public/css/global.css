@@ -66,33 +66,24 @@ body {
 
 #hero {
 background: #ffffff;
-background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
+background: linear-gradient(135deg, #cbe2ff, #b6caff);
 }
 
 .hero-tagline h1 {
-  color: #fff;
-  font-weight: 700;
+  color: #000000;
+  font-weight: bold;
   font-size: 45px;
   line-height: 60px;
-  text-shadow: #001665 1px  2px;
+  text-shadow: #b5b5b5 1px 1px;
 }
 
 .hero-tagline p {
   font-size: 16px;
-  color: #ffffff;
+  color: #333;
   margin-bottom: 60px;
   margin-top: 20px;
   line-height: 30px;
   width: 85%;
-}
-
-
-.span-hero {
-  color: #fff;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 72px;
-  text-shadow: #001665 1px  2px;
 }
 
 
@@ -174,255 +165,170 @@ background: linear-gradient(to bottom, #ffffff 0%, #3e91ff 50%, #003c8b 100%);
 
 /* Footer */
 
-#bot {
-  height: 30vh;
-  width: 100%;
+footer {
+
+  /* background: linear-gradient(135deg, #328bff, #b6caff); */
+  padding: 40px 20px 20px;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
 }
 
-#bot p {
-  font-weight: 600;
-  font-family: sans-serif;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
-#bot .main {
-  justify-content: space-around;
+.footer-section {
+  padding: 0 10px;
 }
 
-#bot .quicklinks {
-  width: 375px;
-  height: 100%;
-  /* background-color: green; */
-  justify-items: center;
-  align-content: center;
+.brand-section {
+  padding-right: 20px;
+}
+
+.logo-container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: right;
-}
-
-#bot .quicklinks h4 {
-  color: #000000;
-}
-
-#bot .quicklinks a {
-  text-decoration: none;
-  color: #444444;
-}
-
-#bot .quicklinks a:hover {
-  color: blue;
-}
-
-#bot .sosmed {
-  width: 370px;
-  height: 100%;
-  /* background-color: yellow; */
-  justify-items: center;
-  align-content: center;
-}
-
-#bot .sosmed h4 {
-  color: #000000;
-  /* margin-bottom: px; */
-}
-
-#bot .sosmed .icon {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: #000000;
-}
-
-#bot .sosmed .icon .canvas {
-  width: 30px;
-  height: 30px;
-  align-content: center;
-  text-align: center;
-  background: #000000;
-  color: #000000;
-  margin: 0 5px 42px 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-#bot .sosmed .icon .canvas:hover {
-  animation: zoom-in-zoom-out 0.5s ease;
-  -webkit-animation: zoom-in-zoom-out 0.5s ease;
-  width: 30px;
-  height: 30px;
-  background-color: var(--pr-color);
-}
-
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-  }
-}
-
-#bot .contactinfo {
-  width: 370px;
-  height: 100%;
-  justify-items: center;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#bot .contactinfo h4 {
-  color: #000000;
-}
-
-#bot .contactinfo p {
-  margin: 0;
-  color: #444444;
-  font-family: "Lato", "Arial", sans-serif;
-}
-
-#bot .contactinfo svg {
-  margin: 0 8px 3px 0;
-}
-
-.acsent-img {
-  /* background-color: #045e9b ; */
-  width: 1000px;
-  /* Sesuaikan ukuran gambar */
-  height: 450px;
-  /* position: relative; */
-  top: -140px;
-  /* Naikkan lebih ke atas */
-  left: -275px;
-  /* Geser lebih ke kiri */
-  opacity: 0;
-  /* Gambar disembunyikan saat awal */
-  transform: scale(0.5);
-  /* Mulai dari ukuran kecil */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  /* Animasi transisi */
-}
-
-.acsent-img.visible {
-  opacity: 1;
-  /* Tampilkan gambar */
-  transform: scale(1);
-  /* Uk uran penuh */
-}
-
-.copyright .copyr {
-  height: 100px;
-  border-top: 1px solid #444444;
-  text-align: center;
-}
-
-.copyright .copyr p {
-  color: #000000;
-  font-size: 16px;
-  margin-top: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-@media (max-width: 768px) {
-  .copyr p {
-    left: 0%;
-    /* Adjust left margin for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .copyr p {
-    left: 0%;
-    /* Full width on very small screens */
-  }
-}
-
-.dep {
-  position: relative;
-  left: 50%;
-}
-
-@media (max-width: 768px) {
-  .dep {
-    left: 0%;
-    /* Adjust left margin for smaller screens */
-  }
-
-  .acsent-img {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .dep {
-    left: 0%;
-    /* Full width on very small screens */
-  }
-}
-
-
-
-#contact {
-  position: relative;
-  /* Menambahkan posisi relatif untuk menempatkan elemen pseudo */
-  background-image: url("path_to_your_image.jpg");
-  /* Ganti dengan path gambar Anda */
-  background-repeat: no-repeat;
-  /* Memastikan gambar tidak terduplikat */
-  background-position: center;
-  /* Menempatkan gambar di tengah */
-  background-size: cover;
-  /* Mengisi seluruh section */
-  height: 100vh;
-  /* Memastikan section mengisi seluruh layar */
-  display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
-  /* Warna teks agar tetap terlihat */
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
-#contact::before {
-  content: "";
-  /* Menambahkan konten kosong */
-  position: absolute;
-  /* Memposisikan elemen pseudo di atas gambar */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* Efek gelap (ubah nilai 0.4 untuk intensitas) */
-  z-index: 1;
-  /* Menempatkan elemen pseudo di atas gambar */
+.logo {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-#contact h1,
-#contact .buttoncontact,
-#contact .icontelp {
-  z-index: 2;
-  /* Menempatkan konten seperti teks, tombol, dan gambar telepon di atas lapisan gelap */
+.organization-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.address {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a,
+.contact-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.footer-links a:hover,
+.contact-link:hover {
+  color: #328bff;
+  transform: translateX(5px);
+}
+
+.copyright {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    gap: 20px;
+  }
+
+  .footer-section {
+    padding: 0;
+    text-align: center; /* Center content */
+  }
+
+  .brand-section {
+    padding-right: 0;
+  }
+
+  .logo-container {
+    justify-content: center; /* Center logo and name */
+  }
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .contact-section .footer-links,
+  .social-media-section .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 0.8rem;
+  }
+
+  /* Ensure all sections are visible */
+  .navigation-section,
+  .contact-section,
+  .social-media-section {
+    display: block;
+  }
+}
+
+/* Additional mobile-specific adjustments */
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 30px 15px 15px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .organization-name {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .address {
+    text-align: center;
+  }
 }
