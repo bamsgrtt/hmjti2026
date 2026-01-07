@@ -78,7 +78,7 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   height: 50px;
   background-color: #fff;     /* Default putih */
   color: #000;                /* Teks hitam */
-  border: 2px solid #1100ff;  /* Border default */
+  border: 2px solid #0c52e7;  /* Border default */
   border-radius: 25px;        /* Rounded */
   font-size: 16px;
   font-weight: 700;
@@ -139,13 +139,21 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    box-shadow: rgb(209, 209, 209) 0px 10px 36px 0px, rgba(85, 85, 85, 0.06) 0px 0px 0px 1px;
-    border: 1px solid #bdcbff;
+    box-shadow: rgb(209, 209, 209) 0px 10px 36px 0px, rgba(214, 214, 214, 0.06) 0px 0px 0px 1px;
+    color: #363636;
+    
 }
 
-.dept-box .bi-journal-check, .dept-box ul li {
+.dept-box i, .dept-box ul li {
   margin-left: 20px;
-  font-size: 14px;
+  font-size: 15px;
+}
+
+.dept-box ul li::marker {
+  color: #1100ff;
+}
+.dept-box h5 {
+  font-weight: bold;
 }
 
 .dept-icon {
@@ -164,6 +172,15 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   position: relative;
   z-index: 2;
 }
+
+.dept-box a.btn {
+  transition: transform 0.3s ease;
+}
+
+.dept-box a.btn:hover {
+  transform: translateX(8px); /* geser 5px ke kanan */
+}
+
 
 .dept-title {
   font-weight: 600;
