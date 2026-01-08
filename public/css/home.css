@@ -153,11 +153,16 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   color: #a3dfff;
 }
 
+.bi.bi-arrow-right {
+  color: #1100ff;
+}
 .dept-box ul li::marker{
   color: #31b7ff;
 }
 .dept-box h5 {
   font-weight: bold;
+  color: #fff;
+  z-index: 20;
 }
 
 .dept-icon {
@@ -236,7 +241,7 @@ background: linear-gradient(159deg, rgb(231, 247, 255) 0%, rgb(172, 188, 255) 10
   height: 250px;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.35s ease;
+  transition: transform 0.45s ease;
 
 }
 
