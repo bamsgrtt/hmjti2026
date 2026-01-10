@@ -2,27 +2,31 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-// Proker Route
+// Halaman list proker
 router.get("/", (req, res) => {
    const limit = 8;
    const page = parseInt(req.query.page) || 1;
    const offset = (page - 1) * limit;
 
    const dataQuery = `
-        SELECT 
-            id, 
-            judul,
-            deskripsi,
-            tanggal,
-            tahun
-       FROM kegiatan
-       ORDER BY tanggal DESC 
-       LIMIT ? OFFSET ?
-   `;
+SELECT 
+    k.id, 
+    k.judul,
+    k.deskripsi,
+    k.tanggal,
+    k.tahun,
+    (
+      SELECT file_url 
+      FROM proker_gambar pg 
+      WHERE pg.proker_id = k.id 
+      LIMIT 1
+    ) AS thumbnail
+FROM kegiatan k
+ORDER BY k.tanggal DESC
+LIMIT ? OFFSET ?
+`;
 
-   const countQuery = `
-         SELECT COUNT(*) AS total FROM kegiatan
-    `;
+   const countQuery = `SELECT COUNT(*) AS total FROM kegiatan`;
 
     db.query(countQuery, (err, countResult) => {
         if (err) throw err;
@@ -43,20 +47,35 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get('/gambar/:id', (req, res) => {
-    const sql = `
-    SELECT gambar
+// Halaman detail proker
+router.get('/program-kerja/:id', (req, res) => {
+    const prokerId = req.params.id;
+
+    const prokerQuery = `
+    SELECT id, judul, deskripsi, tanggal, tahun
     FROM kegiatan
     WHERE id = ?
     `;
 
-    db.query(sql, [req.params.id], (err, result) => {
-        if (err || result.length === 0 ) {
-            return res.status(404).send('Gambar tidak ditemukan');
-        }
+    const gambarQuery = `
+    SELECT file_url
+    FROM proker_gambar
+    WHERE proker_id = ?
+    LIMIT 4
+    `;
 
-        res.setHeader('Content-Type', 'image/jpeg');
-        res.send(result[0].gambar);
+    db.query(prokerQuery, [prokerId], (err, prokerResult) => {
+        if (err) return res.status(500).send('Terjadi kesalahan server');
+        if (prokerResult.length === 0) return res.status(404).send('Proker tidak ditemukan');
+
+        db.query(gambarQuery, [prokerId], (err, gambarResult) => {
+            if (err) return res.status(500).send('Terjadi kesalahan server');
+            
+            res.render('proker-detail', {
+                proker: prokerResult[0],
+                gambar: gambarResult
+            });
+        });
     });
 });
 
