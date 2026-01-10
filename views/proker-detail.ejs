@@ -32,10 +32,20 @@
       <% } %>
   </div>
   
-  <div class="container border">
 
-    <div class="mb-4">
-      <p><%= proker.deskripsi %></p>
+
+    <div class=" mb-3">
+    <div class="row g-2">
+      <div class="col-md-6 border rounded-1">
+        <p><%= proker.deskripsi %></p>
+      </div>
+      <div class="col-md-6 border rounded-1">
+        
+        <p><%= proker.deskripsi %></p>
+      </div>
+    </div>
+  </div>
+ 
       
       <div class="container py-4 border rounded-4 shadow-sm">
         <h2 class="fw-bold ">Dokumentasi</h2>
@@ -53,8 +63,6 @@
               <% }) %>
             </div>
           </div>
-        </div>
-    </div>
   </section>
   
   <%- include('partials/footer') %>
