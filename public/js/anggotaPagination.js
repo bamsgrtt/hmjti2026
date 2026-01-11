@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1;
   const perPage = 8;
 
-  const params = new URLSearchParams(window.location.search);
-  const currentDivisi = params.get("divisi");
+  const currentDivisi = window.location.pathname
+    .split("/")
+    .filter(Boolean)
+    .pop();
 
   fetch("/data/anggota.json")
     .then(res => res.json())
@@ -17,31 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   function filteredData() {
-    if (!currentDivisi) return [];
-    return anggota.filter(a => a.divisi === currentDivisi);
+    return anggota.filter(
+      a => a.divisi.toLowerCase() === currentDivisi.toLowerCase()
+    );
   }
 
   function renderCards(data) {
     container.innerHTML = "";
     data.forEach(a => {
       container.innerHTML += `
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 py-3 mb-4 d-flex justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
           <div class="card text-center">
-            <div class="card-img-wrapper">
-              <img src="${a.foto}" class="card-img-top" alt="${a.nama}">
-            </div>
+            <img src="${a.foto}" class="card-img-top">
             <div class="card-body">
-              <h6 class="fw-bold">${a.nama}</h6>
-              <p class="mb-1" style="font-size:14px;">${a.jabatan}</p>
+              <h6>${a.nama}</h6>
+              <p>${a.jabatan}</p>
             </div>
-            <div class="card-icon">
-              <a href="${a.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="${a.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>
-            </div>
-            <span class="btn text-dark fw-bold p-2 mb-4 m-2 border"
-              style="border-radius:15px;background:#fff;">
-              ${a.divisi}
-            </span>
           </div>
         </div>
       `;
@@ -54,11 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pages = Math.ceil(total / perPage);
 
-    pagination.innerHTML += `
-      <button class="page-btn prev ${currentPage === 1 ? "disabled" : ""}">
-        &laquo; Prev
-      </button>
-    `;
+    pagination.innerHTML += `<button class="page-btn prev">&laquo;</button>`;
 
     for (let i = 1; i <= pages; i++) {
       pagination.innerHTML += `
@@ -68,11 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     }
 
-    pagination.innerHTML += `
-      <button class="page-btn next ${currentPage === pages ? "disabled" : ""}">
-        Next &raquo;
-      </button>
-    `;
+    pagination.innerHTML += `<button class="page-btn next">&raquo;</button>`;
 
     pagination.querySelectorAll("[data-page]").forEach(btn => {
       btn.onclick = () => {
@@ -81,19 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     });
 
-    pagination.querySelector(".prev")?.addEventListener("click", () => {
-      if (currentPage > 1) {
-        currentPage--;
-        render();
-      }
-    });
+    pagination.querySelector(".prev").onclick = () => {
+      if (currentPage > 1) currentPage--, render();
+    };
 
-    pagination.querySelector(".next")?.addEventListener("click", () => {
-      if (currentPage < pages) {
-        currentPage++;
-        render();
-      }
-    });
+    pagination.querySelector(".next").onclick = () => {
+      if (currentPage < pages) currentPage++, render();
+    };
   }
 
   function render() {
