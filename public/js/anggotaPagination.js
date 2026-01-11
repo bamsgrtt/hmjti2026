@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("cardContainer");
   const pagination = document.getElementById("pagination");
-  const filterBtns = document.querySelectorAll("[data-divisi]");
 
   let anggota = [];
   let currentPage = 1;
-  const perPage = 8; // ubah sesuai selera
-  let currentDivisi = "ALL";
+  const perPage = 8;
+
+  const params = new URLSearchParams(window.location.search);
+  const currentDivisi = params.get("divisi");
 
   fetch("/data/anggota.json")
     .then(res => res.json())
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   function filteredData() {
-    if (currentDivisi === "ALL") return anggota;
+    if (!currentDivisi) return [];
     return anggota.filter(a => a.divisi === currentDivisi);
   }
 
@@ -31,15 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-body">
               <h6 class="fw-bold">${a.nama}</h6>
-              <p class="mb-1" style="font-size: 14px;">${a.jabatan}</p>
+              <p class="mb-1" style="font-size:14px;">${a.jabatan}</p>
             </div>
             <div class="card-icon">
               <a href="${a.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>
               <a href="${a.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="${a.github}" target="_blank"><i class="bi bi-github"></i></a>
             </div>
-            
-              <span class="btn text-dark fw-bold p-2 mb-4 m-2 border" style="border-radius: 15px; background: #ffffff;">${a.divisi}</span>
+            <span class="btn text-dark fw-bold p-2 mb-4 m-2 border"
+              style="border-radius:15px;background:#fff;">
+              ${a.divisi}
+            </span>
           </div>
         </div>
       `;
@@ -48,67 +50,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderPagination(total) {
     pagination.innerHTML = "";
-
     if (total <= perPage) return;
+
     const pages = Math.ceil(total / perPage);
 
-    // Prev Button
     pagination.innerHTML += `
-      <button class="page-btn page-link prev${currentPage === 1 ? "disabled" : ""}">
-      &laquo; Prev
+      <button class="page-btn prev ${currentPage === 1 ? "disabled" : ""}">
+        &laquo; Prev
       </button>
     `;
 
-  
-
     for (let i = 1; i <= pages; i++) {
       pagination.innerHTML += `
-        <button class="page-btn page-link ${i === currentPage ? "active" : ""}" data-page="${i}">
+        <button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">
           ${i}
         </button>
       `;
     }
 
-     // Next Button
     pagination.innerHTML += `
-      <button class="page-btn page-link next${currentPage === pages ? "disabled" : ""}">
-      Next &raquo;
+      <button class="page-btn next ${currentPage === pages ? "disabled" : ""}">
+        Next &raquo;
       </button>
     `;
 
-
-    document.querySelectorAll(".page-btn").forEach(btn => {
+    pagination.querySelectorAll("[data-page]").forEach(btn => {
       btn.onclick = () => {
         currentPage = +btn.dataset.page;
         render();
       };
     });
 
-     // Prev Event 
-  const prevBtn = pagination.querySelector(".prev");
-  if (prevBtn) {
-    prevBtn.onclick = () => {
+    pagination.querySelector(".prev")?.addEventListener("click", () => {
       if (currentPage > 1) {
         currentPage--;
         render();
       }
-    };
-  }
+    });
 
-  // Next Envent 
-  const nextBtn = pagination.querySelector(".next");
-  if (nextBtn) {
-    nextBtn.onclick = () => {
+    pagination.querySelector(".next")?.addEventListener("click", () => {
       if (currentPage < pages) {
         currentPage++;
         render();
       }
-    };
+    });
   }
-  }
-
- 
-
 
   function render() {
     const data = filteredData();
@@ -116,12 +102,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCards(data.slice(start, start + perPage));
     renderPagination(data.length);
   }
-
-  filterBtns.forEach(btn => {
-    btn.onclick = () => {
-      currentDivisi = btn.dataset.divisi;
-      currentPage = 1;
-      render();
-    };
-  });
 });
