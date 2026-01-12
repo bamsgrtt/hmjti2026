@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = "";
     data.forEach(a => {
       container.innerHTML += `
-        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
           <div class="card text-center">
-            <img src="${a.foto}" class="card-img-top">
+            <div class="card-img-wrapper">
+              <img src="${a.foto}" class="card-img-top">
+            </div>
             <div class="card-body">
               <h6>${a.nama}</h6>
               <p>${a.jabatan}</p>
