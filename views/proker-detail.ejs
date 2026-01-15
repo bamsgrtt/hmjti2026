@@ -21,22 +21,28 @@
 
 
   <!-- DESKRIPSI -->
-  <section class=" container px-lg-5 py-5">
-    <a href="/proker" class="btn btn-secondary  mb-3">
-      <i class="bi bi-arrow-left"></i> Kembali
-    </a>
-    <div class="border px-lg-5 py-5 rounded-4">
-      <h2>
-        <%= proker.judul %>
-      </h2>
-      <p>
+  <section class="container px-lg-5 py-5">
+  <a href="/proker" class="btn btn-light border shadow-sm mb-4">
+    <i class="bi bi-arrow-left"></i> Kembali
+  </a>
+
+  <div class="border rounded-4 px-lg-5 px-3 py-5">
+    <h2 class="mb-3">
+      <%= proker.judul %>
+    </h2>
+
+    <div class="d-flex gap-3 mb-3">
+      <span class="badge bg-light text-dark border px-3 py-2">
         <%= proker.divisi %>
-      </p>
-      <p class="border py-2 px-2 text-center rounded" style="width: 80px;">
+      </span>
+
+      <span class="badge bg-secondary px-3 py-2">
         <%= proker.tahun %>
-      </p>
+      </span>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 
