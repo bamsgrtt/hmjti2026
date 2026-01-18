@@ -17,27 +17,17 @@
   margin-top: 15px;
 }
 
-/* ==========================
-   Button Primary
-========================== */
-.button-lg-primary {
-  width: 100px;
-  height: 50px;
-  background: linear-gradient(160deg, #597DFF, #ffffff);
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 25px;
-  transition: all 0.5s;
+
+.border-primary-subtle {
+  border: 1px solid rgba(17, 0, 255, 0.2) !important;
+  transition: all 0.3s ease-in-out;
 }
 
-.button-lg-primary:hover {
-  background: #ffffff;
-  color: rgb(120, 110, 255);
-  border: 2px solid rgb(125, 115, 255);
+.border-primary-subtle:hover {
+  border: 1px solid rgb(17, 0, 255) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(-5px);
 }
-
 /* ==========================
    About Section
 ========================== */

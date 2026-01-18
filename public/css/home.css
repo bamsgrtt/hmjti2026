@@ -67,28 +67,6 @@ background: linear-gradient(159deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 10
 
 
 
-.button-lg-primary {
-  display: inline-block;
-  width: 120px;               /* Lebih fleksibel */
-  height: 50px;
-  background-color: #fff;     /* Default putih */
-  color: #000;                /* Teks hitam */
-  border: 2px solid #0c52e7;  /* Border default */
-  border-radius: 25px;        /* Rounded */
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;         /* Vertikal center teks */
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.button-lg-primary:hover {
-  background-color: var(--pr-color, #597DFF); /* Warna hover */
-  color: #fff;                               /* Teks putih saat hover */
-  border-color: var(--pr-color, #597DFF);    /* Border mengikuti warna */
-  transform: translateY(-2px);               /* Sedikit efek naik */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);/* Shadow halus */
-}
 
 /* FOTO BAWAH VISI DAN MISI */
 .item {

@@ -63,10 +63,10 @@
   <div class="container text-center">
     <nav class="d-inline-block">
       <div id="pilihan" class="d-flex justify-content-center flex-wrap gap-2">
-        <span class="filter-item btn btn-sm button-lg-primary " id="klik1">Semua</span>
-        <span class="filter-item btn btn-sm button-lg-primary " id="klik2">Seminar</span>
-        <span class="filter-item btn btn-sm button-lg-primary " id="klik3">Lomba</span>
-        <span class="filter-item btn btn-sm button-lg-primary " id="klik4">Beasiswa</span>
+        <span class="filter-item btn btn-sm button-lg-primary h-50" id="klik1">Semua</span>
+        <span class="filter-item btn btn-sm button-lg-primary h-50" id="klik2">Seminar</span>
+        <span class="filter-item btn btn-sm button-lg-primary h-50" id="klik3">Lomba</span>
+        <span class="filter-item btn btn-sm button-lg-primary h-50" id="klik4">Beasiswa</span>
       </div>
     </nav>
   </div>
@@ -78,7 +78,7 @@
     <div class="row" id="con">
       <% datas.forEach(data => { %>
         <div class="col-md-6 col-lg-4 mb-4 cardarea">
-          <div class="card h-100 shadow-sm border-1">
+          <div class="card h-100 shadow-sm ">
             <div class="widget p-2 d-flex justify-content-between small text-muted">
               <span><i class="bi bi-person-fill"></i> <%= data.author %></span>
               <span><i class="bi bi-calendar-fill"></i> <%= formatDate(data.date) %></span>

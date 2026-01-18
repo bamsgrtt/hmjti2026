@@ -22,11 +22,11 @@
 
   <!-- DESKRIPSI -->
   <section class="container px-lg-5 py-5">
-  <a href="/proker" class="btn btn-light border shadow-sm mb-4">
+  <a href="/proker" class="btn btn-light border shadow mb-4">
     <i class="bi bi-arrow-left"></i> Kembali
   </a>
 
-  <div class="border rounded-4 px-lg-5 px-3 py-5">
+  <div class="border rounded-4 px-lg-5 px-3 py-5 shadow-lg">
     <h2 class="mb-3">
       <%= proker.judul %>
     </h2>
@@ -51,7 +51,7 @@
 
       <!-- KIRI : DESKRIPSI -->
       <div class="col-12 col-lg-8">
-        <div class="border rounded-4 shadow-sm p-4 h-100">
+        <div class="border rounded-4 shadow-lg p-4 h-100">
           <h2 class="fw-bold fs-5 ">Deskripsi Program</h2>
           <div class="opacity-50">
             <hr>
@@ -64,7 +64,7 @@
 
       <!-- KANAN : TIMELINE -->
       <div class="col-12 col-lg-4">
-        <div class="border rounded-4 shadow-sm p-4 h-100">
+        <div class="border rounded-4 shadow-lg p-4 h-100">
           <h2 class="fw-bold fs-5 ">Timeline Program</h2>
           <div class="opacity-50">
             <hr>
@@ -79,10 +79,10 @@
             badgeClass = 'bg-warning text-dark';
             } else if (tanggalDB.getTime() === today.getTime()) {
             status = 'Sedang Berjalan';
-            badgeClass = 'bg-success';
+            badgeClass = 'bg-primary';
             } else {
             status = 'Selesai';
-            badgeClass = 'bg-secondary';
+            badgeClass = 'bg-success';
             }
             %>
             <!-- Status -->
@@ -100,7 +100,7 @@
 
 
  <div class="container px-lg-5 py-4">
-  <div class="border rounded-4 shadow-sm p-4">
+  <div class="border rounded-4 shadow-lg p-4">
     <h2 class="fw-bold fs-5">Dokumentasi Program</h2>
     <div class="opacity-50"><hr></div>
 

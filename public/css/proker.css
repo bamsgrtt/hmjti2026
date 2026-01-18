@@ -70,9 +70,10 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Efek zoom-in */
-    box-shadow: rgb(221, 222, 255) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border: 2px solid #bdcbff;
+    transform: translateY(-8px); /* Efek zoom-in */
+    box-shadow: rgb(221, 222, 255) 0px 15px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 1px solid #3561ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
 .card-info {

@@ -17,36 +17,10 @@
   margin-top: 15px;
 }
 
-.button-lg-primary {
-  display: inline-block;
-  min-width: 120px;
-  height: 40px;
-  background-color: #fff;       /* default putih */
-  color: #1100ff;               /* teks biru */
-  border: 2px solid #1100ff;    /* border jelas */
-  border-radius: 25px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 0;                /* hilangkan margin negatif */
-  z-index: 10;                  /* pastikan di atas elemen lain */
-  position: relative;           /* supaya z-index berlaku */
-}
-
-.button-lg-primary:hover,
-.button-lg-primary.active {
-  background-color: #597DFF;
-  color: #fff;
-  border-color: #597DFF;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
 /* Card Berita */
 .cardarea .card {
-  border: 2px solid var(--pr-color, #1100ff); /* pinggir jelas */
+ /* pinggir jelas */
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -59,6 +33,7 @@
 .cardarea .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border: 1px solid  #1100ff;
 }
 
 .cardarea .card .widget {

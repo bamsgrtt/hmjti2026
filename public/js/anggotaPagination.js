@@ -43,39 +43,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function renderPagination(total) {
-    pagination.innerHTML = "";
-    if (total <= perPage) return;
+function renderPagination(total) {
+  pagination.innerHTML = "";
+  if (total <= perPage) return;
 
-    const pages = Math.ceil(total / perPage);
+  const pages = Math.ceil(total / perPage);
 
-    pagination.innerHTML += `<button class="page-btn prev">&laquo;</button>`;
+  // Gunakan struktur <ul> agar gaya Bootstrap otomatis teraplikasi
+  let paginationHTML = `<ul class="pagination pagination-md shadow-sm">`;
 
-    for (let i = 1; i <= pages; i++) {
-      pagination.innerHTML += `
-        <button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">
-          ${i}
-        </button>
-      `;
-    }
+  // Tombol Previous
+  paginationHTML += `
+    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <button class="page-link prev" aria-label="Previous">&laquo;</button>
+    </li>`;
 
-    pagination.innerHTML += `<button class="page-btn next">&raquo;</button>`;
-
-    pagination.querySelectorAll("[data-page]").forEach(btn => {
-      btn.onclick = () => {
-        currentPage = +btn.dataset.page;
-        render();
-      };
-    });
-
-    pagination.querySelector(".prev").onclick = () => {
-      if (currentPage > 1) currentPage--, render();
-    };
-
-    pagination.querySelector(".next").onclick = () => {
-      if (currentPage < pages) currentPage++, render();
-    };
+  // Tombol Angka
+  for (let i = 1; i <= pages; i++) {
+    paginationHTML += `
+      <li class="page-item ${i === currentPage ? 'active' : ''}">
+        <button class="page-link" data-page="${i}">${i}</button>
+      </li>`;
   }
+
+  // Tombol Next
+  paginationHTML += `
+    <li class="page-item ${currentPage === pages ? 'disabled' : ''}">
+      <button class="page-link next" aria-label="Next">&raquo;</button>
+    </li>`;
+
+  paginationHTML += `</ul>`;
+  pagination.innerHTML = paginationHTML;
+
+  // Event Listener (Selector diubah ke .page-link)
+  pagination.querySelectorAll(".page-link[data-page]").forEach(btn => {
+    btn.onclick = () => {
+      currentPage = +btn.dataset.page;
+      render();
+      window.scrollTo(0, 0); // Opsional: scroll ke atas setelah ganti halaman
+    };
+  });
+
+  const prevBtn = pagination.querySelector(".prev");
+  if (prevBtn) prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; render(); } };
+
+  const nextBtn = pagination.querySelector(".next");
+  if (nextBtn) nextBtn.onclick = () => { if (currentPage < pages) { currentPage++; render(); } };
+}
+
 
   function render() {
     const data = filteredData();
