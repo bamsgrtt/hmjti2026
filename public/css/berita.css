@@ -27,7 +27,6 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .cardarea .card:hover {
@@ -46,9 +45,9 @@
 }
 
 .cardarea .card img {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  width: 100%;
+  width: auto;
 }
 
 .cardarea .card-body {
