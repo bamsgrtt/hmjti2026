@@ -61,7 +61,6 @@
         SELECT file_url
         FROM proker_gambar
         WHERE proker_id = ?
-        LIMIT 4
         `;
 
         db.query(prokerQuery, [prokerId], (err, prokerResult) => {
