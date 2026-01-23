@@ -48,53 +48,6 @@
 }
 
 
-/* ==========================
-   BUTTON
-========================== */
-.btn-primary {
-  display: inline-block;
-  color: #fff;
-  font-size: 14px;
-  background: linear-gradient(#00b8db 0%, #155dfc 100%);
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* ==========================
-   NAV TAB (Visi/Misi/Sejarah)
-========================== */
-.btn-nav {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--muted);
-  background: var(--nav-bg);
-  border: 1px solid var(--nav-border);
-  transition: 0.3s;
-  gap: 6px;
-}
-
-.btn-nav:hover {
-  color: var(--text);
-  border-color: #155dfc;
-}
-
-.active-nav {
-  color: var(--text);
-  background: var(--nav-active-bg);
-  border: 1px solid #84abff;
-  box-shadow: 0 0 15px rgba(0, 113, 219, 0.3);
-}
 
 /* ==========================
    CARD
@@ -128,35 +81,4 @@ footer .container {
   z-index: 2;
 }
 
-/* ==========================
-   ACCENT (Pengurus & Proker)
-========================== */
-.accent-1::before,
-.accent-2::before,
-.accent-3::before,
-.accent-4::before,
-.accent-5::before,
-.accent-6::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  filter: blur(20px);
-  animation: glowPulse 6s ease-in-out infinite alternate;
-}
 
-.accent-1::before { background: radial-gradient(circle at 90% 20%, rgba(43, 127, 255, 0.2) 10%, transparent 20%); }
-.accent-2::before { background: radial-gradient(circle at 90% 20%, rgba(85, 43, 255, 0.2) 10%, transparent 20%); }
-.accent-3::before { background: radial-gradient(circle at 90% 20%, rgba(43, 255, 138, 0.2) 10%, transparent 20%); }
-.accent-4::before { background: radial-gradient(circle at 90% 20%, rgba(184, 43, 255, 0.2) 10%, transparent 20%); }
-.accent-5::before { background: radial-gradient(circle at 90% 20%, rgba(255, 89, 43, 0.2) 10%, transparent 20%); }
-.accent-6::before { background: radial-gradient(circle at 90% 20%, rgba(255, 43, 43, 0.2) 10%, transparent 20%); }
-
-.pengurus p {
-  font-size: 14px;
-}
-
-.pengurus .col-md-4 i {
-  padding: 12px 14px;
-  color: var(--icon-color);
-}
