@@ -1,25 +1,7 @@
-/* Hero Section */
-
-/* #hero { */
-/* background: linear-gradient(160deg, var(--pr-color), #000000); */
-/* background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(0, 95, 177) 60%), url("image/kontak_img.png") bottom/contain no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  overflow: hidden; */
-/* } */
 #hero {
-background: #bfcdff;
-background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 1) 50%, rgba(255, 255, 255, 1) 100%);
-  /* background-image: url("../image/hmj/unnamed\ qq.png");
-  background-color: antiquewhite; */
  padding: 100px 0 80px;
  max-height: 320px;  
   overflow: hidden;
-}
-
-#hero p {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 17px;
 }
 
 .acsent-img {
@@ -51,7 +33,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 }
 
 .program-cards {
-    color: white;
+    color: var(--text);
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -60,8 +42,9 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 }
 
 .card {
-    background-color: rgb(255, 255, 255); /* Latar belakang putih */
+    background: var(--card-bg); /* Latar belakang putih */
     border-radius: 10px;
+    color: var(--text);
     width: 400px;
     height: 420px;
     overflow: hidden;
@@ -71,8 +54,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
 
 .card:hover {
     transform: translateY(-8px); /* Efek zoom-in */
-    box-shadow: rgb(221, 222, 255) 0px 15px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border: 1px solid #3561ff;
+    box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
@@ -111,7 +93,7 @@ background: linear-gradient(0deg,rgba(191, 205, 255, 1) 0%, rgba(220, 225, 252, 
     background-image: url(image/gedungjti.jpg); /* Ganti dengan gambar yang sesuai */
     background-size: cover;
     background-position: center;
-    color: rgb(0, 0, 0);
+    color: var(--text);
     display: flex; /* Menggunakan flexbox untuk memastikan teks berada di tengah */
     justify-content: center;
     align-items: center;

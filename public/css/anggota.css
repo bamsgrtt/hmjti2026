@@ -29,30 +29,6 @@
   }
 }
 
-
-
-  #backToTop {
-      position: fixed;
-      bottom: -300px;
-      right: 30px;
-      width: 10px;
-      height: -300px;
-      background-color: transparent;
-      cursor: pointer;
-      justify-content: center;
-      z-index: 3;
-      align-items: center;
-      border: none;
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    
-    #backToTop.show {
-      display: flex; /* Tampilkan tombol */
-      animation: fadeInUp 0.9s ease-out forwards; /* Animasi muncul dari bawah ke atas */
-      border: none;
-    }
-
     
   /* Animasi untuk kemunculan tombol (dari bawah ke atas) */
   @keyframes fadeInUp {
@@ -65,25 +41,10 @@
         transform: translateY(0); /* Berhenti di posisi awal */
       }
     }
-    
-    #backToTop i {
-      color: rgb(0, 4, 255);
-      font-size: 50px;
-      transition: color 0.3s ease;
-    }
-    
-    /* Efek hover pada tombol */
-    #backToTop:hover i {
-      color: #00734f;
-      font-size: 50px;
-      transition: color 0.3s ease;
-    }
-
-
 
 
 .card {
-    background-color: rgb(255, 255, 255); /* Latar belakang putih */
+    background: var(--card-bg); /* Latar belakang putih */
     border-radius: 20px;
     min-height: 420px;
     max-width: 400px;
@@ -92,11 +53,12 @@
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease; /* Menambahkan transisi */
+    border: 1px solid var(--border-soft);
 }
 
 .card:hover {
     transform: translateY(-10px); /* Efek zoom-in */
-    box-shadow: rgb(221, 222, 255) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: var(--box-shadow);
     border: 1px solid #bdcbff;
 }
 
@@ -193,4 +155,7 @@ font-size: 30px;
     padding: 0 20px; /* Memberikan jarak di sisi kiri dan kanan */
 }
 
-
+.pagination {
+  background: var(--bg);
+  color: var(--text);
+}

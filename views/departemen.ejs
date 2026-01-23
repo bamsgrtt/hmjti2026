@@ -1,284 +1,372 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<!-- Font Google -->
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-rel="stylesheet" />
+  <title>Departemen HMJTI</title>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS (SAMAKAN versi biar konsisten) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
- <link rel="stylesheet" href="/css/departemen.css">
- <link rel="stylesheet" href="/css/global.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<!-- Logo Title -->
+  <!-- Global + Page CSS -->
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/departemen.css" />
 
-<link rel="icon" href="/image/hmj/logo_hmj.png" type="image/x-icon" />
-
-    <title>Departemen Keilmuan</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/image/hmj/logo_hmj.png" type="image/x-icon" />
 </head>
+
 <body>
-    <button id="backToTop" class="hide" border= "none">
-        <i class="bi bi-arrow-up-square-fill"></i>   
-    </button>
-    
-    <%- include('partials/navbar') %>
-    
+  <!-- NAVBAR -->
+  <%- include('partials/navbar') %>
 
-     <!-- Hero Section -->
-    <section id="hero">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 hero-tagline">
-            <h1>Departemen HMJTI</h1>  
-            <p> Individu-individu berbeda latar belakang yang bersatu dalam satu misi, menciptakan keluarga besar yang solid dengan visi yang sama untuk HMJTI POLIJE.</p>
+  <!-- ================= HERO DEPARTEMEN ================= -->
+  <section id="hero" class="dept-hero">
+    <div class="container">
+      <div class=" align-items-center">
+        <div class=" text-center">
+          <p class="title border bg-info bg-opacity-25 text-info rounded-4 px-3 py-1 d-inline-block mb-3">
+            <i class="bi bi-stars"></i> Departemen HMJTI
+          </p>
+
+          <h1 class="fw-bold mb-3">
+            Departemen <span class="span-custom-2">HMJTI</span>
+          </h1>
+
+          <p class="text-secondary" style="font-size: 18px;">
+            Individu-individu berbeda latar belakang yang bersatu dalam satu misi,<br>
+            menciptakan keluarga besar yang solid dengan visi yang sama untuk HMJTI POLIJE.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIVISI LIST ================= -->
+  <section class="container" id="departemen">
+    <div class="row justify-content-center g-4">
+
+      <!-- BOX 1 -->
+      <div class="col-12 col-md-4" data-aos="fade-up">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="BPH" />
+
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
+
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              BPH
+            </h5>
+
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Koordinasi, Strategi, Kepemimpinan"
+            </p>
+          </div>
+
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              BPH bertanggung jawab mengoordinasikan seluruh kegiatan organisasi, mengambil keputusan strategis, serta memastikan setiap divisi berjalan selaras dengan visi dan tujuan bersama.
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
+              <p class="mb-0 fw-semibold">Program Kerja:</p>
+            </div>
+
+            <ul class="mb-0 ps-4">
+              <li>Rapat Kerja</li>
+              <li>Evaluasi Kinerja</li>
+              <li>Forum Silaturahmi</li>
+            </ul>
+          </div>
+
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/BPH" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
+      <!-- BOX 2 -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="ADMINISTRASI" />
 
-    <section class="container my-5" id="departemen">
-      <h2 class="text-center fw-bold mb-4 text-center">Divisi HMJTI</h2>
-      <p class="fs-6 text-center mb-5">Menjadi bagian dari divisi adalah langkah awal untuk mengembangkan potensi dan <br>berkarya dalam tim yang solid</p>
-      <div class="row justify-content-center g-4">
-        
-        <!-- BOX 1 -->
-        <div class="col-12 col-md-4 ">  
-          <div class="dept-box h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="BPH">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                BPH
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50  rounded">
-                "Koordinasi, Strategi, Kepemimpinan"
-              </i>
-            </div>
-            <p class="m-3 fs-6">BPH bertanggung jawab mengoordinasikan seluruh kegiatan organisasi, mengambil keputusan strategis, serta memastikan setiap divisi berjalan selaras dengan visi dan tujuan bersama.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
-              <p class="mb-0 fw-semibold">Program Kerja:</p>
-            </div>
-            <ul class="mb-0 mt-1 ps-4">
-              <li>Rapat Kerja</li>
-              <li>Evaluasi Kinerja</li>
-              <li>Forum Silaturahmi</li>
-            </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-             <div class="d-flex justify-content-start mb-4">
-              <a href="/departemen/BPH" class="btn px-2 py-2 d-flex align-items-center g-3 " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
-            </div>
-          </div>
-          
-          <!-- BOX 2 -->
-          <div class="col-12  col-md-4 ">  
-          <div class="dept-box  h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="ADMINISTRASI">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                Administrasi
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50 rounded">
-                "Administratif, Arsip, Tertib"
-              </i>
-            </div>
-            <p class="m-3 fs-6">Divisi Administrasi mengelola surat-menyurat, arsip, data anggota, serta kebutuhan administrasi organisasi agar seluruh kegiatan terdokumentasi dengan rapi dan tertib.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
-              <p class="mb-0 fw-semibold">Program Kerja:</p>
-            </div>
-            <ul class="mb-0 mt-1 ps-4">
-              <li>Rapat Kerja</li>
-              <li>Evaluasi Kinerja</li>
-              <li>Forum Silaturahmi</li>
-            </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-             <div class="d-flex justify-content-start">
-              <a href="/departemen/Administrasi" class="btn " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- BOX 3 -->
-        <div class="col-12  col-md-4 ">  
-          <div class="dept-box  h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative ">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="KEILMUAN">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                Keilmuan
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50 rounded">
-                "Akademik, Inovatif, Edukatif"
-              </i>
-            </div>
-            <p class="m-3 fs-6">Divisi Keilmuan berfokus pada pengembangan wawasan dan kompetensi anggota melalui kegiatan akademik, diskusi, pelatihan, dan program peningkatan kualitas keilmuan.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
-              <p class="mb-0 fw-semibold">Program Kerja:</p>
-            </div>
-            <ul class="mb-0 mt-1 ps-4">
-              <li>Rapat Kerja</li>
-              <li>Evaluasi Kinerja</li>
-              <li>Forum Silaturahmi</li>
-            </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-            <div class="d-flex justify-content-start">
-              <a href="/departemen/Keilmuan" class="btn px-3 py-2 d-flex align-items-center g-3 " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
 
-        <!-- BOX 4 -->
-        <div class="col-12  col-md-4 ">  
-          <div class="dept-box  h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative ">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="KEILMUAN">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                Perhubungan
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50 rounded">
-                "Relasi, Kerjasama, Hubungan"
-              </i>
-            </div>
-            <p class="m-3 fs-6">Divisi Perhubungan berfokus pada pembangunan relasi dan perluasan jejaring organisasi melalui kolaborasi eksternal, koordinasi antar lembaga, serta pengelolaan komunikasi publik yang harmonis.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
-              <p class="mb-0 fw-semibold">Program Kerja:</p>
-            </div>
-            <ul class="mb-0 mt-1 ps-4">
-              <li>Rapat Kerja</li>
-              <li>Evaluasi Kinerja</li>
-              <li>Forum Silaturahmi</li>
-            </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-            <div class="d-flex justify-content-start">
-              <a href="/departemen/Perhubungan" class="btn px-3 py-2 d-flex align-items-center g-3 " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              Administrasi
+            </h5>
 
-        <!-- BOX 5 -->
-        <div class="col-12  col-md-4 ">  
-          <div class="dept-box  h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative ">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="KEILMUAN">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                Kominfo
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50 rounded">
-                "Publikasi, Media, Informasi"
-              </i>
-            </div>
-            <p class="m-3 fs-6">Divisi Kominfo berfokus pada pengelolaan arus informasi dan dokumentasi organisasi melalui optimalisasi media digital, publikasi konten kreatif, serta penyediaan sarana komunikasi yang transparan.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
-              <p class="mb-0 fw-semibold">Program Kerja:</p>
-            </div>
-            <ul class="mb-0 mt-1 ps-4">
-              <li>Rapat Kerja</li>
-              <li>Evaluasi Kinerja</li>
-              <li>Forum Silaturahmi</li>
-            </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-            <div class="d-flex justify-content-start">
-              <a href="/departemen/Kominfo" class="btn px-3 py-2 d-flex align-items-center g-3 " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Administratif, Arsip, Tertib"
+            </p>
           </div>
-        </div>
 
-        <!-- BOX 6 -->
-        <div class="col-12  col-md-4 ">  
-          <div class="dept-box  h-100 d-flex flex-column">
-            <div class="img-wrapper position-relative ">
-              <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="KEILMUAN">
-              <p class="position-absolute top-0 start-0 mt-2 ms-2 px-2 bg-white bg-opacity-60 rounded-2">Divisi</p>
-              <h5 class="position-absolute bottom-0 start-0 mb-4 ms-2 p-2 bg-opacity-50 text-white rounded">
-                Kewirausahaan
-              </h5>
-              <i class="position-absolute bottom-0 start-0 m-2 p-2 bg-opacity-50 rounded">
-                "Mandiri, Kreatif, Produktif"
-              </i>
-            </div>
-            <p class="m-3 fs-6">Divisi KWU berfokus pada pengembangan jiwa kemandirian ekonomi anggota melalui pengelolaan unit usaha kreatif, pelatihan kewirausahaan, dan optimalisasi potensi profit organisasi.</p>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-journal-check" style="color: #31b7ff;"></i>
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              Divisi Administrasi mengelola surat-menyurat, arsip, data anggota, serta kebutuhan administrasi organisasi agar seluruh kegiatan terdokumentasi dengan rapi dan tertib.
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
               <p class="mb-0 fw-semibold">Program Kerja:</p>
             </div>
-            <ul class="mb-0 mt-1 ps-4">
+
+            <ul class="mb-0 ps-4">
               <li>Rapat Kerja</li>
               <li>Evaluasi Kinerja</li>
               <li>Forum Silaturahmi</li>
             </ul>
-            <hr style="border: none; height: 1px;background: linear-gradient(to right, transparent, #373737, transparent)">
-            <div class="d-flex justify-content-start">
-              <a href="/departemen/Kewirausahaan" class="btn px-3 py-2 d-flex align-items-center g-3 " style="border-radius: 50rem; font-size: 14px; color: #1100ff;">
-                Detail Lengkap <i class="bi bi-arrow-right ms-2 mt-1 fs-6"></i>
-              </a>
-            </div>
+          </div>
+
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/Administrasi" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
+      <!-- BOX 3 -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="KEILMUAN" />
 
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
 
- 
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              Keilmuan
+            </h5>
 
-  <!-- footer -->
- <%- include('partials/footer') %>
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Akademik, Inovatif, Edukatif"
+            </p>
+          </div>
 
-  <!-- Script Postingan -->
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              Divisi Keilmuan berfokus pada pengembangan wawasan dan kompetensi anggota melalui kegiatan akademik, diskusi, pelatihan, dan program peningkatan kualitas keilmuan.
+            </p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
+              <p class="mb-0 fw-semibold">Program Kerja:</p>
+            </div>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+            <ul class="mb-0 ps-4">
+              <li>Rapat Kerja</li>
+              <li>Evaluasi Kinerja</li>
+              <li>Forum Silaturahmi</li>
+            </ul>
+          </div>
 
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/Keilmuan" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOX 4 -->
+      <div class="col-12 col-md-4" data-aos="fade-up">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="Perhubungan" />
+
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
+
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              Perhubungan
+            </h5>
+
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Relasi, Kerjasama, Hubungan"
+            </p>
+          </div>
+
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              Divisi Perhubungan berfokus pada pembangunan relasi dan perluasan jejaring organisasi melalui kolaborasi eksternal, koordinasi antar lembaga, serta pengelolaan komunikasi publik yang harmonis.
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
+              <p class="mb-0 fw-semibold">Program Kerja:</p>
+            </div>
+
+            <ul class="mb-0 ps-4">
+              <li>Rapat Kerja</li>
+              <li>Evaluasi Kinerja</li>
+              <li>Forum Silaturahmi</li>
+            </ul>
+          </div>
+
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/Perhubungan" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOX 5 -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="Kominfo" />
+
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
+
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              Kominfo
+            </h5>
+
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Publikasi, Media, Informasi"
+            </p>
+          </div>
+
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              Divisi Kominfo berfokus pada pengelolaan arus informasi dan dokumentasi organisasi melalui optimalisasi media digital, publikasi konten kreatif, serta penyediaan sarana komunikasi yang transparan.
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
+              <p class="mb-0 fw-semibold">Program Kerja:</p>
+            </div>
+
+            <ul class="mb-0 ps-4">
+              <li>Rapat Kerja</li>
+              <li>Evaluasi Kinerja</li>
+              <li>Forum Silaturahmi</li>
+            </ul>
+          </div>
+
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/Kominfo" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOX 6 -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="dept-box h-100 d-flex flex-column">
+          <div class="img-wrapper position-relative">
+            <img src="image/foto_bersama.jpg" class="img-fluid card-img-top" alt="Kewirausahaan" />
+
+            <span class="dept-badge position-absolute top-0 start-0 mt-2 ms-2 px-2 py-1 rounded-2">
+              Divisi
+            </span>
+
+            <h5 class="dept-title position-absolute bottom-0 start-0 mb-4 ms-2 px-2 py-1 rounded">
+              Kewirausahaan
+            </h5>
+
+            <p class="dept-quote position-absolute bottom-0 start-0 m-2 px-2 py-1 rounded mb-0">
+              "Mandiri, Kreatif, Produktif"
+            </p>
+          </div>
+
+          <div class="p-3 flex-grow-1">
+            <p class="mb-3">
+              Divisi KWU berfokus pada pengembangan jiwa kemandirian ekonomi anggota melalui pengelolaan unit usaha kreatif, pelatihan kewirausahaan, dan optimalisasi potensi profit organisasi.
+            </p>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-journal-check dept-icon"></i>
+              <p class="mb-0 fw-semibold">Program Kerja:</p>
+            </div>
+
+            <ul class="mb-0 ps-4">
+              <li>Rapat Kerja</li>
+              <li>Evaluasi Kinerja</li>
+              <li>Forum Silaturahmi</li>
+            </ul>
+          </div>
+
+          <div class="px-3 pb-3">
+            <hr class="dept-hr" />
+
+            <a href="/departemen/Kewirausahaan" class="dept-link d-inline-flex align-items-center">
+              Detail Lengkap <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <%- include('partials/footer') %>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        AOS.init({
-          once: true,
-        });
-      </script>
-      <script src="/js/script.js"></script>
-      <script src="/js/backToTop.js"></script>
-      <script src="/js/scrollImage.js"></script>
-      <script src="/js/animation_slide.js"></script>
-      <script src="/js/departemenPagination.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+  <script src="/js/backToTop.js"></script>
+  <script src="/js/scrollImage.js"></script>
+  <script src="/js/animation_slide.js"></script>
+  <script src="/js/departemenPagination.js"></script>
 </body>
 </html>

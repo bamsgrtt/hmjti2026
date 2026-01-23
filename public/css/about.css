@@ -1,138 +1,71 @@
 /* ==========================
-   Hero Section
+   ABOUT PAGE (HOME STYLE)
 ========================== */
-#hero {
-  padding: 100px 0 80px;
-  overflow: hidden;
-  max-height: 320px;
+
+/* Biar layout About aman dengan navbar (karena navbar punya margin top) */
+.about-page {
+  padding-top: 100px;
 }
 
-#hero h1 {
-  font-weight: bold;
+/* Logo effect */
+.about-logo {
+  transition: transform 0.35s ease;
 }
 
-#hero p {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 17px;
-  margin-top: 15px;
+.about-logo:hover {
+  transform: scale(1.05);
 }
 
-
-.border-primary-subtle {
-  border: 1px solid rgba(17, 0, 255, 0.2) !important;
-  transition: all 0.3s ease-in-out;
-}
-
-.border-primary-subtle:hover {
-  border: 1px solid rgb(17, 0, 255) !important;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: scale(-5px);
-}
 /* ==========================
-   About Section
+   CARD STYLE MIRIP HOME
 ========================== */
-#about-section {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.about-content {
-  max-width: 600px;
-  text-align: left;
-}
-
-/* Subtitle */
-.about-subtitle {
-  color: #16a085;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 10px;
-  margin-top: 80px;
-}
-
-/* Title */
-.about-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-}
-
-#about-section h3 {
-  color: #4163ea;
-}
-/* Text */
-.about-text {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Mission List */
-.mission-list {
-  list-style: none;
-  padding: 0;
-}
-
-.mission-list li {
-  font-size: 16px;
-  margin-bottom: 10px;
+.about-card {
   position: relative;
-  padding-left: 25px;
-  color: #484848;
-}
-
-.mission-list li:before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #16a085;
-  font-size: 14px;
-}
-
-/* Button Selengkapnya */
-.about-content .btn_selengkapnya {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background: blue;
-  color: white;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-.about-content .btn_selengkapnya:hover {
-  background: rgb(0, 0, 185);
-  border: none;
-}
-
-/* ==========================
-   About Image
-========================== */
-.about-image {
-  max-width: 700px;
-  margin-top: 80px;
-  margin-inline: auto;
-  border-radius: 3rem 1rem 3rem 1rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 15px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 3rem 1rem 3rem 1rem;
+/* Glow layer seperti Home */
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 20%, var(--glow-blue) 10%, transparent 30%),
+    radial-gradient(circle at 90% 80%, var(--glow-cyan) 10%, transparent 30%);
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+/* Hover sama feel Home */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography */
+.about-card h6 {
+  font-size: 16px;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Icon checklist mengikuti theme */
+.about-card i {
+  color: var(--icon-color);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 10px;
+  }
 }
