@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,18 +8,11 @@
   <title>HMJTI Polije 2026</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
   <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/home.css" />
@@ -27,520 +21,483 @@
 
 <body>
     <%- include('partials/navbar') %>
- 
 
-  <!-- HERO SECTION -->
-  <section class="container-fluid hero">
-    <div class="circle"></div>
-    <div class="layer-gradient"></div>
-    
-    <div class="content">
-      <p class="title border bg-info text-info bg-opacity-25 rounded-4 p-1 d-inline-block">
-        <i class="bi bi-stars"></i> Kabinet Bina Informatika
-      </p>
-      
-      <h1 style="font-size: 75px; color: var(--text-title);">
-        <span class="span-custom fw-bold">HMJTI</span><br />
-        Polije 2026
-      </h1>
 
-      <p style="color: var(--text-title); font-size: 24px;" class="mb-4">
-        Himpunan Mahasiswa Jurusan Teknologi Informasi <br />
-        Politeknik Negeri Jember
-      </p>
+    <!-- HERO SECTION -->
+    <section class="container-fluid hero">
+      <div class="circle"></div>
+      <div class="layer-gradient"></div>
 
-      <div class="d-flex gap-3 justify-content-center">
-        <a href="#hero" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
-          Explore more <i class="bi bi-arrow-right"></i>
-        </a>
-
-        <a
-          href="/about.ejs"
-          class="btn-secondary border border-info border-2 border-opacity-50 p-3 rounded-5 text-white text-decoration-none"
-        >
-          Struktur Organisasi
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="hero" class="container py-5 text-center">
-    <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
-      <i class="bi bi-stars"></i> Tentang Kami
-    </p>
-
-    <div class="mt-2">
-      <span class="span-custom-2 fw-bold">About HMJTI</span>
-    </div>
-
-    <div class="p-5">
-      <div class="d-flex flex-column align-items-center gap-4">
-        
-        <!-- TAB NAV -->
-        <div class="d-flex gap-2 flex-wrap justify-content-center">
-          <a href="#" class="btn-nav active-nav" data-target="visi-content">
-            <i class="bi bi-eye"></i> Visi
-          </a>
-          
-          <a href="#" class="btn-nav" data-target="misi-content">
-            <i class="bi bi-briefcase"></i> Misi
-          </a>
-          
-          <a href="#" class="btn-nav" data-target="sejarah-content">
-            <i class="bi bi-clock-history"></i> Sejarah
-          </a>
-        </div>
-
-        <!-- TAB CONTENT -->
-        <div id="content-area" class="w-100 d-flex justify-content-center">
-
-          <!-- VISI (Default) -->
-          <div id="visi-content" class="card card-custom content-item">
-            <div class="card-body text-start">
-              <h5 class="card-title text-gradient mb-3">
-                <span class="span-custom-title">Visi HMJTI 2025</span>
-              </h5>
-              
-              <p class="card-text text-secondary mb-0">
-                Menjadi organisasi mahasiswa yang unggul, inovatif, dan berperan aktif dalam
-                pengembangan teknologi informasi serta membentuk mahasiswa yang profesional,
-                berintegritas, dan berwawasan global.
-              </p>
-            </div>
-          </div>
-
-          <!-- MISI -->
-          <div id="misi-content" class="card card-custom content-item d-none">
-            <div class="card-body text-start">
-              <h5 class="card-title text-gradient mb-3">
-                <span class="span-custom-about">Misi HMJTI 2025</span>
-              </h5>
-              
-              <ul class="text-secondary mb-0">
-                <li>Meningkatkan kualitas sumber daya mahasiswa di bidang teknologi informasi</li>
-                <li>Mengembangkan kreativitas dan inovasi melalui program kerja yang berkelanjutan</li>
-                <li>Membangun kerjasama dengan berbagai pihak untuk kemajuan organisasi</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- SEJARAH -->
-          <div id="sejarah-content" class="card card-custom content-item d-none">
-            <div class="card-body text-start">
-              <h5 class="card-title text-gradient mb-3">
-                <span class="span-custom-about">Sejarah Singkat</span>
-              </h5>
-
-              <p class="card-text text-secondary mb-0">
-                Himpunan Mahasiswa Jurusan Teknologi Informasi (HMJTI) Politeknik Negeri Jember
-                didirikan sebagai wadah bagi mahasiswa untuk mengembangkan potensi akademik dan
-                non-akademik di bidang teknologi informasi.
-                Sejak berdiri, HMJTI telah aktif menyelenggarakan berbagai kegiatan seperti seminar
-                teknologi, workshop pengembangan skill, kompetisi pemrograman, dan kegiatan sosial
-                kemasyarakatan.
-                Dengan semangat kolaborasi dan inovasi, HMJTI terus berkembang dan beradaptasi
-                dengan perkembangan teknologi terkini.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- STRUKTUR ORGANISASI -->
-  <section class="container pengurus py-5">
-    <div class="text-center py-4">
-      <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
-        <i class="bi bi-stars"></i> Tim Kami
-      </p>
-      
-      <div class="mt-2">
-        <span class="span-custom-2 fw-bold">Struktur Organisasi</span>
-      </div>
-
-       <div class="row">
-      <div class="col-md-3">
-        <div class="border rounded-4 shadow-sm mb-4 overflow-hidden">
-          <!-- Kontainer Gambar dengan Overlay -->
-          <div class="position-relative img-gradient-container">
-            <img src="/image/Juliana_INtan_Purwaningtyas_BPH.png" class="img-fluid" alt="Pengurus 1">
-            <!-- Lapisan Overlay -->
-            <div class="custom-overlay"></div>
-          </div>
-
-          <div class="p-3 text-left">
-            <h5 class="fw-bold mb-1">Juliana Intan Purwaningtyas</h5>
-            <p class="text-primary fw-bold mb-0">Ketua Umum</p>
-            <i class="text-secondary" style="font-size: 0.85rem;">"Berkolaborasi untuk kemajuan bersama"</i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="border rounded-4 shadow-sm mb-4">
-          <div class="position-relative img-gradient-container">
-            <img src="/image/ACH._Humaidi_Aidil_Kamal_BPH.png" class="img-fluid" alt="Pengurus 1">
-            <!-- Lapisan Overlay -->
-            <div class="custom-overlay"></div>
-          </div>
-          <div class="p-3 text-left">
-            <h5 class="fw-bold mb-1">ACH.Humaidi Aidil Kamal</h5>
-            <p class="text-primary fw-bold mb-0">Wakil Ketua</p>
-            <i class="text-secondary">"Berkolaborasi untuk kemajuan bersama"</i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="border rounded-4 shadow-sm mb-4">
-          <div class="position-relative img-gradient-container">
-            <img src="/image/Alya_Rachma_Kamila_BPH.png" class="img-fluid" alt="Pengurus 1">
-            <!-- Lapisan Overlay -->
-            <div class="custom-overlay"></div>
-          </div>
-          <div class="p-3 text-left">
-            <h5 class="fw-bold mb-1">Alya Rachma Kamila</h5>
-            <p class="text-primary fw-bold mb-0">Sekretaris</p>
-            <i class="text-secondary">"Dokumentasi adalah kunci transparansi"</i>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="border accent accent-2 rounded-4 shadow-sm mb-4">
-          <div class="position-relative img-gradient-container">
-            <img src="/image/Juliana_INtan_Purwaningtyas_BPH.png" class="img-fluid" alt="Pengurus 1" style="width: 200px; height: 200px;">
-            <!-- Lapisan Overlay -->
-            <div class="custom-overlay"></div>
-          </div>
-          <div class="p-3 text-left">
-            <h5 class="fw-bold mb-1">Agnees Serlita Anggun</h5>
-            <p class="text-primary fw-bold mb-0">Bendahara</p>
-            <i class="text-secondary">"Mengelola keuangan dengan transparan"</i>
-          </div>
-        </div>
-      </div>
-    </div>
-      
-      <p class="text-secondary mt-2">
-        6 Departemen yang solid dan profesional untuk melayani mahasiswa
-      </p>
-    </div>
-    
-    <div class="row">
-      
-      <!-- BPH -->
-      <div class="col-md-4">
-        <div class=" rounded-4 accent accent-1 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i class="bi bi-people-fill border border-info border-2 text-info text-center rounded-4"></i>
-          </div>
-
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1" style="font-size: 14px;">BPH</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Mengelola dan mengkoordinasi kegiatan internal organisasi serta kesejahteraan anggota
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Administrasi -->
-      <div class="col-md-4">
-        <div class="rounded-4 accent accent-2 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i class="bi bi-file-earmark-text text-primary text-center border-primary border border-2 rounded-4"></i>
-          </div>
-          
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1 " style="font-size: 14px;">Administrasi</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Mengelola administrasi, dokumentasi, dan arsip organisasi dengan sistem yang terstruktur
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Keilmuan -->
-      <div class="col-md-4">
-        <div class="rounded-4 accent accent-3 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i class="bi bi-shield border-success border-2 border text-success text-center rounded-4"></i>
-          </div>
-          
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1 " style="font-size: 14px;">Keilmuan</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Pengembangan Sumber Daya Mahasiswa melalui pelatihan dan kompetensi
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Perhubungan -->
-      <div class="col-md-4">
-        <div class="rounded-4 accent accent-4 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i style="border: #7300ff 2px solid; color: #7300ff;" class="bi bi-broadcast text-center rounded-4"></i>
-          </div>
-          
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1 " style="font-size: 14px;">Perhubungan</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Membangun dan menjalin hubungan dengan organisasi eksternal, alumni, dan stakeholder
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kominfo -->
-      <div class="col-md-4">
-        <div class="rounded-4 accent accent-5 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i class="bi bi-megaphone border border-warning border-2 text-warning text-center rounded-4"></i>
-          </div>
-
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1 " style="font-size: 14px;">Kominfo</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Mengelola komunikasi dan informasi melalui media sosial, website, dan publikasi organisasi
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kewirausahaan -->
-      <div class="col-md-4">
-        <div class="rounded-4 accent accent-6 shadow-sm mb-4 p-3">
-          <div class="pt-3">
-            <i class="bi bi-graph-up-arrow border-danger border border-2 text-danger text-center rounded-4"></i>
-          </div>
-          
-          <div class="py-2 px-2 mt-2">
-            <h5 class="fw-bold mb-1 " style="font-size: 14px;">Kewirausahaan</h5>
-            <p class="mb-0 text-secondary" style="font-size: 14px;">
-              Mengembangkan jiwa entrepreneurship dan mengelola usaha untuk kemandirian organisasi
-            </p>
-            <p style="font-size: 12px;" class="text-info mb-0">
-              Lihat Pengurus <i class="bi bi-arrow-right"></i>
-            </p>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-  
-  <!-- ================= PROGRAM KERJA ================= -->
-  <section class="container pengurus py-5">
-    <div class="text-center py-4">
-      <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
-        <i class="bi bi-stars"></i> Program Kerja
-      </p><br />
-      
-      <span class="span-custom-2 fw-bold">Program Unggulan</span>
-      <p class="text-secondary">
-        Program kerja inovatif yang dirancang untuk mengembangkan kompetensi mahasiswa
-      </p>
-    </div>
-    
-    <div class="row">
-        <% 
-          const daftarIkon = ['bi-code', 'bi-people-fill', 'bi-shield', 'bi-trophy', 'bi-megaphone', 'bi-graph-up-arrow']
-          const daftarWarna =  ['text-info border-info', 'text-primary border-primary', 'text-success border-success', 'text-purple border-purple', 'text-warning border-warning', 'text-danger border-danger'];
-         %>
-      <% kegiatan.forEach((item, index) => { 
-          const urutan = index % 6;
-          const nomorAccent = urutan + 1;
-          const ikonSekarang = daftarIkon[urutan];
-          const warnaSekarang = daftarWarna[urutan]
-          %>
-      
-          <!-- Card 1 -->
-    <div class="col-md-4">
-      <div class=" rounded-4 accent accent-<%= nomorAccent %> shadow-sm mb-4 p-3 position-relative">
-        <i
-          class="bi <%= ikonSekarang %> <%= warnaSekarang %> position-absolute  border  border-2  text-center top-0 end-0 m-3 rounded-4"
-        ></i>
-
-        <span
-          class="px-2 border <%= warnaSekarang %> py-1 rounded-4 position-absolute m-4 top-0 start-0 d-inline-block text-info"
-          style="font-size: 12px;"
-        >
-          <%= item.divisi %>
-        </span>
-
-        <div class="p-3 mt-4">
-          <h5 class="fw-bold mb-1 " style="font-size: 14px;">
-            <%= item.judul %>
-          </h5>
-
-          <p class="mb-0 text-secondary" style="font-size: 14px;">
-            <%= item.deskripsi.length > 100 ? item.deskripsi.substring(0, 98) + '..' : item.deskripsi %>
-          </p>
-
-          <small class="">
-            <i class="bi bi-calendar-event text-info px-1"></i> 
-            <%= new Date(item.tanggal).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) %>
-            </small>
-            <p  style="font-size: 12px;" class="mb-0 mt-2">
-              <a href="/proker/program-kerja/<%= item.id %>" class="text-info text-decoration-none">
-              Lihat Detail <i class="bi bi-arrow-right text-info"></i>
-              </a>
-            </p>
-        </div>
-      </div>
-    </div>
-      <% }) %>
-  </div>
-
-  <!-- Button lihat semua -->
-  <div class="d-flex gap-3 justify-content-center py-3">
-    <a href="#" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
-      Lihat Semua Program <i class="bi bi-arrow-right"></i>
-    </a>
-  </div>
-</section>
-  
-
-  <!-- FOOTER -->
-  <hr />
-  <footer class="container  pt-5 pb-4 position-relative">
-    <div class="lapisan"></div>
-
-    <!-- Info & Kontak -->
-    <div class="row gy-4">
-
-      <div class="col-lg-5">
-        <h5 class="fw-bold">
-          <span class="span-custom-2 fs-5">HMJTI Polije 2025</span>
-        </h5>
-
-        <p class="text-secondary">
-          Himpunan Mahasiswa Jurusan Teknologi Informasi Politeknik Negeri Jember.
-          Bersama membangun teknologi untuk masa depan yang lebih baik
+      <div class="content">
+        <p class="title border bg-info text-info bg-opacity-25 rounded-4 p-1 d-inline-block">
+          <i class="bi bi-stars"></i> Kabinet Bina Informatika
         </p>
 
-        <div class="d-flex gap-3 mt-3">
-          <a href="#" class="text-secondary"><i class="bi bi-instagram h5"></i></a>
-          <a href="#" class="text-secondary"><i class="bi bi-twitter h5"></i></a>
-          <a href="#" class="text-secondary"><i class="bi bi-youtube h5"></i></a>
-          <a href="#" class="text-secondary"><i class="bi bi-linkedin h5"></i></a>
+        <h1 style="font-size: 75px; color: var(--text-title);">
+          <span class="span-custom fw-bold">HMJTI</span><br />
+          Polije 2026
+        </h1>
+
+        <p style="color: var(--text-title); font-size: 24px;" class="mb-4">
+          Himpunan Mahasiswa Jurusan Teknologi Informasi <br />
+          Politeknik Negeri Jember
+        </p>
+
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="#hero" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
+            Explore more <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <a href="/about"
+            class="btn-secondary border border-info border-2 border-opacity-50 p-3 rounded-5 text-white text-decoration-none">
+            Struktur Organisasi
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-3">
-        <h5 class="fw-bold fs-6">Quick Links</h5>
-        <ul class="list-unstyled text-secondary">
-          <li><a href="#" class="text-decoration-none text-secondary">Tentang Kami</a></li>
-          <li><a href="#" class="text-decoration-none text-secondary">Struktur Organisasi</a></li>
-          <li><a href="#" class="text-decoration-none text-secondary">Program Kerja</a></li>
-          <li><a href="#" class="text-decoration-none text-secondary">Kontak</a></li>
-        </ul>
+    <!-- ABOUT SECTION -->
+    <section id="hero" class="container py-5 text-center">
+      <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
+        <i class="bi bi-stars"></i> Tentang Kami
+      </p>
+
+      <div class="mt-2">
+        <span class="span-custom-2 fw-bold">About HMJTI</span>
       </div>
 
-      <div class="col-lg-4">
-        <h5 class="fw-bold fs-6">Kontak Kami</h5>
-        <ul class="list-unstyled text-secondary">
-          <li><i class="bi bi-envelope me-2"></i> hmjti@polije.ac.id</li>
-          <li><i class="bi bi-phone me-2"></i> +62 812-3456-7890</li>
-          <li><i class="bi bi-geo-alt me-2"></i> Politeknik Negeri Jember, Jl. Mastrip PO BOX 164 Jember</li>
-        </ul>
-      </div>
-    </div>
+      <div class="p-5">
+        <div class="d-flex flex-column align-items-center gap-4">
 
-    <!-- Newsletter -->
-    <div class="row py-5">
-      <div class="col-12">
-        <div class="p-4 rounded-4 shadow-lg newsletter" >
-          <div class="row align-items-center">
-            <div class="col-md-6 mb-3 mb-md-0">
-              <h5 class="fw-bold mb-1" style="color: var(--text);">Dapatkan Update Terbaru</h5>
-              <p class="text-secondary mb-0">Subscribe newsletter kami untuk informasi terkini</p>
+          <!-- TAB NAV -->
+          <div class="d-flex gap-2 flex-wrap justify-content-center">
+            <a href="#" class="btn-nav active-nav" data-target="visi-content">
+              <i class="bi bi-eye"></i> Visi
+            </a>
+
+            <a href="#" class="btn-nav" data-target="misi-content">
+              <i class="bi bi-briefcase"></i> Misi
+            </a>
+
+            <a href="#" class="btn-nav" data-target="sejarah-content">
+              <i class="bi bi-clock-history"></i> Sejarah
+            </a>
+          </div>
+
+          <!-- TAB CONTENT -->
+          <div id="content-area" class="w-100 d-flex justify-content-center">
+
+            <!-- VISI (Default) -->
+            <div id="visi-content" class="card card-custom content-item">
+              <div class="card-body text-start">
+                <h5 class="card-title text-gradient mb-3">
+                  <span class="span-custom-title">Visi HMJTI 2026</span>
+                </h5>
+
+                <p class="card-text text-secondary mb-0">
+                  Menjadi organisasi mahasiswa yang unggul, inovatif, dan berperan aktif dalam
+                  pengembangan teknologi informasi serta membentuk mahasiswa yang profesional,
+                  berintegritas, dan berwawasan global.
+                </p>
+              </div>
             </div>
 
-            <div class="col-md-6">
-              <form class="d-flex gap-2">
-                <input
-                  type="email"
-                  class="form-control rounded-4 "
-                  placeholder="Email kamu"
-                    aria-label="Email kamu"
-                    method="post"
-                />
-                <button class="btn btn-primary rounded-4" type="submit">
-                  Subscribe
-                </button>
-              </form>
+            <!-- MISI -->
+            <div id="misi-content" class="card card-custom content-item d-none">
+              <div class="card-body text-start">
+                <h5 class="card-title text-gradient mb-3">
+                  <span class="span-custom-about">Misi HMJTI 2026</span>
+                </h5>
+
+                <ul class="text-secondary mb-0">
+                  <li>Meningkatkan kualitas sumber daya mahasiswa di bidang teknologi informasi</li>
+                  <li>Mengembangkan kreativitas dan inovasi melalui program kerja yang berkelanjutan</li>
+                  <li>Membangun kerjasama dengan berbagai pihak untuk kemajuan organisasi</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SEJARAH -->
+            <div id="sejarah-content" class="card card-custom content-item d-none">
+              <div class="card-body text-start">
+                <h5 class="card-title text-gradient mb-3">
+                  <span class="span-custom-about">Sejarah Singkat</span>
+                </h5>
+
+                <p class="card-text text-secondary mb-0">
+                  Himpunan Mahasiswa Jurusan Teknologi Informasi (HMJTI) Politeknik Negeri Jember
+                  didirikan sebagai wadah bagi mahasiswa untuk mengembangkan potensi akademik dan
+                  non-akademik di bidang teknologi informasi.
+                  Sejak berdiri, HMJTI telah aktif menyelenggarakan berbagai kegiatan seperti seminar
+                  teknologi, workshop pengembangan skill, kompetisi pemrograman, dan kegiatan sosial
+                  kemasyarakatan.
+                  Dengan semangat kolaborasi dan inovasi, HMJTI terus berkembang dan beradaptasi
+                  dengan perkembangan teknologi terkini.
+                </p>
+              </div>
             </div>
 
           </div>
         </div>
+    </section>
+
+    <!-- STRUKTUR ORGANISASI -->
+    <section class="container pengurus py-5">
+      <div class="text-center py-4">
+        <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
+          <i class="bi bi-stars"></i> Tim Kami
+        </p>
+
+        <div class="mt-2">
+          <span class="span-custom-2 fw-bold">Struktur Organisasi</span>
+        </div>
+
+        <p class="text-secondary mt-2">
+          Tim solid yang berkomitmen untuk memajukan organisasi dan mengembangkan potensi mahasiswa
+        </p>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class=" accent accent-2 rounded-4 shadow-sm mb-4 overflow-hidden">
+              <!-- Kontainer Gambar dengan Overlay -->
+              <div class="img-gradient-container">
+                <img src="/image/ketua.png" alt="Pengurus 1">
+              </div>
+
+              <div class="p-3 text-left">
+                <h5 class="fw-bold mb-1">Juliana Intan Purwaningtyas</h5>
+                <p class="text-primary fw-bold mb-0">Ketua Umum</p>
+                <i class="text-secondary">"Berkolaborasi untuk kemajuan bersama"</i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="accent accent-2 rounded-4 shadow-sm mb-4">
+              <div class="img-gradient-container">
+                <img src="/image/wakil.png" alt="Pengurus 1">
+                <!-- Lapisan Overlay -->
+                <div class="custom-overlay"></div>
+              </div>
+              <div class="p-3 text-left">
+                <h5 class="fw-bold mb-1">ACH.Humaidi Aidil Kamal</h5>
+                <p class="text-primary fw-bold mb-0">Wakil Ketua</p>
+                <i class="text-secondary">"Berkolaborasi untuk kemajuan bersama"</i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="accent accent-2 rounded-4 shadow-sm mb-4">
+              <div class="img-gradient-container">
+                <img src="/image/sekretaris.png" alt="Pengurus 1">
+                <!-- Lapisan Overlay -->
+                <div class="custom-overlay"></div>
+              </div>
+              <div class="p-3 text-left">
+                <h5 class="fw-bold mb-1">Alya Rachma Kamila</h5>
+                <p class="text-primary fw-bold mb-0">Sekretaris</p>
+                <i class="text-secondary">"Dokumentasi adalah kunci transparansi"</i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="accent accent-2 rounded-4 shadow-sm mb-4">
+              <div class="img-gradient-container">
+                <img src="/image/sekretaris.png" alt="Pengurus1">
+                <!-- Lapisan Overlay -->
+                <div class="custom-overlay"></div>
+              </div>
+              <div class="p-3 text-left">
+                <h5 class="fw-bold mb-1">Agnees Serlita Anggun</h5>
+                <p class="text-primary fw-bold mb-0">Bendahara</p>
+                <i class="text-secondary">"Mengelola keuangan dengan transparan"</i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <hr class="mt-4" />
+    <section class="container pengurus">
+      <div class="mt-2 text-center">
+        <span class="span-custom-title fw-bold">Departemen</span>
+        <p class="text-secondary mt-2">
+          6 Departemen yang solid dan profesional untuk melayani mahasiswa
+        </p>
+      </div>
+      <div class="row">
+        <!-- BPH -->
+        <div class="col-md-4">
+          <div class=" rounded-4 accent accent-1 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i class="bi bi-people-fill border border-info border-2 text-info text-center rounded-4"></i>
+            </div>
 
-    <!-- Copyright -->
-    <div class="row mt-3 align-items-center">
-      <div class="col-md-6 text-secondary">
-        <p class="mb-0">&copy; 2026 HMJTI Polije. Made with ❤️ by HMJTI Dev Team.</p>
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1" style="font-size: 14px;">BPH</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Mengelola dan mengkoordinasi kegiatan internal organisasi serta kesejahteraan anggota
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Administrasi -->
+        <div class="col-md-4">
+          <div class="rounded-4 accent accent-2 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i class="bi bi-file-earmark-text text-primary text-center border-primary border border-2 rounded-4"></i>
+            </div>
+
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1 " style="font-size: 14px;">Administrasi</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Mengelola administrasi, dokumentasi, dan arsip organisasi dengan sistem yang terstruktur
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Keilmuan -->
+        <div class="col-md-4">
+          <div class="rounded-4 accent accent-3 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i class="bi bi-shield border-success border-2 border text-success text-center rounded-4"></i>
+            </div>
+
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1 " style="font-size: 14px;">Keilmuan</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Pengembangan Sumber Daya Mahasiswa melalui pelatihan dan kompetensi
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Perhubungan -->
+        <div class="col-md-4">
+          <div class="rounded-4 accent accent-4 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i style="border: #7300ff 2px solid; color: #7300ff;" class="bi bi-broadcast text-center rounded-4"></i>
+            </div>
+
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1 " style="font-size: 14px;">Perhubungan</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Membangun dan menjalin hubungan dengan organisasi eksternal, alumni, dan stakeholder
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Kominfo -->
+        <div class="col-md-4">
+          <div class="rounded-4 accent accent-5 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i class="bi bi-megaphone border border-warning border-2 text-warning text-center rounded-4"></i>
+            </div>
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1 " style="font-size: 14px;">Kominfo</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Mengelola komunikasi dan informasi melalui media sosial, website, dan publikasi organisasi
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Kewirausahaan -->
+        <div class="col-md-4">
+          <div class="rounded-4 accent accent-6 shadow-sm mb-4 p-3">
+            <div class="pt-3">
+              <i class="bi bi-graph-up-arrow border-danger border border-2 text-danger text-center rounded-4"></i>
+            </div>
+
+            <div class="py-2 px-2 mt-2">
+              <h5 class="fw-bold mb-1 " style="font-size: 14px;">Kewirausahaan</h5>
+              <p class="mb-0 text-secondary" style="font-size: 14px;">
+                Mengembangkan jiwa entrepreneurship dan mengelola usaha untuk kemandirian organisasi
+              </p>
+              <p style="font-size: 12px;" class="text-info mb-0">
+                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAM KERJA ================= -->
+    <section class="container pengurus py-5">
+      <div class="text-center py-4">
+        <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
+          <i class="bi bi-stars"></i> Program Kerja
+        </p><br />
+
+        <span class="span-custom-2 fw-bold">Program Unggulan</span>
+        <p class="text-secondary">
+          Program kerja inovatif yang dirancang untuk mengembangkan kompetensi mahasiswa
+        </p>
       </div>
 
-      <div class="col-md-6 text-md-end text-secondary">
-        <a href="#" class="text-decoration-none text-secondary me-3">Privacy Policy</a>
-        <a href="#" class="text-decoration-none text-secondary">Terms of Service</a>
+      <div class="row">
+        <% const daftarIkon=['bi-code', 'bi-people-fill' , 'bi-shield' , 'bi-trophy' , 'bi-megaphone'
+          , 'bi-graph-up-arrow' ]; const daftarWarna=['text-info border-info', 'text-primary border-primary'
+          , 'text-success border-success' , 'text-purple border-purple' , 'text-warning border-warning'
+          , 'text-danger border-danger' ]; %>
+          <% kegiatan.forEach((item, index)=> {
+            const urutan = index % 6;
+            const nomorAccent = urutan + 1;
+            const ikonSekarang = daftarIkon[urutan];
+            const warnaSekarang = daftarWarna[urutan]; %>
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class=" rounded-4 accent accent-<%= nomorAccent %> shadow-sm mb-4 p-3 position-relative">
+                <i
+                  class="bi <%= ikonSekarang %> <%= warnaSekarang %> position-absolute  border  border-2  text-center top-0 end-0 m-3 rounded-4"></i>
+
+                <span
+                  class="px-2 border <%= warnaSekarang %> py-1 rounded-4 position-absolute m-4 top-0 start-0 d-inline-block text-info"
+                  style="font-size: 12px;">
+                  <%= item.divisi %>
+                </span>
+
+                <div class="p-3 mt-4">
+                  <h5 class="fw-bold mb-1 " style="font-size: 14px;">
+                    <%= item.judul %>
+                  </h5>
+
+                  <p class="mb-0 text-secondary" style="font-size: 14px;">
+                    <%= item.deskripsi.length> 100 ? item.deskripsi.substring(0, 98) + '..' : item.deskripsi %>
+                  </p>
+
+                  <small class="">
+                    <i class="bi bi-calendar-event text-info px-1"></i>
+                    <%= new Date(item.tanggal).toLocaleDateString('id-ID', { day: 'numeric' , month: 'long' ,
+                      year: 'numeric' }) %>
+                  </small>
+                  <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/proker/program-kerja/<%= item.id %>" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% }) %>
       </div>
-    </div>
-  </footer>
 
-  <!-- JS: Tab About (Visi/Misi/Sejarah) -->
-  <script>
-    const navButtons = document.querySelectorAll(".btn-nav");
-    const contentItems = document.querySelectorAll(".content-item");
+      <!-- Button lihat semua -->
+      <div class="d-flex gap-3 justify-content-center py-3">
+        <a href="#" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
+          Lihat Semua Program <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </section>
 
-    navButtons.forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
 
-        navButtons.forEach((btn) => btn.classList.remove("active-nav"));
-        this.classList.add("active-nav");
+    <!-- FOOTER -->
+    <hr />
+    <footer class="container  pt-5 pb-4 position-relative">
+      <div class="lapisan"></div>
 
-        const targetId = this.getAttribute("data-target");
+      <!-- Info & Kontak -->
+      <div class="row gy-4">
 
-        contentItems.forEach((item) => item.classList.add("d-none"));
+        <div class="col-lg-5">
+          <h5 class="fw-bold">
+            <span class="span-custom-2 fs-5">HMJTI Polije 2026</span>
+          </h5>
 
-        const targetContent = document.getElementById(targetId);
-        if (targetContent) targetContent.classList.remove("d-none");
-      });
-    });
-  </script>
+          <p class="text-secondary">
+            Himpunan Mahasiswa Jurusan Teknologi Informasi Politeknik Negeri Jember.
+            Bersama membangun teknologi untuk masa depan yang lebih baik
+          </p>
 
-  <!-- JS: Theme Toggle (Dark/Light) -->
-  
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-secondary"><i class="bi bi-instagram h5"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-twitter h5"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-youtube h5"></i></a>
+            <a href="#" class="text-secondary"><i class="bi bi-linkedin h5"></i></a>
+          </div>
+        </div>
 
-  <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"
-  ></script>
-  <script src="/js/script.js"></script>
+        <div class="col-lg-3">
+          <h5 class="fw-bold fs-6">Quick Links</h5>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="#" class="text-decoration-none text-secondary">Tentang Kami</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Struktur Organisasi</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Program Kerja</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="fw-bold fs-6">Kontak Kami</h5>
+          <ul class="list-unstyled text-secondary">
+            <li><i class="bi bi-envelope me-2"></i> hmjti@polije.ac.id</li>
+            <li><i class="bi bi-phone me-2"></i> +62 812-3456-7890</li>
+            <li><i class="bi bi-geo-alt me-2"></i> Politeknik Negeri Jember, Jl. Mastrip PO BOX 164 Jember</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="row py-5">
+        <div class="col-12">
+          <div class="p-4 rounded-4 shadow-lg newsletter">
+            <div class="row align-items-center">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <h5 class="fw-bold mb-1" style="color: var(--text);">Dapatkan Update Terbaru</h5>
+                <p class="text-secondary mb-0">Subscribe newsletter kami untuk informasi terkini</p>
+              </div>
+
+              <div class="col-md-6">
+                <form class="d-flex gap-2">
+                  <input type="email" class="form-control rounded-4 " placeholder="Email kamu" aria-label="Email kamu"
+                    method="post" />
+                  <button class="btn btn-primary rounded-4" type="submit">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt-4" />
+
+
+      <div class="row mt-3 align-items-center">
+        <div class="col-md-6 text-secondary">
+          <p class="mb-0">&copy; 2026 HMJTI Polije. Made with ❤️ by HMJTI Dev Team.</p>
+        </div>
+
+        <div class="col-md-6 text-md-end text-secondary">
+          <a href="#" class="text-decoration-none text-secondary me-3">Privacy Policy</a>
+          <a href="#" class="text-decoration-none text-secondary">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

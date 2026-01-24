@@ -18,3 +18,4 @@
       const isLight = document.body.classList.contains("light-mode");
       setTheme(isLight ? "dark" : "light");
     });
+
