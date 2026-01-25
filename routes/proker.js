@@ -4,7 +4,7 @@
 
     // Halaman list proker
     router.get("/", (req, res) => {
-    const limit = 20;
+    const limit = 16;
     const page = parseInt(req.query.page) || 1;
     const offset = (page - 1) * limit;
 

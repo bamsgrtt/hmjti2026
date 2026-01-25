@@ -156,3 +156,22 @@ footer .container {
 }
 
 
+.pagination .page-item .page-link {
+    background: var(--bg);
+    border-color: var(--border-soft);
+    color: var(--text);
+}
+
+.pagination  .page-link:active  {
+    border-color: var(--border-soft);
+}
+
+
+.text-purple, .bi-trophy {
+  color: blueviolet !important;
+
+}
+
+.border-purple {
+  border-color: #8a2be2 !important;
+}

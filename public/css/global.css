@@ -23,7 +23,9 @@
 
   --hr-middle: rgba(208, 222, 255, 0.8);
   --newsleter-bg: linear-gradient(135deg, rgba(29, 41, 61, 0.50) 0%, rgba(15, 23, 43, 0.53) 100%);
-  --box-shadow: rgb(226, 226, 255) 2px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
+  --box-shadow: rgb(226, 226, 255) 2px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    --nav-bg: rgba(131, 131, 131, 0.15);
+  --nav-border: rgba(255, 255, 255, 0.3);
 }
 
 /* LIGHT MODE */
@@ -59,89 +61,91 @@ body {
   color: var(--text);
 }
 
+
+/* Hilangkan background default navbar agar border terpisah terlihat */
 .navbar {
-  /* Opsional */
-  z-index: 999;
-  padding: 10px;
-  width: auto; /* biar mengikuti konten */ /* optional, biar nggak terlalu lebar */
-  margin: 10px auto; 
-  height: 60px;
+  background: transparent !important;
+  padding: 15px 0;
 }
 
-.navbar-brand, .navbar-nav {
-  font-weight: 700;
-  font-size: 14px;
-  padding: 0 10px;
-  /* Ukuran font awal */
-  transition: font-size 0.3s ease-in-out;
-   left: 0; 
-  right: 0;
-  background: rgba(131, 131, 131, 0.202);
-  border-radius: 30px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16.5px);
-  -webkit-backdrop-filter: blur(16.5px);
-  border: 2px solid rgba(255, 255, 255, 0.32);
-}
-
-.navbar .navbar-brand {
-  font-size: 14px;
-  /* Ukuran font setelah scroll */
+/* Gaya untuk masing-masing kotak (Logo, Menu, Mode) */
+.navbar-brand-custom, 
+.navbar-nav-custom, 
+.btn-mode-custom, 
+.navbar-toggler-custom {
+  background: var(--nav-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--nav-border);
   color: var(--text);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-.navbar-brand:hover {
-  font-size: 14px;
-  /* Ukuran font setelah scroll */
-  color: #333;
-}
-
-
-.nav-link {
-  font-size: 14px;
-}
-
-
-
-
-
-.navbar-nav .nav-item .nav-link {
-  position: relative;  /* penting untuk pseudo-element */
-  color: var(--text);         /* warna default */
+.navbar-brand-custom {
+  padding: 8px 18px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 700;
 }
 
-.nav-item .nav-link:hover {
-    color: #1e80ff;
-    display: inline-block;
-    border-radius: 999px;
+.navbar-nav-custom {
+  display: flex;
+  list-style: none;
+  padding: 5px 15px;
+  margin: 0;
+  border-radius: 30px;
+  gap: 5px;
 }
 
-/* Menandai halaman yang sedang aktif dengan background oval lembut */
-.nav-link.active {
-  background: rgba(30, 128, 255, 0.1); /* Warna biru transparan */
-  color: #1e80ff !important;
-  font-weight: 600;
-  border-radius: 999px;
+.btn-mode-custom {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%; /* Mode berbentuk Bulat */
+  justify-content: center;
+  cursor: pointer;
 }
 
-.navbar-toggler {
-  border: none;
+.navbar-toggler-custom {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px; /* Toggler berbentuk Kotak */
+  justify-content: center;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    background: transparent;
+#navIcon {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+
+/* --- LOGIC DESKTOP (Menu Tengah Presisi) --- */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  .navbar:hover {
-    background: rgba(215, 233, 255, 0.70);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16.5px);
-  -webkit-backdrop-filter: blur(16.5px);
-  border: 1px solid rgba(215, 233, 255, 0.22);
+}
+
+/* --- LOGIC MOBILE (Dropdown Melayang) --- */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    right: 15px;
+  }
+  .navbar-nav-custom {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
   }
 }
 
@@ -189,18 +193,6 @@ body {
 
 
 
-/* tombol toggle theme */
-.theme-toggle {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 9999;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-}
 
 /* ==========================
    GRADIENT TEXT

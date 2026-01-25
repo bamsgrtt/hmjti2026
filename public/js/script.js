@@ -19,3 +19,31 @@
       setTheme(isLight ? "dark" : "light");
     });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.btn-nav');
+    const contentItems = document.querySelectorAll('.content-item');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // 1. Ambil target ID dari atribut data-target
+        const targetId = this.getAttribute('data-target');
+
+        // 2. Hapus class 'active-nav' dari semua tombol
+        navLinks.forEach(nav => nav.classList.remove('active-nav'));
+        
+        // 3. Tambahkan class 'active-nav' ke tombol yang diklik
+        this.classList.add('active-nav');
+
+        // 4. Sembunyikan semua konten dan tampilkan yang sesuai target
+        contentItems.forEach(item => {
+          if (item.id === targetId) {
+            item.classList.remove('d-none'); // Tampilkan
+          } else {
+            item.classList.add('d-none');    // Sembunyikan
+          }
+        });
+      });
+    });
+  });

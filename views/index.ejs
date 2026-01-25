@@ -106,7 +106,7 @@
             <div id="misi-content" class="card card-custom content-item d-none">
               <div class="card-body text-start">
                 <h5 class="card-title text-gradient mb-3">
-                  <span class="span-custom-about">Misi HMJTI 2026</span>
+                  <span class="span-custom-title">Misi HMJTI 2026</span>
                 </h5>
 
                 <ul class="text-secondary mb-0">
@@ -121,7 +121,7 @@
             <div id="sejarah-content" class="card card-custom content-item d-none">
               <div class="card-body text-start">
                 <h5 class="card-title text-gradient mb-3">
-                  <span class="span-custom-about">Sejarah Singkat</span>
+                  <span class="span-custom-title">Sejarah Singkat</span>
                 </h5>
 
                 <p class="card-text text-secondary mb-0">
@@ -238,7 +238,7 @@
                 Mengelola dan mengkoordinasi kegiatan internal organisasi serta kesejahteraan anggota
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -256,7 +256,7 @@
                 Mengelola administrasi, dokumentasi, dan arsip organisasi dengan sistem yang terstruktur
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -274,7 +274,7 @@
                 Pengembangan Sumber Daya Mahasiswa melalui pelatihan dan kompetensi
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -292,7 +292,7 @@
                 Membangun dan menjalin hubungan dengan organisasi eksternal, alumni, dan stakeholder
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -309,7 +309,7 @@
                 Mengelola komunikasi dan informasi melalui media sosial, website, dan publikasi organisasi
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -327,7 +327,7 @@
                 Mengembangkan jiwa entrepreneurship dan mengelola usaha untuk kemandirian organisasi
               </p>
               <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right"></i>
+                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
               </p>
             </div>
           </div>
@@ -350,7 +350,8 @@
 
       <div class="row">
         <% const daftarIkon=['bi-code', 'bi-people-fill' , 'bi-shield' , 'bi-trophy' , 'bi-megaphone'
-          , 'bi-graph-up-arrow' ]; const daftarWarna=['text-info border-info', 'text-primary border-primary'
+          , 'bi-graph-up-arrow' ]; 
+          const daftarWarna=['text-info border-info', 'text-primary border-primary'
           , 'text-success border-success' , 'text-purple border-purple' , 'text-warning border-warning'
           , 'text-danger border-danger' ]; %>
           <% kegiatan.forEach((item, index)=> {
@@ -366,7 +367,7 @@
                   class="bi <%= ikonSekarang %> <%= warnaSekarang %> position-absolute  border  border-2  text-center top-0 end-0 m-3 rounded-4"></i>
 
                 <span
-                  class="px-2 border <%= warnaSekarang %> py-1 rounded-4 position-absolute m-4 top-0 start-0 d-inline-block text-info"
+                  class="px-2 border <%= warnaSekarang %> py-1 rounded-4 position-absolute m-4 top-0 start-0 d-inline-block"
                   style="font-size: 12px;">
                   <%= item.divisi %>
                 </span>
@@ -398,100 +399,13 @@
 
       <!-- Button lihat semua -->
       <div class="d-flex gap-3 justify-content-center py-3">
-        <a href="#" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
+        <a href="/proker" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
           Lihat Semua Program <i class="bi bi-arrow-right"></i>
         </a>
       </div>
     </section>
 
-
-    <!-- FOOTER -->
-    <hr />
-    <footer class="container  pt-5 pb-4 position-relative">
-      <div class="lapisan"></div>
-
-      <!-- Info & Kontak -->
-      <div class="row gy-4">
-
-        <div class="col-lg-5">
-          <h5 class="fw-bold">
-            <span class="span-custom-2 fs-5">HMJTI Polije 2026</span>
-          </h5>
-
-          <p class="text-secondary">
-            Himpunan Mahasiswa Jurusan Teknologi Informasi Politeknik Negeri Jember.
-            Bersama membangun teknologi untuk masa depan yang lebih baik
-          </p>
-
-          <div class="d-flex gap-3 mt-3">
-            <a href="#" class="text-secondary"><i class="bi bi-instagram h5"></i></a>
-            <a href="#" class="text-secondary"><i class="bi bi-twitter h5"></i></a>
-            <a href="#" class="text-secondary"><i class="bi bi-youtube h5"></i></a>
-            <a href="#" class="text-secondary"><i class="bi bi-linkedin h5"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <h5 class="fw-bold fs-6">Quick Links</h5>
-          <ul class="list-unstyled text-secondary">
-            <li><a href="#" class="text-decoration-none text-secondary">Tentang Kami</a></li>
-            <li><a href="#" class="text-decoration-none text-secondary">Struktur Organisasi</a></li>
-            <li><a href="#" class="text-decoration-none text-secondary">Program Kerja</a></li>
-            <li><a href="#" class="text-decoration-none text-secondary">Kontak</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4">
-          <h5 class="fw-bold fs-6">Kontak Kami</h5>
-          <ul class="list-unstyled text-secondary">
-            <li><i class="bi bi-envelope me-2"></i> hmjti@polije.ac.id</li>
-            <li><i class="bi bi-phone me-2"></i> +62 812-3456-7890</li>
-            <li><i class="bi bi-geo-alt me-2"></i> Politeknik Negeri Jember, Jl. Mastrip PO BOX 164 Jember</li>
-          </ul>
-        </div>
-      </div>
-
-
-      <div class="row py-5">
-        <div class="col-12">
-          <div class="p-4 rounded-4 shadow-lg newsletter">
-            <div class="row align-items-center">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <h5 class="fw-bold mb-1" style="color: var(--text);">Dapatkan Update Terbaru</h5>
-                <p class="text-secondary mb-0">Subscribe newsletter kami untuk informasi terkini</p>
-              </div>
-
-              <div class="col-md-6">
-                <form class="d-flex gap-2">
-                  <input type="email" class="form-control rounded-4 " placeholder="Email kamu" aria-label="Email kamu"
-                    method="post" />
-                  <button class="btn btn-primary rounded-4" type="submit">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="mt-4" />
-
-
-      <div class="row mt-3 align-items-center">
-        <div class="col-md-6 text-secondary">
-          <p class="mb-0">&copy; 2026 HMJTI Polije. Made with ❤️ by HMJTI Dev Team.</p>
-        </div>
-
-        <div class="col-md-6 text-md-end text-secondary">
-          <a href="#" class="text-decoration-none text-secondary me-3">Privacy Policy</a>
-          <a href="#" class="text-decoration-none text-secondary">Terms of Service</a>
-        </div>
-      </div>
-    </footer>
-
-
+    <%- include("partials/footer"); %>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

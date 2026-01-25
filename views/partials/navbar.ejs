@@ -1,51 +1,55 @@
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light navbar-transparent position-fixed w-100">
-    <div class="container">
-      <a class="navbar-brand " href="/"> <img src="/image/hmj/logo_hmj.png" alt="" width="40" class="me-3" />HMJ TI
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav ">
-          <li class="nav-item  mx-2">
-            <a class="nav-link "  aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="/about">Tentang</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="/departemen">Departemen</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="/proker">Proker</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="/berita">Blog</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link " href="#contact">Kontak</a>
-          </li>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    
+    <!-- KIRI: Logo -->
+    <a class="navbar-brand-custom" href="/">
+      <img src="/image/hmj/logo_hmj.png" alt="Logo" width="30" class="d-none">
+      <span class="ms-2  d-md-inline">HMJ TI</span>
+    </a>
 
-        </ul>
-      </div>
-
-      <div class="d-none d-lg-flex justify-content-end align-items-end gap-2">
-         
-      
-      <div class="navbar-nav">
-        <div class="nav-item">
-
-          <!-- THEME TOGGLE BUTTON -->
-          <button id="themeToggle" class=" nav-link  px-2" aria-label="Toggle Theme">
-            <i class="bi bi-sun"></i>
-          </button>
-        </div>
-      </div>
- </div>
-
-  
+    <!-- TENGAH: Menu Navigasi -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav-custom">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="/proker">Proker</a></li>
+        <li class="nav-item"><a class="nav-link" href="/berita">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
     </div>
-  </nav>
-  <!-- End Navbar -->
+
+    <!-- KANAN: Mode & Toggler (Dikelompokkan agar rapi di HP) -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Tombol Mode -->
+      <button id="themeToggle" class="btn-mode-custom">
+        <i class="bi bi-sun" id="themeIcon"></i>
+      </button>
+
+      <!-- Toggler (Hanya muncul di HP) -->
+      <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+        <i class="bi bi-list" id="navIcon"></i>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const navbarNav = document.getElementById('navbarNav');
+  const navIcon = document.getElementById('navIcon');
+
+  navbarNav.addEventListener('show.bs.collapse', function () {
+    navIcon.classList.remove('bi-list');
+    navIcon.classList.add('bi-x-lg');
+    navIcon.style.transform = 'rotate(90deg)';
+  });
+
+  navbarNav.addEventListener('hide.bs.collapse', function () {
+    navIcon.classList.remove('bi-x-lg');
+    navIcon.classList.add('bi-list');
+    navIcon.style.transform = 'rotate(0deg)';
+  });
+  });
+</script>

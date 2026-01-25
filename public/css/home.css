@@ -108,3 +108,11 @@ footer .container {
   z-index: 6; 
 }
 
+.text-purple, .bi-trophy {
+  color: blueviolet !important;
+
+}
+
+.border-purple {
+  border-color: #8a2be2 !important;
+}
