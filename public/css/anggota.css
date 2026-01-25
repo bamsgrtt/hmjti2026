@@ -18,144 +18,30 @@
 }
 
 
-.d-flex.overflow-auto {
-  scroll-padding-left: 16px; /* jarak kiri saat scroll */
-  scroll-padding-right: 16px; /* jarak kanan */
+
+.img-gradient-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
 }
 
-@media (min-width: 992px) { /* desktop */
-  .d-flex.overflow-auto {
-    justify-content: center; /* center di desktop */
-  }
+.img-gradient-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mencegah gambar gepeng */
+  object-position: top;
+  display: block;
+  position: relative;
+  z-index: 6; 
 }
 
-    
-  /* Animasi untuk kemunculan tombol (dari bawah ke atas) */
-  @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(100%); /* Mulai dari di bawah layar */
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0); /* Berhenti di posisi awal */
-      }
-    }
-
-
-.card {
-    background: var(--card-bg); /* Latar belakang putih */
-    border-radius: 20px;
-    min-height: 420px;
-    max-width: 400px;
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.2s ease; /* Menambahkan transisi */
-    border: 1px solid var(--border-soft);
-}
-
-.card:hover {
-    transform: translateY(-10px); /* Efek zoom-in */
-    box-shadow: var(--box-shadow);
-    border: 1px solid #bdcbff;
-}
-
-.card-img-wrapper {
-    height: 240px; /* Tinggi tetap untuk gambar */
-    overflow: hidden;
-}
-
-.card-img-top {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-.card-info {
-    background: linear-gradient(to bottom, #557dff 5%, #ffffff8e 95%);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.card-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.card-info p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    z-index: 1;
-}
-
-.card-icon {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 6px;
-  margin-bottom: 10px;
-font-size: 30px;
-}
-
-.card-icon i {
-    color: #000000;
-    transition: color 0.3s ease;
-}
-
-.card-icon i:hover {
-    color: #597dff;
-}
-/* Hover Info - Animasi Scale dan Background */
-.hover-info {
-    position: absolute;
-    top: 0; /* Menempatkan di atas kartu */
-    left: 0; /* Menempatkan di kiri kartu */
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background-image: url(image/gedungjti.jpg); /* Ganti dengan gambar yang sesuai */
-    background-size: cover;
-    background-position: center;
-    color: rgb(0, 0, 0);
-    display: flex; /* Menggunakan flexbox untuk memastikan teks berada di tengah */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2; /* Pastikan elemen ini muncul di atas teks */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Menambahkan animasi */
-    opacity: 0; /* Mulai dengan transparan */
-    transform: scale(0); /* Mulai dari kecil */
-    transform-origin: center; /* Animasi dimulai dari tengah */
-}
-
-.card:hover .hover-info {
-    transform: scale(1); /* Muncul dan membesar */
-    opacity: 1; /* Menampilkan dengan opasitas penuh */
-}
-
-/* Menyesuaikan posisi teks dalam hover-info */
-.hover-info h3 {
-    font-size: 1.5rem;
-    margin-top: 50px; /* Memberikan jarak sedikit ke bawah */
-}
-
-.hover-info p {
-    font-size: 1rem;
-    margin-top: 20px; /* Memberikan jarak sedikit ke bawah dari judul */
-    padding: 0 20px; /* Memberikan jarak di sisi kiri dan kanan */
-}
-
-.pagination {
-  background: var(--bg);
-  color: var(--text);
+.accent {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--border-soft);
+  background: var(--card-bg);
 }

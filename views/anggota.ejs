@@ -18,8 +18,8 @@ rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="/css/global.css">
  <link rel="stylesheet" href="/css/anggota.css">
- <link rel="stylesheet" href="/css/global.css">
 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
@@ -36,9 +36,10 @@ rel="stylesheet" />
      <!-- Hero Section -->
     <section id="hero">
       <div class="container">
-        <a href="/departemen" class="btn btn-primary h-50 rounded-3 shadow-sm ">
-          <i class="bi bi-arrow-left"></i> Kembali
-        </a>
+        <a href="javascript:void(0)" onclick="window.location.href='/'" class="btn btn-primary shadow-sm">
+  <i class="bi bi-arrow-left"></i> Kembali
+</a>
+
         <div class="row justify-content-center">
           <div class="col-md-6 hero-tagline text-center align-items-center">
             <h1 class="span-custom-2 fw-bold">Anggota Divisi</h1>  
@@ -48,8 +49,10 @@ rel="stylesheet" />
       </div>
     </section>
 
-  <div class="container">
-    <div id="cardContainer" class="row justify-content-center py-2"></div>
+  <div class="container py-5">
+    <div  class="text-center py-4">
+        <div class="row" id="cardContainer"></div>
+    </div>
     
     <div id="pagination" class="pagination d-flex justify-content-center  mt-4"></div>
   </div>

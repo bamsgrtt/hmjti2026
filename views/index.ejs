@@ -66,7 +66,6 @@
         <span class="span-custom-2 fw-bold">About HMJTI</span>
       </div>
 
-      <div class="p-5">
         <div class="d-flex flex-column align-items-center gap-4">
 
           <!-- TAB NAV -->
@@ -143,7 +142,7 @@
 
     <!-- STRUKTUR ORGANISASI -->
     <section class="container pengurus py-5">
-      <div class="text-center py-4">
+      <div class="text-center">
         <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
           <i class="bi bi-stars"></i> Tim Kami
         </p>
@@ -217,7 +216,7 @@
       </div>
     </section>
 
-    <section class="container pengurus">
+    <section class="container pengurus" id="pengurus">
       <div class="mt-2 text-center">
         <span class="span-custom-title fw-bold">Departemen</span>
         <p class="text-secondary mt-2">
@@ -237,9 +236,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Mengelola dan mengkoordinasi kegiatan internal organisasi serta kesejahteraan anggota
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/anggota/BPH" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -255,9 +256,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Mengelola administrasi, dokumentasi, dan arsip organisasi dengan sistem yang terstruktur
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/anggota/Administrasi" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -273,9 +276,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Pengembangan Sumber Daya Mahasiswa melalui pelatihan dan kompetensi
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/anggota/Keilmuan" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -291,9 +296,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Membangun dan menjalin hubungan dengan organisasi eksternal, alumni, dan stakeholder
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/anggota/Perhubungan" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -308,9 +315,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Mengelola komunikasi dan informasi melalui media sosial, website, dan publikasi organisasi
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/anggota/Kewirausahaan" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -326,9 +335,11 @@
               <p class="mb-0 text-secondary" style="font-size: 14px;">
                 Mengembangkan jiwa entrepreneurship dan mengelola usaha untuk kemandirian organisasi
               </p>
-              <p style="font-size: 12px;" class="text-info mb-0">
-                Lihat Pengurus <i class="bi bi-arrow-right text-info"></i>
-              </p>
+              <p style="font-size: 12px;" class="mb-0 mt-2">
+                    <a href="/Kewirausahaan" class="text-info text-decoration-none">
+                      Lihat Detail <i class="bi bi-arrow-right text-info"></i>
+                    </a>
+                  </p>
             </div>
           </div>
         </div>
@@ -348,7 +359,7 @@
         </p>
       </div>
 
-      <div class="row">
+      <div class="row " >
         <% const daftarIkon=['bi-code', 'bi-people-fill' , 'bi-shield' , 'bi-trophy' , 'bi-megaphone'
           , 'bi-graph-up-arrow' ]; 
           const daftarWarna=['text-info border-info', 'text-primary border-primary'
@@ -378,7 +389,7 @@
                   </h5>
 
                   <p class="mb-0 text-secondary" style="font-size: 14px;">
-                    <%= item.deskripsi.length> 100 ? item.deskripsi.substring(0, 98) + '..' : item.deskripsi %>
+                    <%= item.deskripsi.length> 200 ? item.deskripsi.substring(0, 175) + '..' : item.deskripsi %>
                   </p>
 
                   <small class="">

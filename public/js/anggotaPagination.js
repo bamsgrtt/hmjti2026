@@ -28,27 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = "";
     data.forEach((a) => {
       container.innerHTML += `
-        <div class="col-12 col-sm-6 col-lg-4 mb-4 d-flex justify-content-center">
-          <div class="card text-center">
-            <div class="card-img-wrapper">
-              <img src="${a.foto}" class="card-img-top">
-            </div>
-            <div class="card-body">
-              <h6>${a.nama}</h6>
-              <p>${a.jabatan}</p>
 
-              <!-- Tambahan Icon Sosial Media -->
-              <div class="social-links d-flex justify-content-center gap-3">
-                <a href="${a.instagram}" target="_blank" class="text-danger">
-                  <i class="bi bi-instagram fs-5"></i>
-                </a>
-                <a href="${a.linkedin}" target="_blank" class="text-primary">
-                  <i class="bi bi-linkedin fs-5"></i>
-                </a>
+         <div class="col-md-3">
+            <div class=" accent accent-2 rounded-4 shadow-sm mb-4 overflow-hidden">
+              <!-- Kontainer Gambar dengan Overlay -->
+              <div class="img-gradient-container">
+                <img src="/image/ketua.png" alt="Pengurus 1">
               </div>
-            </div>            
+
+              <div class="p-3 text-left">
+                <h5 class="fw-bold mb-1">${a.nama}</h5>
+                <p class="text-primary fw-bold mb-0">${a.jabatan}</p>
+                <i class="text-secondary">"${a.quote}"</i>
+              </div>
+            </div>
           </div>
-        </div>
+
       `;
     });
   }

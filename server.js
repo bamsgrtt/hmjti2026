@@ -20,7 +20,6 @@ app.use(express.urlencoded({ extended: true }));
     
 app.use('/', require('./routes/home'));
 app.use('/about', require('./routes/about'));
-app.use('/departemen', require('./routes/departemen'));
 app.use('/berita', require('./routes/berita'));
 app.use('/proker', require('./routes/proker'));
    
