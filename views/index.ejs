@@ -14,6 +14,10 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/home.css" />
   <link rel="stylesheet" href="/css/global.css">
@@ -57,7 +61,7 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="hero" class="container py-5 text-center">
+    <section id="hero" class="container py-5 text-center" >
       <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
         <i class="bi bi-stars"></i> Tentang Kami
       </p>
@@ -143,11 +147,11 @@
     <!-- STRUKTUR ORGANISASI -->
     <section class="container pengurus py-5">
       <div class="text-center">
-        <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
+        <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block" data-aos="fade-down">
           <i class="bi bi-stars"></i> Tim Kami
         </p>
 
-        <div class="mt-2">
+        <div class="mt-2" data-aos="fade-down">
           <span class="span-custom-2 fw-bold">Struktur Organisasi</span>
         </div>
 
@@ -155,8 +159,8 @@
           Tim solid yang berkomitmen untuk memajukan organisasi dan mengembangkan potensi mahasiswa
         </p>
 
-        <div class="row">
-          <div class="col-md-3">
+        <div class="row" >
+          <div class="col-md-3" data-aos="fade-right">
             <div class=" accent accent-2 rounded-4 shadow-sm mb-4 overflow-hidden">
               <!-- Kontainer Gambar dengan Overlay -->
               <div class="img-gradient-container">
@@ -170,7 +174,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-up">
             <div class="accent accent-2 rounded-4 shadow-sm mb-4">
               <div class="img-gradient-container">
                 <img src="/image/wakil.png" alt="Pengurus 1">
@@ -184,7 +188,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-up">
             <div class="accent accent-2 rounded-4 shadow-sm mb-4">
               <div class="img-gradient-container">
                 <img src="/image/sekretaris.png" alt="Pengurus 1">
@@ -198,7 +202,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-left">
             <div class="accent accent-2 rounded-4 shadow-sm mb-4">
               <div class="img-gradient-container">
                 <img src="/image/sekretaris.png" alt="Pengurus1">
@@ -217,13 +221,13 @@
     </section>
 
     <section class="container pengurus" id="pengurus">
-      <div class="mt-2 text-center">
+      <div class="mt-2 text-center" data-aos="fade-down">
         <span class="span-custom-title fw-bold">Departemen</span>
         <p class="text-secondary mt-2">
           6 Departemen yang solid dan profesional untuk melayani mahasiswa
         </p>
       </div>
-      <div class="row">
+      <div class="row" data-aos="fade-up">
         <!-- BPH -->
         <div class="col-md-4">
           <div class=" rounded-4 accent accent-1 shadow-sm mb-4 p-3">
@@ -347,7 +351,7 @@
     </section>
 
     <!-- ================= PROGRAM KERJA ================= -->
-    <section class="container pengurus py-5">
+    <section class="container pengurus py-5" data-aos="fade-down">
       <div class="text-center py-4">
         <p class="title border bg-info text-info bg-opacity-25 rounded-4 px-2 py-1 d-inline-block">
           <i class="bi bi-stars"></i> Program Kerja
@@ -359,7 +363,7 @@
         </p>
       </div>
 
-      <div class="row " >
+      <div class="row" data-aos="fade-up">
         <% const daftarIkon=['bi-code', 'bi-people-fill' , 'bi-shield' , 'bi-trophy' , 'bi-megaphone'
           , 'bi-graph-up-arrow' ]; 
           const daftarWarna=['text-info border-info', 'text-primary border-primary'
@@ -372,7 +376,7 @@
             const warnaSekarang = daftarWarna[urutan]; %>
 
             <!-- Card 1 -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
               <div class=" rounded-4 accent accent-<%= nomorAccent %> shadow-sm mb-4 p-3 position-relative">
                 <i
                   class="bi <%= ikonSekarang %> <%= warnaSekarang %> position-absolute  border  border-2  text-center top-0 end-0 m-3 rounded-4"></i>
@@ -405,7 +409,7 @@
                 </div>
               </div>
             </div>
-            <% }) %>
+            <% }); %>
       </div>
 
       <!-- Button lihat semua -->
@@ -417,6 +421,12 @@
     </section>
 
     <%- include("partials/footer"); %>
+      <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

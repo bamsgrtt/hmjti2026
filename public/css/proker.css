@@ -58,69 +58,11 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
-.card-info {
-    background: linear-gradient(to bottom, #557dff 5%, #ffffff8e 95%);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.card-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.card-info p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    z-index: 1;
-}
-
-/* Hover Info - Animasi Scale dan Background */
-.hover-info {
-    position: absolute;
-    top: 0; /* Menempatkan di atas kartu */
-    left: 0; /* Menempatkan di kiri kartu */
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background-image: url(image/gedungjti.jpg); /* Ganti dengan gambar yang sesuai */
-    background-size: cover;
-    background-position: center;
-    color: var(--text);
-    display: flex; /* Menggunakan flexbox untuk memastikan teks berada di tengah */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2; /* Pastikan elemen ini muncul di atas teks */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Menambahkan animasi */
-    opacity: 0; /* Mulai dengan transparan */
-    transform: scale(0); /* Mulai dari kecil */
-    transform-origin: center; /* Animasi dimulai dari tengah */
-}
-
 .card:hover .hover-info {
     transform: scale(1); /* Muncul dan membesar */
     opacity: 1; /* Menampilkan dengan opasitas penuh */
 }
 
-/* Menyesuaikan posisi teks dalam hover-info */
-.hover-info h3 {
-    font-size: 1.5rem;
-    margin-top: 50px; /* Memberikan jarak sedikit ke bawah */
-}
-
-.hover-info p {
-    font-size: 1rem;
-    margin-top: 20px; /* Memberikan jarak sedikit ke bawah dari judul */
-    padding: 0 20px; /* Memberikan jarak di sisi kiri dan kanan */
-}
 
 
 /* ==========================
