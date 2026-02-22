@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Font Google -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/departemen.css" />
+  <link rel="stylesheet" href="/css/global.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <!-- Logo Title -->
+
+  <link rel="icon" href="/image/hmj/logo_hmj.png" type="image/x-icon" />
+
+  <title>Program Kerja - HMJTI</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <%- include('partials/navbar') %>
+
+    <!-- ================= HERO DEPARTEMEN ================= -->
+
+    <div class="container py-5">
+      <div class=" align-items-center text-center pt-5">
+          <p class="title border bg-info bg-opacity-25 text-info rounded-4 px-3 py-1 d-inline-block mb-3 ">
+            <i class="bi bi-stars"></i> Departemen HMJTI
+          </p>
+
+          <h1 class="fw-bold mb-3">
+            Departemen <span class="span-custom-2">HMJTI</span>
+          </h1>
+
+          <p class="text-secondary" style="font-size: 18px;">
+            Individu-individu berbeda latar belakang yang bersatu dalam satu misi,<br>
+            menciptakan keluarga besar yang solid dengan visi yang sama untuk HMJTI POLIJE.
+          </p>
+      </div>
+    </div>
+
+    <!-- FILTER BUTTON -->
+    <div class="d-flex gap-2 justify-content-center py-5">
+      <a href="#" class="btn btn-nav active-nav" data-divisi="Semua">Semua</a>
+
+      <% daftarDivisi.forEach(row=> { %>
+        <a href="#" class="btn btn-nav" data-divisi="<%= row.divisi %>">
+          <%= row.divisi %>
+        </a>
+        <% }) %>
+    </div>
+
+    <div class="container pengurus py-2">
+
+
+      <!-- CARD LOOP -->
+      <div class="row">
+        <% anggota.forEach((item, index)=> { %>
+          <div class="col-md-3 col-sm-6 text-center" data-divisi="<%= item.divisi %>" data-aos="fade-up">
+
+            <div class="accent accent-2 rounded-4 shadow-sm mb-4 overflow-hidden">
+
+              <div class="img-gradient-container">
+                <img src="<%= item.foto %>" alt="<%= item.nama %>">
+              </div>
+
+              <div class="p-3">
+                <h5 class="fw-bold mb-1">
+                  <%= item.nama %>
+                </h5>
+                <p class="text-primary fw-bold mb-0">
+                  <%= item.jabatan %>
+                </p>
+
+                <% if (item.quote) { %>
+                  <small class="text-secondary">
+                    <%= item.quote %>
+                  </small>
+                  <% } %>
+
+              </div>
+
+            </div>
+          </div>
+          <% }) %>
+      </div>
+
+    </div>
+    <!-- FOOTER -->
+    <%- include('partials/footer') %>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- AOS -->
+      <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({ once: true });
+      </script> -->
+
+
+
+      <script src="/js/departemen.js"></script>
+      <script src="/js/script.js"></script>
+</body>
+
+</html>

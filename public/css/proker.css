@@ -1,0 +1,119 @@
+#hero {
+ padding: 100px 0 80px;
+ max-height: 320px;  
+  overflow: hidden;
+}
+
+.acsent-img {
+  margin-top: 505px;
+  width: 32%;
+  height: 32%;
+  margin-left: 380px;
+  opacity: 0.5;
+}
+
+.acsent-img.scrolled {
+  opacity: 1;
+}
+
+
+
+
+/* Program Kerja Section */
+#program-kerja {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+#program-kerja h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.program-cards {
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    background: var(--card-bg); /* Latar belakang putih */
+    border-radius: 10px;
+    color: var(--text);
+    width: 400px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease; /* Menambahkan transisi */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efek zoom-in */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.card:hover .hover-info {
+    transform: scale(1); /* Muncul dan membesar */
+    opacity: 1; /* Menampilkan dengan opasitas penuh */
+}
+
+
+
+/* ==========================
+   CARD
+========================== */
+.card-custom,
+.accent,
+footer .container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--border-soft);
+  background: var(--card-bg);
+}
+
+/* Glow untuk Card About */
+.card-custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at -15% 70%, rgba(43, 127, 255, 0.1) 30%, transparent 30%),
+    radial-gradient(circle at 115% 70%, rgba(0, 184, 219, 0.1) 30%, transparent 30%);
+  filter: blur(20px);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+
+.pagination .page-item .page-link {
+    background: var(--bg);
+    border-color: var(--border-soft);
+    color: var(--text);
+}
+
+.pagination  .page-link:active  {
+    border-color: var(--border-soft);
+}
+
+
+.text-purple, .bi-trophy {
+  color: blueviolet !important;
+
+}
+
+.border-purple {
+  border-color: #8a2be2 !important;
+}

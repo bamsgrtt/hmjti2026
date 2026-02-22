@@ -1,0 +1,366 @@
+/* ==========================
+   THEME SYSTEM (2 MODE)
+========================== */
+
+/* Default = DARK MODE */
+:root {
+  --bg: #020618;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --icon-color: #ffffff;
+
+  --hero-gradient: linear-gradient(#020618 0%, #0f1839 50%, #270241 100%);
+  --card-bg: linear-gradient(135deg, rgba(29, 41, 61, 0.4) 0%, rgba(15, 23, 43, 0.4) 100%);
+
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --nav-border: #374151;
+
+  --nav-bg: linear-gradient(90deg, rgba(0, 184, 219, 0.1) 0%, rgba(43, 127, 255, 0.1) 100%);
+  --nav-active-bg: #00819b75;
+
+  --glow-blue: rgba(43, 127, 255, 0.2);
+  --glow-cyan: rgba(0, 184, 219, 0.2);
+
+  --hr-middle: rgba(208, 222, 255, 0.8);
+  --newsleter-bg: linear-gradient(135deg, rgba(29, 41, 61, 0.50) 0%, rgba(15, 23, 43, 0.53) 100%);
+  --box-shadow: rgb(226, 226, 255) 2px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    --nav-bg: rgba(131, 131, 131, 0.15);
+  --nav-border: rgba(255, 255, 255, 0.3);
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-title: #fff;
+  --muted: #475569;
+  --icon-color: #000000;
+
+  --hero-gradient:   linear-gradient(290deg,rgb(222, 225, 255) 50%, rgba(255, 255, 255, 1) 100%);
+  --card-bg: linear-gradient(135deg, rgba(255, 254, 254, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+
+  --border-soft: rgba(15, 23, 42, 0.15);
+  --nav-border: rgba(15, 23, 42, 0.15);
+
+  --nav-bg: linear-gradient(90deg, rgba(0, 184, 219, 0.08) 0%, rgba(43, 127, 255, 0.08) 100%);
+  --nav-active-bg: rgba(0, 129, 155, 0.18);
+
+  --glow-blue: rgba(43, 127, 255, 0.18);
+  --glow-cyan: rgba(0, 184, 219, 0.18);
+
+  --hr-middle: rgba(20, 40, 90, 0.35);
+    --newsleter-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.236) 0%, rgba(216, 227, 255, 0.53) 100%);
+    --box-shadow: rgb(201, 201, 201) 0px 10px 14px 0px, rgba(171, 171, 171, 0.06) 0px 0px 0px 1px;;
+}
+
+body {
+  margin: 0 ;
+  padding: 0 ;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* Hilangkan background default navbar agar border terpisah terlihat */
+.navbar {
+  background: transparent !important;
+  padding: 15px 0;
+}
+
+/* Gaya untuk masing-masing kotak (Logo, Menu, Mode) */
+.navbar-brand-custom, 
+.navbar-nav-custom, 
+.btn-mode-custom, 
+.navbar-toggler-custom {
+  background: var(--nav-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--nav-border);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-custom {
+  padding: 4px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar-nav-custom {
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+  padding: 8px 18px;
+  margin: 0;
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.btn-mode-custom {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%; /* Mode berbentuk Bulat */
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar-toggler-custom {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px; /* Toggler berbentuk Kotak */
+  justify-content: center;
+  cursor: pointer;
+}
+
+#navIcon {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+
+/* --- LOGIC DESKTOP (Menu Tengah Presisi) --- */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* --- LOGIC MOBILE (Dropdown Melayang) --- */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    right: 15px;
+  }
+  .navbar-nav-custom {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+/* ==========================
+   BASE
+========================== */
+
+/* ==========================
+   ACCENT (Pengurus & Proker)
+========================== */
+
+
+footer .container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--border-soft);
+  background: var(--card-bg);
+}
+
+
+.accent-1::before,
+.accent-2::before,
+.accent-3::before,
+.accent-4::before,
+.accent-5::before,
+.accent-6::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: blur(20px);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+.accent-1::before { background: radial-gradient(circle at 90% 20%, rgba(43, 127, 255, 0.2) 10%, transparent 20%); }
+.accent-2::before { background: radial-gradient(circle at 90% 20%, rgba(85, 43, 255, 0.2) 10%, transparent 20%); }
+.accent-3::before { background: radial-gradient(circle at 90% 20%, rgba(43, 255, 138, 0.2) 10%, transparent 20%); }
+.accent-4::before { background: radial-gradient(circle at 90% 20%, rgba(184, 43, 255, 0.2) 10%, transparent 20%); }
+.accent-5::before { background: radial-gradient(circle at 90% 20%, rgba(255, 89, 43, 0.2) 10%, transparent 20%); }
+.accent-6::before { background: radial-gradient(circle at 90% 20%, rgba(255, 43, 43, 0.2) 10%, transparent 20%); }
+
+
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+.pengurus p {
+  font-size: 14px;
+}
+
+.pengurus .col-md-4 i {
+  padding: 12px 14px;
+  color: var(--icon-color);
+}
+
+
+
+
+/* ==========================
+   GRADIENT TEXT
+========================== */
+
+
+
+
+.span-custom {
+  font-size: 90px;
+  background: linear-gradient(90deg, rgba(0, 211, 242, 1) 0%, rgba(43, 127, 255, 1) 50%, rgb(177, 67, 255) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.span-custom-2,
+.span-custom-title {
+  background: linear-gradient(180deg, rgba(0, 211, 242, 1) 0%, rgba(43, 127, 255, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.span-custom-2 {
+  font-size: 32px;
+}
+
+
+
+.span-custom-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+.btn-primary {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  background: linear-gradient(#00b8db 0%, #155dfc 100%);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ==========================
+   NAV TAB (Visi/Misi/Sejarah)
+========================== */
+.btn-nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--muted);
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  transition: 0.3s;
+  gap: 6px;
+  z-index: 6;
+}
+
+.btn-nav:hover {
+  color: var(--text);
+  border-color: #155dfc;
+}
+
+.active-nav {
+  color: var(--text);
+  background: var(--nav-active-bg);
+  border: 1px solid #84abff;
+  box-shadow: 0 0 15px rgba(0, 113, 219, 0.3);
+}
+
+
+.content {
+  position: relative;
+  z-index: 5;
+  color: var(--text);
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.title {
+  font-size: 0.8em;
+  margin: 0 0 10px 0;
+}
+
+.span-custom-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.newsletter {
+  background: var(--newsleter-bg);
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-soft);
+  color: var(--text);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    var(--hr-middle) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.lapisan {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 100%, rgba(43, 127, 255, 0.2) 10%, transparent 20%);
+  filter: blur(20px);
+}
+
+footer p, footer li, footer a {
+  font-size: 14px;
+}
+
+/* ==========================
+   ANIMATION (1x saja)
+========================== */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}

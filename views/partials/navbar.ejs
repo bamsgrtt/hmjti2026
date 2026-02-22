@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    
+    <!-- KIRI: Logo -->
+    <a class="navbar-brand-custom" href="/">
+      <img src="/image/hmj/logo_hmj.png" alt="Logo" width="30" class="d-none d-md-inline">
+      <span class="ms-2  d-md-inline">HMJ TI</span>
+    </a>
+
+    <!-- TENGAH: Menu Navigasi -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav-custom">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="/departemen">Departemen</a></li>
+        <li class="nav-item"><a class="nav-link" href="/proker">Proker</a></li>
+        <li class="nav-item"><a class="nav-link" href="/berita">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- KANAN: Mode & Toggler (Dikelompokkan agar rapi di HP) -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Tombol Mode -->
+      <button id="themeToggle" class="btn-mode-custom">
+        <i class="bi bi-sun" id="themeIcon"></i>
+      </button>
+
+      <!-- Toggler (Hanya muncul di HP) -->
+      <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+        <i class="bi bi-list" id="navIcon"></i>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const navbarNav = document.getElementById('navbarNav');
+  const navIcon = document.getElementById('navIcon');
+
+  navbarNav.addEventListener('show.bs.collapse', function () {
+    navIcon.classList.remove('bi-list');
+    navIcon.classList.add('bi-x-lg');
+    navIcon.style.transform = 'rotate(90deg)';
+  });
+
+  navbarNav.addEventListener('hide.bs.collapse', function () {
+    navIcon.classList.remove('bi-x-lg');
+    navIcon.classList.add('bi-list');
+    navIcon.style.transform = 'rotate(0deg)';
+  });
+  });
+</script>

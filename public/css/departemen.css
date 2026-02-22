@@ -1,0 +1,24 @@
+
+.accent {
+  position: relative;
+  z-index: 10; /* Berikan z-index agar berada di atas background hero */
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.img-gradient-container {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.img-gradient-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mencegah gambar gepeng */
+  object-position: top;
+  display: block;
+  position: relative;
+  z-index: 6; 
+} 

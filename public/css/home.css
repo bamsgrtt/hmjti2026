@@ -1,0 +1,116 @@
+
+
+
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero .layer-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: var(--hero-gradient);
+}
+
+.hero .circle {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+  z-index: 3;
+  background:
+    radial-gradient(circle at 40% 40%, rgba(0, 183, 219, 0.2) 5%, transparent 20%),
+    radial-gradient(circle at 60% 60%, rgba(172, 70, 255, 0.2) 5%, transparent 20%);
+  filter: blur(30px);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/image/partikel.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: invert(1) sepia(100%) saturate(500%) hue-rotate(180deg);
+  opacity: 1;
+}
+
+
+
+/* ==========================
+   CARD
+========================== */
+.card-custom,
+.accent,
+footer .container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--border-soft);
+  background: var(--card-bg);
+}
+
+/* Glow untuk Card About */
+.card-custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at -15% 70%, rgba(43, 127, 255, 0.1) 30%, transparent 30%),
+    radial-gradient(circle at 115% 70%, rgba(0, 184, 219, 0.1) 30%, transparent 30%);
+  filter: blur(20px);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* Update CSS Anda */
+
+.accent {
+  position: relative;
+  z-index: 10; /* Berikan z-index agar berada di atas background hero */
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.img-gradient-container {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.img-gradient-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mencegah gambar gepeng */
+  object-position: top;
+  display: block;
+  position: relative;
+  z-index: 6; 
+}
+
+.text-purple, .bi-trophy {
+  color: blueviolet !important;
+
+}
+
+.border-purple {
+  border-color: #8a2be2 !important;
+}

@@ -1,0 +1,71 @@
+/* ==========================
+   ABOUT PAGE (HOME STYLE)
+========================== */
+
+/* Biar layout About aman dengan navbar (karena navbar punya margin top) */
+.about-page {
+  padding-top: 100px;
+}
+
+/* Logo effect */
+.about-logo {
+  transition: transform 0.35s ease;
+}
+
+.about-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   CARD STYLE MIRIP HOME
+========================== */
+.about-card {
+  position: relative;
+  border-radius: 15px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow layer seperti Home */
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 20%, var(--glow-blue) 10%, transparent 30%),
+    radial-gradient(circle at 90% 80%, var(--glow-cyan) 10%, transparent 30%);
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+/* Hover sama feel Home */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography */
+.about-card h6 {
+  font-size: 16px;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Icon checklist mengikuti theme */
+.about-card i {
+  color: var(--icon-color);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 10px;
+  }
+}

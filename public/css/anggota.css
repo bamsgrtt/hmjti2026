@@ -1,0 +1,47 @@
+
+
+
+
+/* Hero Section */
+
+/* #hero { */
+/* background: linear-gradient(160deg, var(--pr-color), #000000); */
+/* background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(0, 95, 177) 60%), url("image/kontak_img.png") bottom/contain no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden; */
+/* } */
+#hero {
+ padding: 40px 0 100px;
+ max-height: 320px;  
+  overflow: hidden;
+}
+
+
+
+.img-gradient-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.img-gradient-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mencegah gambar gepeng */
+  object-position: top;
+  display: block;
+  position: relative;
+  z-index: 6; 
+}
+
+.accent {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--border-soft);
+  background: var(--card-bg);
+}

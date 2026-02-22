@@ -1,0 +1,83 @@
+/* ==========================
+   Hero Section
+========================== */
+#hero {
+  padding: 100px 0 80px;
+  overflow: hidden;
+  max-height: 320px;
+}
+
+#hero h1 {
+  font-weight: bold;
+}
+
+
+
+
+/* Card Berita */
+.cardarea .card {
+ /* pinggir jelas */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+    background: var(--card-bg);
+    color: var(--text);
+    border: var(--border-soft);
+}
+
+.cardarea .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-soft);
+}
+
+.cardarea .card .widget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+
+
+}
+
+.cardarea .card img {
+  height: 300px;
+  object-fit: cover;
+  width: auto;
+}
+
+.cardarea .card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardarea .card-body h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardarea .card-body p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  margin-bottom: auto;
+}
+
+.cardarea .card-body a.btn {
+  margin-top: 1rem;
+  align-self: start;
+  font-size: 0.85rem;
+  border-radius: 25px;
+}
