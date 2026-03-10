@@ -14,6 +14,8 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
+  <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com" rel="stylesheet">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -33,10 +35,10 @@
       <div class="layer-gradient"></div>
 
       <div class="content">
-        <h1 style="font-size: 75px;">
-          <span class="span-custom fw-bold">HMJTI  </span><br />
-          POLIJE 2026
+        <h1 style="font-size: 70px;" >
+          <span class="span-custom fw-bold">HMJTI</span>
         </h1>
+        <h1 class="fw-bold" style="font-size: 70px;">POLIJE 2026</h1>
 
         <p style=" font-size: 24px;" class="mb-4">
           Himpunan Mahasiswa Jurusan Teknologi  <br />
@@ -157,7 +159,7 @@
 
         <div class="row justify-content-center" >
           <% anggota.forEach((item, index) => { %>
-          <div class="col-md-3 col-sm-6" data-aos="fade-right">
+          <div class="col-md-3 col-sm-6" data-aos="fade-up">
             <div class=" accent accent-2 rounded-4 shadow-sm mb-4 overflow-hidden">
               <!-- Kontainer Gambar dengan Overlay -->
               <div class="img-gradient-container">
@@ -165,9 +167,8 @@
               </div>
 
               <div class="p-3 text-left">
-                <h5 class="fw-bold mb-1"><%= item.nama %></h5>
+                <h6 class="fw-bold mb-1"><%= item.nama %></h6>
                 <p class="text-primary fw-bold mb-0"><%= item.jabatan %></p>
-                <i class="text-secondary">"<%= item.quote %>"</i>
               </div>
             </div>
           </div>
@@ -197,7 +198,7 @@
                 Mengelola dan mengkoordinasi kegiatan internal organisasi serta kesejahteraan anggota
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/anggota/BPH" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=BPH" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
@@ -217,7 +218,7 @@
                 Mengelola administrasi, dokumentasi, dan arsip organisasi dengan sistem yang terstruktur
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/anggota/Administrasi" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=Administrasi" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
@@ -237,7 +238,7 @@
                 Pengembangan Sumber Daya Mahasiswa melalui pelatihan dan kompetensi
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/anggota/Keilmuan" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=Keilmuan" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
@@ -257,7 +258,7 @@
                 Membangun dan menjalin hubungan dengan organisasi eksternal, alumni, dan stakeholder
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/anggota/Perhubungan" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=Perhubungan" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
@@ -276,7 +277,7 @@
                 Mengelola komunikasi dan informasi melalui media sosial, website, dan publikasi organisasi
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/anggota/Kewirausahaan" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=Kominfo" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
@@ -296,7 +297,7 @@
                 Mengembangkan jiwa entrepreneurship dan mengelola usaha untuk kemandirian organisasi
               </p>
               <p style="font-size: 12px;" class="mb-0 mt-2">
-                    <a href="/Kewirausahaan" class="text-info text-decoration-none">
+                    <a href="/departemen?divisi=Kewirausahaan" class="text-info text-decoration-none">
                       Lihat Detail <i class="bi bi-arrow-right text-info"></i>
                     </a>
                   </p>
