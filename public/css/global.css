@@ -126,6 +126,11 @@ body {
   color: #ffea00; 
   text-shadow: 0 0 5px rgba(238, 255, 0, 0.9);
 }
+
+.btn-mode-custom .bi.bi-moon {
+  color: #5d85ff; 
+  text-shadow: 0 0 5px rgba(103, 119, 220, 0.9);
+}
 .navbar-toggler-custom {
   width: 42px;
   height: 42px;
