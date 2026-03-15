@@ -30,9 +30,10 @@
 
 
     <!-- HERO SECTION -->
-    <section class="container-fluid hero">
-      <div class="circle"></div>
+    <section id="particles-js" class="container-fluid hero">
+      <div ></div>
       <div class="layer-gradient"></div>
+      <div class="circle"></div>
 
       <div class="content">
         <h1 style="font-size: 70px;" >
@@ -44,17 +45,6 @@
           Himpunan Mahasiswa Jurusan Teknologi  <br />
           Politeknik Negeri Jember
         </p>
-
-        <div class="d-flex gap-3 justify-content-center">
-          <a href="#hero" class="btn-primary p-3 rounded-5 text-white text-decoration-none">
-            Explore more <i class="bi bi-arrow-right"></i>
-          </a>
-
-          <a href="/about"
-            class="btn-secondary border border-info border-2 border-opacity-50 p-3 rounded-5 text-white text-decoration-none">
-            Struktur Organisasi
-          </a>
-        </div>
       </div>
     </section>
 
@@ -390,6 +380,13 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+  particlesJS.load('particles-js', '/js/particlesjs-config.json', function() {
+    console.log('Background HMJTI Berhasil Dimuat!');
+  });
+</script>
 </body>
 
 </html>
